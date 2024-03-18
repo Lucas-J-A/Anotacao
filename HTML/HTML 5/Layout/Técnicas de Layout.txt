@@ -1,0 +1,7 @@
+Técnicas de layout HTML
+Existem quatro técnicas diferentes para criar layouts de várias colunas. Cada técnica tem seus prós e contras:
+
+Estrutura CSS
+propriedade flutuante CSS
+Flexbox CSS
+Grade CSS

@@ -1,0 +1,572 @@
+<!DOCTYPE html5> <!--Tipo de documentoo -->
+<html lang="pt-br"><!--Lang tipo de linguagem do site-->
+<head><!-- carrega dados da pagina-->
+<title>Titulo da pagina</title>
+<meta charset="utf-8"><!-- meta nao precisa de fechamento-->
+<!-- Meta description serve para otimização em sites de busca-->
+<meta name="description" content="Resumo HTML">
+<!-- Meta keywordsserve para otimização em sites de busca com palavras chave-->
+<meta name="keywords" content="Resumo,HTML5,CSS3">
+<!-- Meta author serve para dizer quem e o autor-->
+<meta name="author" content="Lucas José">
+<!-- Meta http-equiv serve para da refresh em tantos segundos-->
+<!--<meta http-equiv="refresh" content="10">-->
+
+ <style>
+div{background-color: #ccc; padding:20px;}
+span {color:red}
+ </style>
+ 
+ <!-- <script> abre um bloco para escreve script
+ alert("olá Mundo")
+ </script>-->
+ <!-- <script src="script/script.js"></script><!-- como chamar um script externo-->
+ <!--<noscript>Seu navegador nao suporta javascript </noscript>para exibir caso navegador nao suporte javascript-->
+ 
+ <link rel="icon" href="image/icon.png" size="16x16"> 
+ <!--link serve para criar ligação entre o documento com documento externo-->
+  <link rel="stylesheet" type=text/css href="css/style1.css">
+ <!--link serve para criar ligação entre o documento com documento externo no caso css-->
+</head>
+<body><!-- corpo da pagina-->
+<!--Assim que se comenta no codigo ^^-->
+<!--h1 ate h6 marca importancia herarquia-->
+<h1>Olá Mundo h1</h1>
+<h2>Olá Mundo h2</h2>
+<h3>Olá Mundo h3</h3>
+<h4>Olá Mundo h4</h4>
+<h5>Olá Mundo h5</h5>
+<h6>Olá Mundo h6</h6>
+
+<!--<p>=paragrafo-->
+<!--<br>=quebra de linha-->
+
+<p>Lorem Ipsum é simplesmente uma simulação de texto 
+da indústria tipográfica e de impressos, e vem sendo utilizado desde 
+o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e 
+os embaralhou para fazer um livro de modelos de tipos. <br>Lorem Ipsum sobreviveu não só a
+cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente 
+inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de 
+Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica
+ como Aldus PageMaker</p>
+
+ 
+ 
+ <!--<ul> lista nao ordenada -->
+  <p>Lista não ordenada</p>
+ <ul>
+ <!--<li>=linha-->
+
+ <li>Item 1</li>
+ <li>Item 2
+<ol>
+ <li>Item 1</li>
+ <li>Item 2</li>
+ <li>Item 3</li>
+ 
+</ol></li>
+ <li>Item 3</li>
+ 
+
+
+ </ul>
+ 
+ <p>Lista ordenada</p>
+<ol type="1">
+ <!--ol lista ordenada type pode ser 1 que ordenada numeros
+ A alfabatecio maiusculo ou 
+ a tambem alfabatecio minusculo
+ i numero romano
+ I numero romano
+ -->
+ <li>Item 1</li>
+ <li>Item 2</li>
+ <li>Item 3</li>
+ 
+</ol>
+ 
+ <p>Lista de descrição</p>
+  <!--<dl>=Lista de descrição-->
+ <dl>
+  <!--<dt>=item-->
+ <dt>Item 1</dt>
+  <!--<dd>=Descriçaõ do item-->
+ <dd>Esse item é o 1</dd>
+ <dt>Item 2</dt>
+ <dt>Item 3</dt>
+ </dl>
+ 
+<h1>Imagens</h1>
+  <!-- src="AQUI VC COLOCA CAMINHO"
+  title="Aqui titulo da imagem"
+  alt="Aqui mostra algo se internet tiver ruim ou se pessoa for deficiente"
+  width = seta tamanho da largura
+  height seta tamanho da altura
+  
+    -->
+<img src="image/image.jpg" title="Exemplo de image" alt="Image" width="300" height="300">
+ 
+ <h1>Iframe</h1>
+ <!-- Iframe e uma pagina dentro de outra-->
+ <iframe width="400" height="300" src="http://www.otakupt.com/"></iframe>
+  <!-- Link pontos clicados que apontam para outras paginas
+ target ="_blank" abri em nova pagina 
+  -->
+  <br><a href="h.html">link interno</a>
+  <br><a href="http://www.google.com.br">link externo</a>
+<br>
+<h1>Tabelas</h1>
+<!---table criar tabela
+<caption> e uma legenda
+-->
+
+<table>
+<caption>Cadastro</caption>
+<colgroup> <!--Faz um groupo de colunas-->
+<col class="nome">
+<col class="email">
+<col class="fone">
+<col class="cargo">
+</colgroup>
+<tr><!--linha-->
+<th>Nome</th><!--coluna titulo-->
+<th>Email</th><!--coluna titulo-->
+<th>Fone </th><!--coluna titulo-->
+<th>Cargo</th>
+</tr>
+<tr>
+<td>Lucas</td><!-- coluna conteudo-->
+<td>Email@email.com</td><!-- coluna conteudo-->
+<td>11 9999-9999</td><!-- coluna conteudo-->
+<td rowspan="2">Trabalhador</td><!-- rowspan faz ocupar tantas linhas da tabela-->
+</tr>
+
+<tr>
+<td>Lucas</td><!-- coluna conteudo-->
+<td>Email@email.com</td><!-- coluna conteudo-->
+<td>11 9999-9999</td><!-- coluna conteudo-->
+</tr>
+<tfoot><!-- rodape de tabela-->
+<tr>
+<td colspan="4">Total</td><!--colspan ele faz oculpar tantos colunas da tabela-->
+</tr>
+</tfoot>
+</table>
+<h1>Div </h1>
+<div><!--div e um bloco-->
+<h1>Html- DIV</h1><!--span elemento em linha-->
+<p>Lorem Ipsum é simplesmente uma simulação de texto 
+da indústria tipográfica e de impressos, e vem sendo utilizado desde 
+o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e 
+os embaralhou para fazer um livro de modelos de tipos. <br>Lorem Ipsum sobreviveu não só a
+cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente 
+inalterado. <span>Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de 
+Lorem Ipsum</span>, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica
+ como Aldus PageMaker</p>
+</div>
+
+<h1>Audio</h1>
+<audio controls>
+<!-- controls coloca controle de audio 
+autoplay começa musica assim que pagina entra
+loop continua rodando musica infinito
+-->
+<source src="audio/Despertando Os Leões.mp3" type="audio/mpeg">
+<!--type fica tipo de audio 
+.mp3="audio/mpeg 
+.ogg="audio/ogg 
+.wav="audio/wav
+-->
+</audio>
+
+<h1>video</h1>
+<!-- controls coloca controle de video 
+autoplay começa musica assim que pagina entra
+loop continua rodando musica infinito
+-->
+<video controls width="500" height="400">
+<!--type fica tipo de audio 
+.mp4="video/mp4 
+.ogg="video/ogg 
+.webm="video/webm
+-->
+<source src="video/video.mp4" type="video/mp4">
+<!-- track Legenda-->
+<track 
+kind="subtitles" 
+srclang="pt-br" 
+label="PT-BR" 
+src="legenda.vtt">
+</track>
+</video>
+<h1>Formulário</h1>
+<form action="cadastro.php" method="POST">
+<!-- actionpagina que vai receber as informação
+method="get" passar por url
+method="post" passar encapsulado
+-->
+<fieldset> <!-- caixa  do formulario-->
+<legend>Informação Pessoais</legend>
+Nome:<br>
+<!-- Required ele força campo ser preenchido para poder ser validado-->
+<!-- autofocus faz dar foco nesse campo -->
+<!-- Disabled desabilita o campo -->
+<!-- maxlength maximo de caracteres -->
+<input type="text" name="nome" required autofocus maxlength="10"><br>
+<!-- input type= tipo de dado que vai ser preenchido-->
+Senha:<br>
+<input type="password" name="senha"><br>
+
+<!-- input type= tipo de dado que vai ser preenchido-->
+
+Email:<br>
+<!-- autocomplete da opções para completar o campo -->
+<!-- placeholder deixa escrito no campo como sombra -->
+<input type="email" name="email" autocomplete="on" placeholder="seuemail@email.com" required><br>
+<!-- input type= tipo de dado que vai ser preenchido-->
+<!-- input type= radio pode seleciona uma opção de varias-->
+Time:<br>
+<input type="radio" name="time" value="Time 1" checked>Time 1<br>
+<input type="radio" name="time" value="Time 2" >Time 2<br>
+<input type="radio" name="time" value="Time 3" >Time 3<br>
+<input type="radio" name="time" value="Time 4" >Time 4<br><br>
+<!-- input type= tipo de dado que vai ser preenchido-->
+<!-- input type= checkbox pode seleciona varias opções de varias-->
+<!-- checked quando tela carregar ja deixa selecionada-->
+Cores:<br>
+<input type="checkbox" name="cores" value="verde">Verde<br>
+<input type="checkbox" name="cores" value="Azul" checked>Azul<br>
+<input type="checkbox" name="cores" value="preto">Preto<br>
+ 
+ Quantidade:<br>
+ <!-- input type= tipo de dado que vai ser preenchido-->
+ <!--Number vc pode coloca valor 
+ minimo min ate 
+ maximo max e ate um 
+ intervalo com step-->
+ <input type="number" name="quantidade" min="0" max="1000" step="10"><br>
+ <!-- range mostra um slide para escolher valor-->
+ <input type="range" name="quantidade"><br>
+ 
+Cor:<br>
+ <input type="color" name="cor"><br><br>
+ 
+ Arquivo<br><br>
+ <input type="file" name="arquivo"><br><br>
+ <!-- hidden input invisivel serve para passar parametro-->
+ <input type="hidden" name="id"><br><br>
+  <!--URL input de url ^^-->
+ URL:<br>
+ <input type="url" name="site"><br><br>
+   <!--Search input de pesquisa ^^-->
+ Search:<br>
+ <input type="url" name="pesquisa"><br><br>
+    <!--input de telefone ^^-->
+Telefone:<br>
+ <input type="tel" name="telefone"><br><br>
+ 
+     <!--input de data^^-->
+Data:<br>
+ <input type="date" name="data" min="2000-12-31" max="2017-12-31"><br><br>
+ 
+   <!--input de tempo Hora^^-->
+Hora:<br>
+ <input type="time" name="hora"><br><br>
+ 
+    <!--input de tempo Mes e ano^^-->
+Mês e ano:<br>
+ <input type="month" name="mes-ano"><br><br>
+ 
+    <!--input de Semana^^-->
+Semana:<br>
+ <input type="week" name="Semana"><br><br>
+ 
+     <!--input de Data e hora^^-->
+Data e hora:<br>
+ <input type="datetime-local" name="data-e-hora"><br><br>
+ 
+      <!--input de campo de texto^^-->
+Mensagem:<br> <!--rows numero de linhas cols numero de colunas-->
+ <!--spellcheck desliga corretor automatico-->
+ <textarea name="mensagem" rows="5" cols="30" spellcheck="false"></textarea><br><br>
+ 
+ <h1>Botão</h1>   
+ <!--Botão diferença do input submit pode colocar qual quer conteudo-->
+ <button type="button">Clique-ME</button><br><br>
+ 
+ 
+ 
+ <h1>Select</h1>   
+ <!--Select Caixa com opções-->
+ <select name="veiculo">
+ <optgroup label="Carros"> <!--grupo de opções-->
+ <option value="camaro">Camaro</option>
+ <option value="hilux">Hilux</option>
+ </optgroup>
+ <optgroup label="Motos"> <!--grupo de opções-->
+ <option value="pop100" selected>Pop100</option><!--selected deixa selecionado-->
+ <option value="zig-50">Zig-50</option>
+ </optgroup>
+ </select><br><br>
+ <h1>Datalist</h1
+  <!--datalist lista pre definida-->
+ <input name="cursos" list="lista-cursos"> <!--list linka com id da datalist-->
+ <datalist id="lista-cursos">
+ <option value="HTML5">
+ <option value="CSS3">
+ <option value="PHP">
+ </datalist>
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<input type="submit" name="btn-enviar" value="Enviar"><br>
+</fieldset><!--fim do formulario-->
+
+
+ 
+</form>
+
+
+
+
+
+
+
+<fieldset> <!-- caixa  do formulario-->
+<legend>Formulario 2</legend>
+ <form id="form-cadastro" method="POST">
+
+
+Nome:<br> <!--form com id do from-->
+<input type="text" name="nome" required autofocus maxlength="10" form="form-cadastro"><br>
+Senha:<br>
+<input type="password" name="senha" form="form-cadastro"><br>
+Email:<br>
+<input type="email" name="email" autocomplete="on" placeholder="seuemail@email.com" required form="form-cadastro"><br>
+ <!--formaction faz direcionar para pagina -->
+  <!--formmethod defina metodo se e get ou post -->
+  <!--formenctype ermite que você especifique um tipo de codificação para o seu formulário -->
+  <!--formnovalidate faz nao precisar de validação-->
+ <input type="submit" name="cadastrar" 
+ value="Cadastra" 
+ formaction="cadastrar.php" 
+ formmethod="GET" 
+ formenctype="application/x-www-form-urlencoded"
+ formnovalidate
+ >
+ <br>
+ <!--  formtarget defina aonde pagina vai ser aberta _blank por ex: pagina em branco-->
+ <input type="submit" 
+ name="enviar-por-email" 
+ value="Enviar por email" 
+ formaction="enviar-email.php" 
+ formmethod="POST"
+ formtarget="_blank"
+ ><br>
+ </form>
+
+</fieldset><br>
+ <!--contenteditable deixa caixa editavel -->
+<div contenteditable>
+<h1>Mark e Contenteditable<h1>
+ <!--mark deixa em destaque -->
+  <!--contenteditable="false" cancela a editação  -->
+<p contenteditable="false">Lorem Ipsum é <mark>simplesmente uma simulação 
+de texto da indústria tipográfica e de impressos</mark>, e 
+vem sendo utilizado desde o século XVI, quando um 
+impressor desconhecido pegou uma </p>
+
+</div>
+<br>
+<h1>Tabeindex</h1>
+<!-- tabindex exibifica a ordem que tab vai selecionar-->
+<!-- acesskey seta um atalho para o link -->
+
+<a href="#" tabindex="2" accesskey="a">Link 1</a><br>
+<a href="#" tabindex="3" accesskey="b">Link 2</a><br>
+<a href="#" tabindex="1" accesskey="c">Link 3</a><br>
+
+
+<h1>Details</h1>
+<!--details faz uma caixa de detalhes-->
+<details>
+<summary>HTML 5</summary>
+<!--summary vc foloca os itens que vao aparecer a baixo-->
+<ul>
+<li>01- Introdução</li>
+<li>01- Exemplos</li>
+<li>01- Exercicios</li>
+</ul>
+</details>
+<br>
+
+
+<h1>Object</h1>
+<!-- object para coloca uma animção um efeito ou um objeto (pdf,swf,...)-->
+<object width="400" height="200" data="pdf/pdf.pdf"></object>
+
+<h1> Hgroup</h1>
+
+<hgroup><!-- Grupo de h1 ate h6 para agrupamento--> 
+<h1>Titulo h1</h1>
+<h2>Titulo h2</h2>
+</hgroup><br>
+
+
+<h1> Meter</h1>
+<!-- Meter medidor pode ser grafico-->
+<meter min="0" low="3" optimum="8" high="8" max="10" value="2"></meter><br>
+<!--
+ min= valor minimo
+low = valor baixo
+optimum= valor otimo
+high= valor alto
+max = valor maximo
+-->
+
+<!-- porcetagem value-->
+<meter value="0.5"></meter><br>
+
+<!-- progress barra de progresso-->
+<progress max="100" value="90"></progress><br>
+
+<!--Figure agrupamento de imagens-->
+<h1>Figura e legenda</h1>
+<figure>
+<figcaption>Legenda da imagem</figcaption>
+<!--Figcaption legenda de imagem-->
+<img src="image/image.jpg" alt="imagem" title="imagem">
+
+</figure>
+<h1>Imagem mapeada</h1>
+<img src="image/image.jpg" alt="imagem mapeada" usemap="#imagem-mapeada">	
+<map name="imagem-mapeada">
+<!--Area pode ser um 
+rect(retangulo)
+cicle(circulo)
+poly(poligono)
+
+-->
+<area shape="rect" coords="1,434,433,596" href="#">
+<!-- no rect precisa da cordenada do canto superior esquerdo e do inferior direito-->
+<area shape="circle" coords="100,100,90" href="#">
+<!-- no circle precisa da cordenada do meio e o raio -->
+<area shape="poly" coords="109,290,305,290,305,305,385" href="#" >
+<!-- pega todas cordenadas no sentido horario-->
+</map><br>
+
+<h1>Time e Datetime</h1>
+<!-- time para marca horario ou data-->
+<!-- datetime coloca data e ou hora-->
+<p>Escrito por Lucas José</p> <time datetime="2017-10-18 19:41">18 de Outubro de 2017</time>
+<br>
+<style>
+.elemento {width:200px;height:200px;background-color:#ccc;}
+</style>
+<h1>Menu e menuitem(Funciona até momento so no firefox)</h1>
+<div class="elemento" contextmenu="meu-menu">
+<!-- Menu de contexo so funciona no firefox  quando clicado com direto abre as opções mais aque colocamos-->
+<menu type="context" id="meu-menu">
+<menuitem>Atualizar</menuitem>
+<!--pode criar menu dentro do menu com menu labe="nome" -->
+<menu label ="siga-nos">
+<menuitem icon="image/icon.png">Facebook</menuitem>
+<menuitem icon="image/icon.png">Youtube</menuitem>
+</menu>
+</menu>
+</div><br>
+
+<h1>Keygen (Funciona até momento so no firefox)</h1>
+<!--indica um campo gerador de chaves publica ou privadas-->
+
+<fieldset> <!-- caixa  do formulario-->
+<legend>Formulario 3</legend>
+ <form id="cadastro.php" method="GET">
+
+
+Nome:<br> <!--form com id do from-->
+<input type="text" name="nome"><br>
+Chave: <keygen name="chave"><br>
+ <input type="submit" name="enviar" value="Enviar" ><br>
+ </form>
+
+</fieldset><br><br>
+<style>
+svg {background-color:#ccc;}
+<!--
+fil= corde fundo
+stroke= borda
+stroke-width=tamanho da borda
+-->
+svg rect circle ellipse text polygon{fill:blue; stroke:red;stroke-width:3;opacity:0.5;}
+svg line {stroke:red; strok-width:10px;}
+svg polyline{stroke:red; strok-width:5px;}
+</style>
+<h1>SVG</h1>
+<!--SVG definir grafico vetorial para web-->
+<svg width="320" height="165">
+<rect width="280" height="140" x="10" y="10" rx="20" ry"20>
+<!--
+x e y definem posição do rect(retangulo) no svg
+rx e ry aredonda a borda 
+-->
+</svg><br>
+<h1>SVG</h1>
+<svg width="320" height="165">
+<circle cx="255" cy="80" r="57">
+<!--
+cx e cy definem posição do circle(circulo) no svg
+r= raio
+-->
+</svg><br>
+<h1>SVG</h1>
+<svg width="320" height="165">
+<ellipse cx="150" cy="80" rx="110" ry="45">
+<!--
+cx e cy definem posição do ellipse( elipse) no svg
+rx= raio horizontal ry= raio vertical
+-->
+
+</svg><br>
+
+<h1>SVG</h1>
+<svg width="320" height="165">
+<!--text criar um texto ^^-->
+<text x="20" y="40"> Aprendendo SVG</text>
+
+</svg><br>
+
+<h1>SVG</h1>
+<svg width="320" height="165">
+<!--line criar uma linha ^^-->
+<line x1="18" y1="16" x2="287" y2="138"></line>
+<!--x1 e y1 =cordenada do começo e x2 e y2= cordenada do final da linha-->
+</svg><br>
+
+<h1>SVG</h1>
+<svg width="320" height="165">
+<!--polyline criar uma linha com varios pontos^^-->
+<polyline points="10,78 67,43 148,104 178,47 290,130">
+<!--points= todos pontos da linha  x,y x,y-->
+</svg><br>
+
+<h1>SVG</h1>
+<svg width="320" height="165">
+<!--polygon criar poligino-->
+<polygon points="34,111 125,14 190,120">
+<!--points= todos pontos do poligino  x,y x,y-->
+</svg><br>
+
+<h1>Sematica html 5</h1>
+<img src="sematica html5.png">
+
+
+</body>
+</html>

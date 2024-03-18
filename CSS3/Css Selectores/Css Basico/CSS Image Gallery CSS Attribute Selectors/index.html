@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Index html 5</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <style>
+         div.gallery :last-child::before {
+        clear: right;
+        }
+        
+        div.gallery {
+          margin: 5px;
+          border: 1px solid #ccc;
+          float: left;
+          width: 180px;
+        }
+        
+        div.gallery:hover {
+          border: 1px solid #777;
+        }
+        
+        div.gallery img {
+          width: 100%;
+          height: auto;
+        }
+        
+        div.desc {
+          padding: 15px;
+          text-align: center;
+        }
+        h1 {
+            
+            position: relative;
+            clear: left;
+        }
+        #navlist {
+  position: relative;
+}
+
+#navlist li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  top: 0;
+}
+
+#navlist li, #navlist a {
+  height: 44px;
+  display: block;
+}
+
+#home {
+  left: 0px;
+  width: 46px;
+  background: url('img/img_navsprites.gif') 0 0;
+}
+
+#prev {
+  left: 63px;
+  width: 43px;
+  background: url('img/img_navsprites.gif') -47px 0;
+}
+
+#next {
+  left: 129px;
+  width: 43px;
+  background: url('img/img_navsprites.gif') -91px 0;
+}
+        </style>
+</head>
+
+<body>
+    <div class="gallery">
+        <a target="_blank" href="img/fundo.jpg">
+          <img src="img/fundo.jpg" alt="Cinque Terre" width="600" height="400">
+        </a>
+        <div class="desc">Add a description of the image here</div>
+      </div>
+      
+      <div class="gallery">
+        <a target="_blank" href="img/fundo.jpg">
+          <img src="img/fundo.jpg" alt="Forest" width="600" height="400">
+        </a>
+        <div class="desc">Add a description of the image here</div>
+      </div>
+      
+      <div class="gallery">
+        <a target="_blank" href="img/fundo.jpg">
+          <img src="img/fundo.jpg" alt="Northern Lights" width="600" height="400">
+        </a>
+        <div class="desc">Add a description of the image here</div>
+      </div>
+      
+      <div class="gallery">
+        <a target="_blank" href="img/fundo.jpg">
+          <img src="img/fundo.jpg" alt="Mountains" width="600" height="400">
+        </a>
+        <div class="desc">Add a description of the image here</div>
+      </div>
+     
+      <h1>CSS Image Sprites</h1>
+     <p>Um sprite de imagem é uma coleção de imagens colocadas em uma única imagem.
+
+        Uma página da Web com muitas imagens pode levar muito tempo para carregar e gerar várias solicitações de servidor.
+        
+        O uso de sprites de imagem reduzirá o número de solicitações do servidor e economizará largura de banda.
+        Com CSS, podemos mostrar apenas a parte da imagem que precisamos.
+
+No exemplo a seguir, o CSS especifica qual parte da imagem "img_navsprites.gif" mostrar:
+        </p>
+        <ul id="navlist">
+            <li id="home"><a href="default.asp"></a></li>
+            <li id="prev"><a href="css_intro.asp"></a></li>
+            <li id="next"><a href="css_syntax.asp"></a></li>
+          </ul>
+          <!--
+              Exemplo explicado:
+
+#navlist {position:relative;} - a posição é definida como relativa para permitir o posicionamento absoluto dentro dela
+#navlist li {margin:0;padding:0;list-style:none;position:absolute;top:0;} - margin e padding são definidos como 0, list-style é removido e todos os itens da lista são posicionados de forma absoluta
+#navlist li, #navlist a {height:44px;display:block;} - a altura de todas as imagens são 44px
+Agora comece a posicionar e estilizar cada parte específica:
+
+#home {left:0px;width:46px;} - Posicionado totalmente à esquerda, e a largura da imagem é de 46px
+#home {background:url(img_navsprites.gif) 0 0;} - Define a imagem de fundo e sua posição (esquerda 0px, top 0px)
+#prev {left:63px;width:43px;} - Posicionado 63px à direita (#home largura 46px + algum espaço extra entre os itens), e a largura é 43px.
+#prev {background:url('img_navsprites.gif') -47px 0;} - Define a imagem de fundo 47px à direita (#home largura 46px + 1px divisor de linha)
+#next {left:129px;width:43px;}- Posicionado 129px à direita (início de #prev é 63px + #prev largura 43px + espaço extra), e a largura é 43px.
+#next {background:url('img_navsprites.gif') -91px 0;} - Define a imagem de fundo 91px à direita (#home width 46px + 1px line divisor + #prev width 43px + 1px line divisor )
+          -->
+
+        
+</body>
+
+</html>

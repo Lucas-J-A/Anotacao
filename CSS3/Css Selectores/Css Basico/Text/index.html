@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Index html 5</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <style>
+div {
+  border: 1px solid gray;
+  padding: 8px;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #4CAF50;
+}
+
+p {
+  text-indent: 50px;
+  text-align: justify;
+  letter-spacing: 3px;
+}
+
+a {
+  text-decoration: none;
+  color: #008CBA;
+}
+h2 {
+  text-decoration-line: line-through;
+}
+
+h3 {
+  text-decoration-line: underline;
+}
+    </style>
+</head>
+
+<body>
+<h1>CSS Text</h1>
+<!--
+Cor do texto
+A colorpropriedade é usada para definir a cor do texto. A cor é especificada por:
+
+um nome de cor - como "vermelho"
+um valor HEX - como "#ff0000"
+um valor RGB - como "rgb(255,0,0)"
+Exemplo
+body {
+  color: blue;
+}
+
+h1 {
+  color: green;
+}
+
+Cor do texto e cor de fundo
+Neste exemplo, definimos a background-colorpropriedade e a colorpropriedade:
+
+Exemplo
+body {
+  background-color: lightgrey;
+  color: blue;
+}
+
+h1 {
+  background-color: black;
+  color: white;
+}
+
+div {
+  background-color: blue;
+  color: white;
+}
+Importante: O alto contraste é muito importante para pessoas com problemas de visão. Portanto, certifique-se sempre de que o contraste entre a cor do texto e a cor de fundo (ou imagem de fundo) seja bom!
+-->
+<div>
+    <h1>text formatting</h1>
+    <p>This text is styled with some of the text formatting properties. The heading uses the text-align, text-transform, and color properties.
+    The paragraph is indented, aligned, and the space between characters is specified. The underline is removed from this colored
+    <a target="_blank" href="tryit.asp?filename=trycss_text">"Try it Yourself"</a> link.</p>
+  </div>
+
+  <!--CSS Text Alignment
+Alinhamento de texto CSS e direção de texto
+Neste capítulo você aprenderá sobre as seguintes propriedades:
+
+text-align
+text-align-last
+direction
+unicode-bidi
+vertical-align
+
+Alinhamento de texto
+A text-alignpropriedade é usada para definir o alinhamento horizontal de um texto.
+
+Um texto pode ser alinhado à esquerda ou à direita, centralizado ou justificado.
+
+O exemplo a seguir mostra o texto alinhado ao centro e alinhado à esquerda e à direita (o alinhamento à esquerda é o padrão se a direção do texto for da esquerda para a direita e o alinhamento à direita é o padrão se a direção do texto for da direita para a esquerda):
+
+Exemplo
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: left;
+}
+
+h3 {
+  text-align: right;
+}
+Quando a text-align propriedade está configurada para "justificar", cada linha é esticada para que cada linha tenha a mesma largura e as margens esquerda e direita sejam retas (como em revistas e jornais):
+
+Exemplo
+div {
+  text-align: justify;
+}
+Alinhar texto por último
+A text-align-lastpropriedade especifica como alinhar a última linha de um texto.
+
+Exemplo
+Alinhe a última linha do texto em três elementos <p>:
+
+p.a {
+  text-align-last: right;
+}
+
+p.b {
+  text-align-last: center;
+}
+
+p.c {
+  text-align-last: justify;
+}
+
+Alinhamento vertical
+A vertical-alignpropriedade define o alinhamento vertical de um elemento.
+
+Exemplo
+Defina o alinhamento vertical de uma imagem em um texto: 
+
+img.a {
+  vertical-align: baseline;
+}
+
+img.b {
+  vertical-align: text-top;
+}
+
+img.c {
+  vertical-align: text-bottom;
+}
+
+img.d {
+  vertical-align: sub;
+}
+
+img.e {
+  vertical-align: super;
+}
+-->
+<h1>CSS Text Decoration</h1>
+<!--
+    Decoração de texto CSS
+Neste capítulo você aprenderá sobre as seguintes propriedades:
+
+text-decoration-line
+text-decoration-color
+text-decoration-style
+text-decoration-thickness
+text-decoration
+
+Adicionar uma linha de decoração ao texto
+A text-decoration-linepropriedade é usada para adicionar uma linha de decoração ao texto.
+
+Dica: você pode combinar mais de um valor, como sobrelinha e sublinhado, para exibir linhas sobre e sob um texto.
+
+Exemplo
+h1 {
+  text-decoration-line: overline;
+}
+
+h2 {
+  text-decoration-line: line-through;
+}
+
+h3 {
+  text-decoration-line: underline;
+}
+
+p {
+  text-decoration-line: overline underline;
+}
+-->
+<h2> text-decoration-line: line-through;</h2>
+<h3>text-decoration-line: underline;</h3>
+<!--Especifique uma cor para a linha de decoração
+A text-decoration-colorpropriedade é usada para definir a cor da linha de decoração.
+
+Exemplo
+h1 {
+  text-decoration-line: overline;
+  text-decoration-color: red;
+}
+Especifique um estilo para a linha de decoração
+A text-decoration-stylepropriedade é usada para definir o estilo da linha de decoração.
+
+Exemplo
+h1 {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+}
+
+h2 {
+  text-decoration-line: underline;
+  text-decoration-style: double;
+}
+
+h3 {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+}
+
+p.ex1 {
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+}
+
+p.ex2 {
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+}
+
+p.ex3 {
+  text-decoration-line: underline;
+  text-decoration-color: red;
+  text-decoration-style: wavy;
+}
+
+Especifique a espessura da linha de decoração
+A text-decoration-thicknesspropriedade é usada para definir a espessura da linha de decoração.
+
+Exemplo
+h1 {
+  text-decoration-line: underline;
+  text-decoration-thickness: auto;
+}
+
+h2 {
+  text-decoration-line: underline;
+  text-decoration-thickness: 5px;
+}
+
+h3 {
+  text-decoration-line: underline;
+  text-decoration-thickness: 25%;
+}
+
+A propriedade abreviada
+A text-decorationpropriedade é uma propriedade abreviada para:
+
+text-decoration-line(requeridos)
+text-decoration-color(opcional)
+text-decoration-style(opcional)
+text-decoration-thickness(opcional)
+
+h1 {
+  text-decoration: underline;
+}
+
+h2 {
+  text-decoration: underline red;
+}
+
+h3 {
+  text-decoration: underline red double;
+}
+
+p {
+  text-decoration: underline red double 5px;
+}
+Uma pequena dica
+Todos os links em HTML são sublinhados por padrão. Às vezes, você vê que os links são estilizados sem sublinhado. O text-decoration: none;é usado para remover o sublinhado dos links, assim:
+
+Exemplo
+a {
+  text-decoration: none;
+}
+-->
+<h1>Text Transformation</h1>
+<!--
+    Transformação de texto
+A text-transformpropriedade é usada para especificar letras maiúsculas e minúsculas em um texto.
+
+Ele pode ser usado para transformar tudo em letras maiúsculas ou minúsculas, ou colocar em maiúscula a primeira letra de cada palavra:
+
+Exemplo
+p.uppercase {
+  text-transform: uppercase;
+}
+
+p.lowercase {
+  text-transform: lowercase;
+}
+
+p.capitalize {
+  text-transform: capitalize;
+}
+-->
+<h1>CSS Text Spacing</h1>
+<!--
+    Recuo de texto CSS, espaçamento entre letras, altura da linha, espaçamento entre palavras e espaço em branco
+Neste capítulo você aprenderá sobre as seguintes propriedades:
+
+text-indent
+letter-spacing
+line-height
+word-spacing
+white-space
+Recuo de texto
+A text-indentpropriedade é usada para especificar o recuo da primeira linha de um texto:
+
+Exemplo
+p {
+  text-indent: 50px;
+}
+Espaçamento entre letras
+A letter-spacingpropriedade é usada para especificar o espaço entre os caracteres em um texto.
+
+O exemplo a seguir demonstra como aumentar ou diminuir o espaço entre os caracteres:
+
+Exemplo
+h1 {
+  letter-spacing: 5px;
+}
+
+h2 {
+  letter-spacing: -2px;
+}
+Altura da linha
+A line-heightpropriedade é usada para especificar o espaço entre as linhas:
+
+Exemplo
+p.small {
+  line-height: 0.8;
+}
+
+p.big {
+  line-height: 1.8;
+}
+Espaçamento entre palavras
+A word-spacingpropriedade é usada para especificar o espaço entre as palavras em um texto.
+
+O exemplo a seguir demonstra como aumentar ou diminuir o espaço entre as palavras:
+
+Exemplo
+p.one {
+  word-spacing: 10px;
+}
+
+p.two {
+  word-spacing: -2px;
+}
+Espaço em branco
+A white-spacepropriedade especifica como o espaço em branco dentro de um elemento é tratado.
+
+Este exemplo demonstra como desabilitar a quebra de texto dentro de um elemento:
+
+Exemplo
+p {
+  white-space: nowrap;
+}
+
+-->
+<h1>tex shadow</h1>
+<!--
+    Sombra de texto CSS
+Sombra de texto
+A text-shadowpropriedade adiciona sombra ao texto.
+
+Em seu uso mais simples, você especifica apenas a sombra horizontal (2px) e a sombra vertical (2px):
+h1 {
+  text-shadow: 2px 2px;
+}
+Em seguida, adicione uma cor (vermelha) à sombra:
+
+Efeito de sombra de texto!
+Exemplo
+h1 {
+  text-shadow: 2px 2px red;
+}
+Em seguida, adicione um efeito de desfoque (5px) à sombra:
+
+Efeito de sombra de texto!
+Exemplo
+h1 {
+  text-shadow: 2px 2px 5px red;
+}
+Mais exemplos de sombra de texto
+Exemplo 1
+Sombra de texto em um texto branco:
+
+h1 {
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+Exemplo 2
+Sombra de texto com brilho de néon vermelho:
+
+h1 {
+  text-shadow: 0 0 3px #ff0000;
+}
+Exemplo 3
+Sombra de texto com brilho de néon vermelho e azul:
+
+h1 {
+  text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;
+}
+Exemplo 4
+h1 {
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+-->
+<h1 style="color: white;
+text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;"> Text shadow</h1>
+</body>
+
+</html>

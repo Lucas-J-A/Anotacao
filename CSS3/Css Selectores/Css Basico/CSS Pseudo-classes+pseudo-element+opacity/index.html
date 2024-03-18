@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Index html 5</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <style>
+        /* unvisited link */
+        a:link {
+          color: red;
+        }
+        
+        /* visited link */
+        a:visited {
+          color: green;
+        }
+        
+        /* mouse over link */
+        a:hover {
+          color: hotpink;
+        }
+        
+        /* selected link */
+        a:active {
+          color: blue;
+        }
+        a.highlight:hover {
+  color: #ff0000;
+  font-size: 22px;
+}
+div {
+  background-color: green;
+  color: white;
+  padding: 25px;
+  text-align: center;
+}
+
+div:hover {
+  background-color: blue;
+}
+.ap {
+  display: none;
+  background-color: yellow;
+  padding: 20px;
+}
+
+.aparece:hover .ap {
+  display: block;
+}
+p:first-child {
+  color: blue;
+} 
+q:lang(no) {
+  quotes: "~" "~";
+}
+p::first-line {
+  color: #ff0000;
+  font-variant: small-caps;
+}
+p::first-letter {
+  color: #ffd900c9;
+  font-size: xx-large;
+}
+
+h4::before {
+    content: url(img/fundo.jpg);
+  background-color: aqua;
+  width: 10px;
+  height: 10px;
+
+}
+h3::after {
+    content: url(img/fundo.jpg);
+  background-color: aqua;
+  width: 10px;
+  height: 10px;
+
+}
+::marker { 
+  color: red;
+  font-size: 23px;
+}
+::selection {
+  color: red;
+  background: yellow;
+}
+div.first {
+  opacity: 0.1;
+}
+
+div.second {
+  opacity: 0.3;
+}
+
+div.third {
+  opacity: 0.6;
+}
+        </style>
+
+</head>
+
+<body>
+<h1>O que são pseudoclasses?</h1>
+
+<!--Uma pseudo-classe é usada para definir um estado especial de um elemento.
+
+Por exemplo, pode ser usado para:
+
+Estilizar um elemento quando um usuário passa o mouse sobre ele
+Estilize links visitados e não visitados de maneira diferente
+Estilize um elemento quando ele estiver em foco
+Sintaxe
+A sintaxe das pseudoclasses:
+
+selector:pseudo-class {
+  property: value;
+}
+-->
+<h2>Styling a link depending on state</h2>
+
+<p><b><a href="default.asp" target="_blank">This is a link</a></b></p>
+<p><b>Note:</b> a:hover DEVE vir depois de a:link e a:visited na definição CSS para ser eficaz.</p>
+<p><b>Note:</b> a:active DEVE vir depois de a:hover na definição CSS para ser eficaz.</p>
+
+<!--
+    Nota: a:hover DEVE vir depois a:linke a:visitedna definição CSS para ser eficaz! a:activeDEVE vir depois a:hoverna definição CSS para ser eficaz! Os nomes de pseudoclasses não diferenciam maiúsculas de minúsculas
+-->
+
+<p>
+    Pseudo-classes e classes HTML
+Pseudo-classes podem ser combinadas com classes HTML:
+
+Quando você passa o mouse sobre o link no exemplo, ele muda de cor:
+</p>
+
+
+<p><a class="highlight" href="css_syntax.asp">CSS Syntax</a></p>
+
+<p><a href="default.asp">CSS Tutorial</a></p>
+
+<h2 class="aparece">Hover over this div element to show the p element
+    <span class="ap">Tada! Here I am!</span>
+</h2>
+
+<h1>CSS - A pseudo-classe :first-child</h1>
+
+<p>A :first-childpseudoclasse corresponde a um elemento especificado que é o primeiro filho de outro elemento.
+
+    Corresponde ao primeiro elemento p
+    No exemplo a seguir, o seletor corresponde a qualquer elemento p que seja o primeiro filho de qualquer elemento:</p>
+
+<!--
+    Corresponde ao primeiro elemento <i> em todos os elementos <p>
+No exemplo a seguir, o seletor corresponde ao primeiro elemento <i> em todos os elementos <p>:
+
+Exemplo
+p i:first-child {
+  color: blue;
+}
+
+Corresponde a todos os elementos <i> em todos os primeiros elementos <p> filhos
+No exemplo a seguir, o seletor corresponde a todos os elementos <i> em elementos <p> que são o primeiro filho de outro elemento:
+
+Exemplo
+p:first-child i {
+  color: blue;
+}
+-->
+
+<h1>CSS - A pseudoclasse :lang</h1>
+
+<p>A :lang pseudo-classe permite definir regras especiais para diferentes idiomas.
+
+    No exemplo abaixo, :lang define as aspas para elementos q com lang="no":</p>
+
+        <p>Some text <q lang="no">A quote in a paragraph</q> Some text.</p>
+
+        <h1>CSS Pseudo-elements</h1>
+        <p>O que são pseudo-elementos?
+            Um pseudoelemento CSS é usado para estilizar partes especificadas de um elemento.
+            
+            Por exemplo, pode ser usado para:
+            
+            Estilize a primeira letra, ou linha, de um elemento
+            Inserir conteúdo antes ou depois do conteúdo de um elemento</p>
+            <!--
+                Sintaxe
+A sintaxe dos pseudo-elementos:
+
+selector::pseudo-element {
+  property: value;
+}
+O ::Pseudo-elemento de primeira linha
+O ::first-linepseudoelemento é usado para adicionar um estilo especial à primeira linha de um texto.
+
+O exemplo a seguir formata a primeira linha do texto em todos os elementos <p>:
+
+Exemplo 
+p::first-line {
+  color: #ff0000;
+  font-variant: small-caps;
+}
+-->
+<!--
+    Nota: O ::first-linepseudoelemento só pode ser aplicado a elementos de nível de bloco.
+
+As seguintes propriedades se aplicam ao ::first-line pseudoelemento:
+
+propriedades da fonte
+propriedades de cor
+propriedades de fundo
+espaçamento entre palavras
+espaçamento entre letras
+decoração de texto
+alinhamento vertical
+transformação de texto
+altura da linha
+Claro
+Observe a notação de dois pontos - ::first-line versus :first-line
+
+Os dois pontos substituíram a notação de dois pontos para pseudo-elementos em CSS3. Esta foi uma tentativa do W3C de distinguir entre pseudo-classes e pseudo-elementos .
+
+A sintaxe de dois-pontos foi usada para pseudoclasses e pseudoelementos em CSS2 e CSS1.
+
+Para compatibilidade com versões anteriores, a sintaxe de dois-pontos é aceitável para pseudoelementos CSS2 e CSS1.
+-->
+<!--
+    O pseudo-elemento ::primeira letra
+O ::first-letterpseudoelemento é usado para adicionar um estilo especial à primeira letra de um texto.
+
+O exemplo a seguir formata a primeira letra do texto em todos os elementos <p>: 
+
+Exemplo
+p::first-letter {
+  color: #ff0000;
+  font-size: xx-large;
+}
+
+-->
+<!--
+    Nota: O ::first-letterpseudoelemento só pode ser aplicado a elementos de nível de bloco.
+
+As seguintes propriedades se aplicam ao pseudoelemento ::first-letter: 
+
+propriedades da fonte
+propriedades de cor 
+propriedades de fundo
+propriedades de margem
+propriedades de preenchimento
+propriedades da borda
+decoração de texto
+vertical-align (somente se "float" for "none")
+transformação de texto
+altura da linha
+flutuador
+Claro
+
+Pseudo-elementos e classes HTML
+Pseudo-elementos podem ser combinados com classes HTML: 
+
+Exemplo
+p.intro::first-letter {
+  color: #ff0000;
+  font-size: 200%;
+}
+Vários pseudo-elementos
+Vários pseudo-elementos também podem ser combinados.
+
+No exemplo a seguir, a primeira letra de um parágrafo será vermelha, em um tamanho de fonte xx grande. O restante da primeira linha será azul e em versalete. O restante do parágrafo será o tamanho e a cor da fonte padrão:
+
+Exemplo
+p::first-letter {
+  color: #ff0000;
+  font-size: xx-large;
+}
+
+p::first-line {
+  color: #0000ff;
+  font-variant: small-caps;
+}
+-->
+<!--
+    CSS - O ::antes do pseudo-elemento
+O ::before pseudoelemento pode ser usado para inserir algum conteúdo antes do conteúdo de um elemento.
+
+O exemplo a seguir insere uma imagem antes do conteúdo de cada elemento <h1>:
+-->
+<h4>O ::before pseudoelemento pode ser usado para inserir algum conteúdo antes do conteúdo de um elemento.</h4>
+<h3>::after pseudoelemento pode ser usado para inserir algum conteúdo após o conteúdo de um elemento.
+</h3>
+<h1>CSS - O pseudo-elemento ::marker
+    O ::markerpseudoelemento seleciona os marcadores dos itens da lista.</h1>
+
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+      </ul>
+      
+      <ol>
+        <li>First</li>
+        <li>Second</li>
+        <li>Third</li>
+      </ol>
+
+      <h1>O ::selectionpseudoelemento corresponde à parte de um elemento selecionado por um usuário.
+
+As seguintes propriedades CSS podem ser aplicadas a ::selection: color, background, cursore outline.
+
+O exemplo a seguir torna o texto selecionado vermelho em um fundo amarelo:</h1>
+
+<h1>CSS opacity</h1>
+<!--
+    img {
+  opacity: 0.5;
+}
+mudar opacidade 1 é imagem normal
+img {
+  opacity: 0.5;
+}
+
+img:hover {
+  opacity: 1.0;
+}
+-->
+<div class="first"><p>opacity 0.1</p></div>
+<div class="second"><p>opacity 0.3</p></div>
+<div class="third"><p>opacity 0.6</p></div>
+<div><p>opacity 1 (default)</p></div>
+<p>Transparência usando RGBA</p>
+<!--
+   div {
+  background: rgba(76, 175, 80, 0.3) /* Green background with 30% opacity */
+}
+-->
+</body>
+
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Index html 5</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <style>
+        h1.sd1 {
+  text-shadow: 2px 2px;
+}
+h1.sd2 {
+  text-shadow: 2px 2px red;
+}
+h1.sd3 {
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+h1.sd4 {
+  text-shadow: 0 0 3px #FF0000;
+}
+h1.sd5 {
+  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+}
+h1.sd6 {
+  color: coral;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+div.box-sd {
+  width: 300px;
+  height: 100px;
+  padding: 15px;
+  background-color: coral;
+  box-shadow: 10px 10px;
+}
+div.card {
+  width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+ 
+}
+
+div.header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  font-size: 40px;
+
+}
+
+div.container {
+  padding: 10px;
+}
+div.polaroid {
+  width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+
+}
+p.test1 {
+  white-space: nowrap; 
+  width: 200px; 
+  border: 1px solid #000000;
+  overflow: hidden;
+  text-overflow: clip;
+}
+
+p.test2 {
+  white-space: nowrap; 
+  width: 200px; 
+  border: 1px solid #000000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+p.test {
+  width: 11em; 
+  border: 1px solid #000000;
+  word-wrap: break-word;
+}
+p.test3 {
+  width: 140px; 
+  border: 1px solid #000000;
+  word-break: keep-all;
+}
+
+p.test4 {
+  width: 140px; 
+  border: 1px solid #000000;
+  word-break: break-all;
+}
+@font-face {
+   font-family: myFirstFont;
+   src: url(sansation_light.woff);
+}
+
+@font-face {
+   font-family: myFirstFont;
+   src: url(sansation_bold.woff);
+   font-weight: bold;
+}
+
+* {
+   font-family: myFirstFont;
+}
+
+    </style>
+</head>
+
+<body>
+<!--Efeitos de sombra CSS-->
+<h1>Efeitos de sombra CSS</h1>
+<p>Com CSS você pode adicionar sombra ao texto e aos elementos.
+
+    Nestes capítulos, você aprenderá sobre as seguintes propriedades:
+    
+    text-shadow
+    box-shadow</p>
+    <h1 class="sd1">Text-shadow effect!</h1>
+    <p>A propriedade CSS text-shadowaplica sombra ao texto.
+
+        Em seu uso mais simples, você especifica apenas a sombra horizontal (2px) e a sombra vertical (2px):</p>
+        <h1>Em seguida, adicione uma cor à sombra:
+
+            Efeito de sombra de texto!</h1>
+            <h1 class="sd2">Text-shadow effect!</h1>
+            <p>O exemplo a seguir mostra um texto branco com sombra preta:
+
+                Efeito de sombra de texto!</p>
+                <h1 class="sd3">Text-shadow effect!</h1>
+                <h2>O exemplo a seguir mostra uma sombra de brilho de néon vermelho:</h2>
+                <h1 class="sd4">Text-shadow with red neon glow!</h1>
+                <p>Várias sombras
+                    Para adicionar mais de uma sombra ao texto, você pode adicionar uma lista de sombras separadas por vírgulas.
+                    
+                    O exemplo a seguir mostra uma sombra de brilho neon vermelho e azul:</p>
+                    <h1 class="sd5">Text-shadow with red and blue neon glow!</h1>
+                    <!--
+                        O exemplo a seguir mostra um texto branco com sombra preta, azul e azul escuro:
+
+Efeito de sombra de texto!
+Exemplo
+h1 {
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+                    -->
+                    <h1 class="sd6">Border around text!</h1>
+                    <h1>CSS Box Shadow</h1>
+                    <p>A propriedade CSS box-shadow é usada para aplicar uma ou mais sombras a um elemento.</p>
+                    <p>Em seu uso mais simples, você especifica apenas uma sombra horizontal e uma vertical. A cor padrão da sombra é a cor do texto atual.</p>
+                    <div class="box-sd">This is a div element with a box-shadow</div>
+                    <!--
+                        Especifique uma cor para a sombra
+O colorparâmetro define a cor da sombra.    
+Especifique uma cor para a sombra:
+
+div {
+  box-shadow: 10px 10px lightblue;
+}
+Adicione um efeito de desfoque à sombra
+O blurparâmetro define o raio de desfoque. Quanto maior o número, mais borrada será a sombra.
+div {
+  box-shadow: 10px 10px 5px lightblue;
+}
+Definir o raio de propagação da sombra
+O spreadparâmetro define o raio de dispersão. Um valor positivo aumenta o tamanho da sombra, um valor negativo diminui o tamanho da sombra.
+Defina o raio de propagação da sombra:
+
+div {
+  box-shadow: 10px 10px 5px 12px lightblue;
+}
+Defina o parâmetro de inserção
+O insetparâmetro altera a sombra de uma sombra externa (início) para uma sombra interna.
+div {
+  box-shadow: 10px 10px 5px lightblue inset;
+}
+Adicionar várias sombras
+Um elemento também pode ter várias sombras:
+
+Exemplo
+div {
+  box-shadow: 5px 5px blue, 10px 10px red, 15px 15px green;
+}
+                    -->
+                    <h1>Cartões
+                        Você também pode usar a box-shadowpropriedade para criar cartões semelhantes a papel:</h1>
+                        <div class="card">
+                            <div class="header">
+                              <h1>1</h1>
+                            </div>
+                          
+                            <div class="container">
+                              <p>January 1, 2021</p>
+                            </div>
+                          </div>
+
+                          <div class="polaroid">
+                            <img src="img/fundo.jpg" alt="Norway" style="width:100%">
+                            <div class="container">
+                              <p>Hardanger, Norway</p>
+                            </div>
+                          </div>
+                          <h1>CSS Text Effects</h1>
+                          <p>Estouro de texto CSS , quebra de linha, regras de quebra de linha e modos de escrita</p>       
+                          <p>Estouro de texto CSS
+                            A propriedade CSS text-overflowespecifica como o conteúdo estourado que não é exibido deve ser sinalizado ao usuário.</p>
+                            <h2>text-overflow: clip:</h2>
+        <p class="test1">This is some long text that will not fit in the box</p>
+
+        <h2>text-overflow: ellipsis:</h2>
+        <p class="test2">This is some long text that will not fit in the box</p>
+                    <!--Pode ser recortado:
+
+Este é um texto longo que não cabe na caixa
+
+ou pode ser renderizado como reticências (...):
+
+Este é um texto longo que n-->
+
+<!--
+    O exemplo a seguir mostra como você pode exibir o conteúdo transbordado ao passar o mouse sobre o elemento:
+
+Exemplo
+div.test:hover {
+  overflow: visible;
+}
+Permita que palavras longas possam ser quebradas e passar para a próxima linha:
+
+p {
+  word-wrap: break-word;
+}
+-->
+<h1>Quebra de palavras CSS</h1>
+<p class="test">This paragraph contains a very long word: thisisaveryveryveryveryveryverylongword. The long word will break and wrap to the next line.</p>
+<p class="test3">This paragraph contains some text. This line will-break-at-hyphens.</p>
+<!--
+    p.test3 {
+  word-break: keep-all;
+}
+    Este parágrafo contém algum texto. Esta linha quebrará em hífens.
+p.test4 {
+  word-break: break-all;
+}
+Este parágrafo contém algum texto. As linhas serão quebradas em qualquer caractere.
+-->
+<p class="test4">This paragraph contains some text. The lines will break at any character.</p>
+<!--
+    Modo de escrita CSS
+A propriedade CSS writing-modeespecifica se as linhas de texto são dispostas horizontalmente ou verticalmente.
+Exemplo
+p.test1 {
+  writing-mode: horizontal-tb;
+}
+
+span.test2 {
+  writing-mode: vertical-rl;
+}
+
+p.test2 {
+  writing-mode: vertical-rl;
+}
+-->
+
+<h1>CSS Web Fonts</h1>
+<!--
+    A regra CSS @font-face
+As fontes da Web permitem que os designers da Web usem fontes que não estão instaladas no computador do usuário.
+
+Quando você encontrar/comprar a fonte que deseja usar, basta incluir o arquivo de fonte em seu servidor web, e ele será baixado automaticamente para o usuário quando necessário.
+
+Suas fontes "próprias" são definidas dentro da @font-faceregra CSS.
+O arquivo "sansation_bold.woff" é outro arquivo de fonte, que contém os caracteres em negrito para a fonte Sansation.
+
+Os navegadores usarão isso sempre que um pedaço de texto com a família de fontes "myFirstFont" for renderizado em negrito.
+
+Dessa forma, você pode ter muitas @font-faceregras para a mesma fonte.
+-->
+</body>
+
+</html>

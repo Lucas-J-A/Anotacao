@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Index html 5</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <style> 
+        #rcorners1 {
+          border-radius: 25px;
+          background: #73AD21;
+          padding: 20px; 
+          width: 200px;
+          height: 150px;  
+        }
+        
+        #rcorners2 {
+          border-radius: 25px;
+          border: 2px solid #73AD21;
+          padding: 20px; 
+          width: 200px;
+          height: 150px;  
+        }
+        
+        #rcorners3 {
+          border-radius: 25px;
+          background: url(paper.gif);
+          background-position: left top;
+          background-repeat: repeat;
+          padding: 20px; 
+          width: 200px;
+          height: 150px;  
+        }
+        #rcorners4 {
+  border-radius: 15px 50px;
+  background: #73AD21;
+  padding: 20px; 
+  width: 200px;
+  height: 150px; 
+} 
+#rcorners5 {
+  border-radius: 50px / 15px;
+  background: #73AD21;
+  padding: 20px; 
+  width: 200px;
+  height: 150px; 
+}
+
+#rcorners6 {
+  border-radius: 15px / 50px;
+  background: #73AD21;
+  padding: 20px; 
+  width: 200px;
+  height: 150px; 
+}
+
+#rcorners7 {
+  border-radius: 50%;
+  background: #73AD21;
+  padding: 20px; 
+  width: 200px;
+  height: 150px;
+} 
+
+#borderimg { 
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(img/border.png) 30 round;
+}
+#example1 {
+  background-image: url(img/border.png), url(img/border.png);
+  background-position: right bottom, left top;
+  background-repeat: no-repeat, repeat;
+  padding: 15px;
+}
+        </style>
+</head>
+
+<body>
+<h1>Cantos arredondados CSS
+    Com a propriedade CSS border-radius, você pode dar "cantos arredondados" a qualquer elemento.</h1>
+
+<!--
+    Propriedade CSS border-radius
+A propriedade CSS border-radiusdefine o raio dos cantos de um elemento.
+
+Dica: Esta propriedade permite adicionar cantos arredondados aos elementos!
+-->
+
+<p>Rounded corners for an element with a specified background color:</p>
+<p id="rcorners1">Rounded corners!</p>
+<p>Rounded corners for an element with a border:</p>
+<p id="rcorners2">Rounded corners!</p>
+<p>Rounded corners for an element with a background image:</p>
+<p id="rcorners3">Rounded corners!</p>
+<!--Dica: A border-radiuspropriedade é, na verdade, uma propriedade abreviada para as propriedades border-top-left-radius, 
+    border-top-right-radius e .
+    border-bottom-right-radius
+    border-bottom-left-radius-->
+<p>Two values - border-radius: 15px 50px:</p>
+<p id="rcorners4"></p>
+
+
+<p>Elliptical border - border-radius: 50px / 15px:</p>
+<p id="rcorners5"></p>
+
+<p>Elliptical border - border-radius: 15px / 50px:</p>
+<p id="rcorners6"></p>
+
+<p>Ellipse border - border-radius: 50%:</p>
+<p id="rcorners7"></p>
+
+<h1>CSS Border Images</h1>
+<!--
+    Imagens de borda CSS
+Com a propriedade CSS border-image, você pode definir uma imagem para ser usada como borda ao redor de um elemento.
+
+A propriedade CSS border-image permite especificar uma imagem a ser usada em vez da borda normal ao redor de um elemento.
+
+A propriedade tem três partes:
+
+A imagem a ser usada como borda
+Onde cortar a imagem
+Defina se as seções do meio devem ser repetidas ou esticadas
+Usaremos a seguinte imagem (chamada "border.png"):
+A border-image propriedade pega a imagem e a divide em nove seções, como um jogo da velha. Em seguida, ele coloca os cantos nos cantos e as seções do meio são repetidas ou esticadas conforme você especifica.
+
+Nota: Para border-imagefuncionar, o elemento também precisa do border conjunto de propriedades!
+
+Aqui, as seções do meio da imagem são repetidas para criar a borda:
+-->
+
+
+<h1>The border-image Property</h1>
+
+<p>Here, the middle sections of the image are repeated to create the border:</p>
+<p id="borderimg">border-image: url(border.png) 30 round;</p>
+
+<p>Here is the original image:</p><img src="img/border.png">
+<p><strong>Note:</strong> Internet Explorer 10, and earlier versions, do not support the border-image property.</p>
+<!--
+    Aqui, as seções do meio da imagem são esticadas para criar a borda:
+
+Uma imagem como fronteira!
+
+Aqui está o código:
+
+Exemplo
+#borderimg {
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(border.png) 30 stretch;
+}
+-->
+<!--
+    CSS Multiple Backgrounds
+-->
+<h1>CSS Multiple Backgrounds</h1>
+<!--
+    Fundos Múltiplos CSS
+CSS permite adicionar várias imagens de fundo para um elemento, através da background-imagepropriedade.
+
+As diferentes imagens de fundo são separadas por vírgulas e as imagens são empilhadas umas sobre as outras, onde a primeira imagem está mais próxima do visualizador.
+
+O exemplo a seguir tem duas imagens de plano de fundo, a primeira imagem é uma flor (alinhada à parte inferior e à direita) e a segunda imagem é um plano de fundo de papel (alinhada ao canto superior esquerdo):
+-->
+<h1>Multiple Backgrounds</h1>
+<p>The following div element has two background images:</p>
+
+<div id="example1">
+  <h1>Lorem Ipsum Dolor</h1>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+  <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+</div>
+<!--
+    Várias imagens de plano de fundo podem ser especificadas usando as propriedades de plano de fundo individuais (como acima) ou a backgroundpropriedade abreviada.
+
+O exemplo a seguir usa a backgroundpropriedade shorthand (mesmo resultado do exemplo acima):
+-->
+</body>
+
+</html>

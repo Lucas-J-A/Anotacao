@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Index html 5</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+
+    <style>
+        div {
+  padding: 70px;
+  border: 1px solid #4CAF50;
+}
+div.individual {
+  border: 1px solid black;
+  background-color: lightblue;
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+}
+    </style>
+</head>
+
+<body>
+<!--O preenchimento é usado para criar espaço ao redor do conteúdo de um elemento, dentro de qualquer borda definida.
+
+-->
+<h2>CSS Padding</h2>
+<div>This element has a padding of 70px.</div>
+<!--
+Preenchimento CSS
+As propriedades CSS paddingsão usadas para gerar espaço ao redor do conteúdo de um elemento, dentro de qualquer borda definida.
+
+Com CSS, você tem controle total sobre o preenchimento. Existem propriedades para definir o preenchimento para cada lado de um elemento (superior, direito, inferior e esquerdo).
+
+Acolchoamento - Lados Individuais
+CSS tem propriedades para especificar o preenchimento para cada lado de um elemento:
+
+padding-top
+padding-right
+padding-bottom
+padding-left
+Todas as propriedades de preenchimento podem ter os seguintes valores:
+
+length - especifica um preenchimento em px, pt, cm, etc.
+% - especifica um preenchimento em % da largura do elemento que o contém
+inherit - especifica que o preenchimento deve ser herdado do elemento pai
+Nota: Valores negativos não são permitidos.
+
+-->
+<div class="individual ">This div element has a top padding of 50px, a right padding of 30px, a bottom padding of 50px, and a left padding of 80px.</div>
+
+<!--
+    Para encurtar o código, é possível especificar todas as propriedades de preenchimento em uma propriedade.
+
+A paddingpropriedade é uma propriedade abreviada para as seguintes propriedades de preenchimento individuais:
+
+padding-top
+padding-right
+padding-bottom
+padding-left
+Então, aqui está como funciona:
+
+Se a paddingpropriedade tiver quatro valores:
+
+preenchimento: 25px 50px 75px 100px;
+o preenchimento superior é de 25px
+o preenchimento direito é de 50px
+o preenchimento inferior é de 75px
+o preenchimento esquerdo é de 100px
+Exemplo
+Use a propriedade abreviada de preenchimento com quatro valores:
+
+div {
+  padding: 25px 50px 75px 100px;
+}
+
+Se a paddingpropriedade tiver três valores:
+
+preenchimento: 25px 50px 75px;
+o preenchimento superior é de 25px
+os preenchimentos direito e esquerdo são de 50px
+o preenchimento inferior é de 75px
+Exemplo
+Use a propriedade abreviada de preenchimento com três valores: 
+
+div {
+  padding: 25px 50px 75px;
+}
+Se a paddingpropriedade tiver dois valores:
+
+preenchimento: 25px 50px;
+os preenchimentos superior e inferior são de 25px
+os preenchimentos direito e esquerdo são de 50px
+Exemplo
+Use a propriedade abreviada de preenchimento com dois valores: 
+
+div {
+  padding: 25px 50px;
+}
+Se a paddingpropriedade tiver um valor:
+
+preenchimento: 25px;
+todos os quatro preenchimentos são 25px
+Exemplo
+Use a propriedade abreviada de preenchimento com um valor: 
+
+div {
+  padding: 25px;
+}
+Preenchimento e largura do elemento
+A propriedade CSS widthespecifica a largura da área de conteúdo do elemento. A área de conteúdo é a parte dentro do preenchimento, borda e margem de um elemento ( o modelo de caixa ).
+
+Portanto, se um elemento tiver uma largura especificada, o preenchimento adicionado a esse elemento será adicionado à largura total do elemento. Este é muitas vezes um resultado indesejável.
+
+Exemplo
+Aqui, o elemento <div> recebe uma largura de 300px. No entanto, a largura real do elemento <div> será de 350px (300px + 25px de preenchimento esquerdo + 25px de preenchimento direito):
+
+div {
+  width: 300px;
+  padding: 25px;
+}
+
+Para manter a largura em 300px, não importa a quantidade de preenchimento, você pode usar a box-sizingpropriedade. Isso faz com que o elemento mantenha sua largura real; se você aumentar o preenchimento, o espaço de conteúdo disponível diminuirá.
+
+Exemplo
+Use a propriedade box-sizing para manter a largura em 300px, não importa a quantidade de preenchimento:
+
+div {
+  width: 300px;
+  padding: 25px;
+  box-sizing: border-box;
+}
+-->
+</body>
+
+</html>

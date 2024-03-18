@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Index html 5</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <style>
+        #customers {
+          font-family: Arial, Helvetica, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        #customers td, #customers th {
+          border: 1px solid #ddd;
+          padding: 8px;
+        }
+        
+        #customers tr:nth-child(even){background-color: #f2f2f2;}
+        
+        #customers tr:hover {background-color: #ddd;}
+        
+        #customers th {
+          padding-top: 12px;
+          padding-bottom: 12px;
+          text-align: left;
+          background-color: #04AA6D;
+          color: white;
+        }
+        table, th, td {
+  border: 1px solid;
+}
+div.ex1 {
+  width: 500px;
+  margin: auto;
+  border: 3px solid #73AD21;
+}
+
+div.ex2 {
+  max-width: 500px;
+  margin: auto;
+  border: 3px solid #73AD21;
+}
+        </style>
+</head>
+
+<body>
+<!--CSS Tables-->
+<h1>A Fancy Table</h1>
+
+<table id="customers">
+  <tr>
+    <th>Company</th>
+    <th>Contact</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Berglunds snabbköp</td>
+    <td>Christina Berglund</td>
+    <td>Sweden</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+  </tr>
+  <tr>
+    <td>Ernst Handel</td>
+    <td>Roland Mendel</td>
+    <td>Austria</td>
+  </tr>
+  <tr>
+    <td>Island Trading</td>
+    <td>Helen Bennett</td>
+    <td>UK</td>
+  </tr>
+  <tr>
+    <td>Königlich Essen</td>
+    <td>Philip Cramer</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Laughing Bacchus Winecellars</td>
+    <td>Yoshi Tannamuri</td>
+    <td>Canada</td>
+  </tr>
+  <tr>
+    <td>Magazzini Alimentari Riuniti</td>
+    <td>Giovanni Rovelli</td>
+    <td>Italy</td>
+  </tr>
+  <tr>
+    <td>North/South</td>
+    <td>Simon Crowther</td>
+    <td>UK</td>
+  </tr>
+  <tr>
+    <td>Paris spécialités</td>
+    <td>Marie Bertrand</td>
+    <td>France</td>
+  </tr>
+</table>
+
+<h2>Add a border to a table:</h2>
+
+<table>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+  </tr>
+  <tr>
+    <td>Peter</td>
+    <td>Griffin</td>
+  </tr>
+  <tr>
+    <td>Lois</td>
+    <td>Griffin</td>
+  </tr>
+</table>
+<!--Tabela de largura total
+A tabela acima pode parecer pequena em alguns casos. Se você precisar de uma tabela que deva abranger toda a tela (largura total), adicione width: 100%ao elemento <table>:
+table {
+  width: 100%;
+}   
+
+-->
+<!--
+    Recolher bordas da tabela
+A border-collapsepropriedade define se as bordas da tabela devem ser recolhidas em uma única borda:
+table {
+  border-collapse: collapse;
+}
+Se você quiser apenas uma borda ao redor da tabela, especifique apenas a borderpropriedade para <table>:
+    table {
+  width: 100%;
+  border: 1px solid;
+}
+-->
+<h1>CSS Table Size</h1>
+<!--table {
+  width: 100%;
+}
+
+th {
+  height: 70px;
+}-->
+
+<h1>CSS Table Alignment</h1>
+<!--Alinhamento horizontal
+A text-alignpropriedade define o alinhamento horizontal (como esquerda, direita ou centro) do conteúdo em <th> ou <td>.
+
+Por padrão, o conteúdo dos elementos <th> é alinhado ao centro e o conteúdo dos elementos <td> é alinhado à esquerda.
+
+Para centralizar também o conteúdo dos elementos <td>, use text-align: center:
+table, td, th {
+  border: 1px solid black;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  text-align: center;
+}
+Para alinhar o conteúdo à esquerda, force o alinhamento dos elementos <th> a serem alinhados à esquerda, com a text-align: leftpropriedade:
+    Alinhamento vertical
+A vertical-alignpropriedade define o alinhamento vertical (como superior, inferior ou meio) do conteúdo em <th> ou <td>.
+    td {
+  height: 50px;
+  vertical-align: bottom;
+}    
+-->
+<!--Preenchimento da mesa
+Para controlar o espaço entre a borda e o conteúdo de uma tabela, use a paddingpropriedade nos elementos <td> e <th>:
+table, td, th {  
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 15px;
+}
+-->
+<h1>Divisores horizontais</h1>
+<!--table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+Mesa flutuante
+Use o :hoverseletor em <tr> para destacar as linhas da tabela ao passar o mouse:
+    tr:hover {background-color: coral;}
+    Tabelas listradas
+
+    table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+-->
+<h1>
+    Cor da tabela
+    O exemplo abaixo especifica a cor de fundo e a cor do texto dos elementos </h1>
+    <!--table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #04AA6D;
+  color: white;
+}-->
+
+<h1>CSS Responsive Table</h1>
+<!--Tabela responsiva
+Uma tabela responsiva exibirá uma barra de rolagem horizontal se a tela for muito pequena para exibir o conteúdo completo:
+Adicione um elemento de contêiner (como <div>) ao overflow-x:autoredor do elemento <table> para torná-lo responsivo 
+    Nota: No OS X Lion (no Mac), as barras de rolagem ficam ocultas por padrão e são exibidas apenas quando usadas (mesmo que "overflow:scroll" esteja definido).
+-->
+<h1>A displaypropriedade é a propriedade CSS mais importante para controlar o layout.</h1>
+<!--A display propriedade especifica se/como um elemento é exibido.
+
+Cada elemento HTML tem um valor de exibição padrão dependendo do tipo de elemento que é. O valor de exibição padrão para a maioria dos elementos é blockou inline.-->
+<!--
+    Um elemento de nível de bloco sempre começa em uma nova linha e ocupa toda a largura disponível (se estende para a esquerda e para a direita o máximo possível).
+
+O elemento <div> é um elemento de nível de bloco.
+Exemplos de elementos em nível de bloco:
+
+<div>
+<h1> - <h6>
+<p>
+<formulário>
+<cabeçalho>
+<rodapé>
+<seção>
+Elementos embutidos
+Um elemento embutido não inicia em uma nova linha e só ocupa a largura necessária.
+
+Este é um elemento <span> embutido dentro de um parágrafo.
+
+Exemplos de elementos embutidos:
+
+<span>
+<a>
+<img>
+Mostrar nenhum;
+display: none;é comumente usado com JavaScript para ocultar e mostrar elementos sem excluí-los e recriá-los. Dê uma olhada no nosso último exemplo nesta página se você quiser saber como isso pode ser alcançado.
+
+O <script>elemento usa display: none; como padrão. 
+    
+
+-->
+<!--
+    Substituir o valor de exibição padrão
+Como mencionado, cada elemento tem um valor de exibição padrão. No entanto, você pode substituir isso.
+
+Alterar um elemento inline para um elemento de bloco, ou vice-versa, pode ser útil para fazer a página parecer de uma maneira específica e ainda seguir os padrões da web.
+
+Um exemplo comum é criar elementos embutidos <li>para menus horizontais:
+
+Exemplo
+li {
+  display: inline;
+}
+Nota: Definir a propriedade display de um elemento altera apenas a forma como o elemento é exibido , NÃO o tipo de elemento que ele é. Portanto, um elemento inline com display: block;não pode ter outros elementos de bloco dentro dele.
+-->
+<!--Ocultar um elemento - display:none ou visibilidade:hidden?
+No entanto, o elemento ainda ocupará o mesmo espaço de antes. O elemento ficará oculto, mas ainda afetará o layout:
+Ocultar um elemento pode ser feito definindo a displaypropriedade como none. O elemento ficará oculto e a página será exibida como se o elemento não estivesse lá:
+ visibility:hidden;também oculta um elemento.
+-->
+
+<!--Layout CSS - largura e largura máxima-->
+<h1>Layout CSS - largura e largura máxima</h1>
+<!--Usando largura, largura máxima e margem: auto;
+Conforme mencionado no capítulo anterior; um elemento de nível de bloco sempre ocupa toda a largura disponível (se estende para a esquerda e para a direita o máximo possível).
+
+Definir o width de um elemento de nível de bloco impedirá que ele se estenda até as bordas de seu contêiner. Em seguida, você pode definir as margens como automáticas, para centralizar horizontalmente o elemento em seu contêiner. O elemento ocupará a largura especificada e o espaço restante será dividido igualmente entre as duas margens:
+Nota: O problema com o <div>acima ocorre quando a janela do navegador é menor que a largura do elemento. O navegador adiciona uma barra de rolagem horizontal à página.
+
+Usar max-widthem vez disso, nessa situação, melhorará o manuseio de janelas pequenas pelo navegador. Isso é importante ao tornar um site utilizável em dispositivos pequenos:
+Dica: Redimensione a janela do navegador para menos de 500px de largura, para ver a diferença entre as duas divs!
+-->
+<h2>CSS Max-width</h2>
+
+<div class="ex1">This div element has width: 500px;</div>
+<br>
+
+<div class="ex2">This div element has max-width: 500px;</div>
+
+<p><strong>Tip:</strong> Drag the browser window to smaller than 500px wide, to see the difference between 
+the two divs!</p>
+</body>
+
+</html>

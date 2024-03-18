@@ -1,0 +1,46 @@
+Configurando a janela de visualização
+Para criar um site responsivo, adicione a seguinte <meta> tag a todas as suas páginas da web:
+
+Exemplo
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+Isso definirá a janela de visualização de sua página, que fornecerá ao navegador instruções sobre como controlar as dimensões e o dimensionamento da página.
+
+Aqui está um exemplo de uma página da web sem a meta tag viewport e a mesma página da web com a meta tag viewport
+
+Imagens responsivas
+Imagens responsivas são imagens que se adaptam bem a qualquer tamanho de navegador.
+
+Usando a propriedade largura
+Se a propriedade CSS widthestiver definida como 100%, a imagem será responsiva e aumentará e diminuirá a escala:
+
+<img src="img_girl.jpg" style="width:100%;">
+
+Observe que no exemplo acima, a imagem pode ser ampliada para ser maior que seu tamanho original. Uma solução melhor, em muitos casos, será usar a max-widthpropriedade.
+
+Usando a propriedade max-width
+Se a max-widthpropriedade estiver definida como 100%, a imagem será reduzida se for necessário, mas nunca será aumentada para ser maior que seu tamanho original:
+
+Mostrar imagens diferentes dependendo da largura do navegador
+O elemento HTML <picture>permite definir imagens diferentes para diferentes tamanhos de janela do navegador.
+
+Redimensione a janela do navegador para ver como a imagem abaixo muda dependendo da largura:
+
+Flores
+Exemplo
+<picture>
+  <source srcset="img_smallflower.jpg" media="(max-width: 600px)">
+  <source srcset="img_flowers.jpg" media="(max-width: 1500px)">
+  <source srcset="flowers.jpg">
+  <img src="img_smallflower.jpg" alt="Flowers">
+</picture>
+
+Tamanho do texto responsivo
+O tamanho do texto pode ser definido com uma unidade "vw", que significa a "largura da janela de visualização".
+
+Dessa forma, o tamanho do texto seguirá o tamanho da janela do navegador:
+
+<h1 style="font-size:10vw">Hello World</h1>
+
+Viewport é o tamanho da janela do navegador. 1vw = 1% da largura da janela de visualização. Se a janela de visualização tiver 50 cm de largura, 1vw é 0,5 cm.
+

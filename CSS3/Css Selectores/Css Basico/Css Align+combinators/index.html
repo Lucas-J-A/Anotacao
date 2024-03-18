@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Index html 5</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+
+    <style>
+        .center {
+          text-align: center;
+          border: 3px solid green;
+        }
+        img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.right {
+  position: absolute;
+  right: 0px;
+  width: 300px;
+  border: 3px solid #73AD21;
+  padding: 10px;
+}
+.centerpadding {
+  padding: 70px 0;
+  border: 3px solid green;
+}
+.centervh {
+  padding: 70px 0;
+  border: 3px solid green;
+  text-align: center;
+}
+        </style>
+</head>
+
+<body>
+<h1>CSS Layout - Horizontal & Vertical Align</h1>
+
+<!--
+    Elementos de alinhamento central
+Para centralizar horizontalmente um elemento de bloco (como <div>), use margin: auto;
+
+Definir a largura do elemento impedirá que ele se estenda até as bordas de seu contêiner.
+
+O elemento então ocupará a largura especificada e o espaço restante será dividido igualmente entre as duas margens:
+Nota: O alinhamento ao centro não tem efeito se a widthpropriedade não estiver definida (ou definida como 100%).
+-->
+<div class="center">
+    <p>This text is centered.</p>
+  </div>
+  <h1>Centralizar uma imagem
+    Para centralizar uma imagem, defina as margens esquerda e direita autoe transforme-a em um blockelemento:</h1>
+    <h2>Center an Image</h2>
+<p>To center an image, set left and right margin to auto, and make it into a block element.</p>
+
+<img src="img/fundo.jpg" alt="Paris" style="width:20%; height: 200px;">
+<h1>Alinhar à esquerda e à direita - Usando a posição
+    Um método para alinhar elementos é usar position: absolute;:</h1>
+    <div class="right">
+        <p>Nota: Os elementos posicionados absolutos são removidos do fluxo normal e podem sobrepor elementos.</p>
+      </div>    
+<!--
+    Alinhamento à esquerda e à direita - Usando flutuação
+Outro método para alinhar elementos é usar a floatpropriedade:
+    .right {
+  float: right;
+  width: 300px;
+  border: 3px solid #73AD21;
+  padding: 10px;
+}
+O hack do clearfix
+Nota: Se um elemento for mais alto que o elemento que o contém e estiver flutuando, ele transbordará para fora de seu contêiner. Você pode usar o "hack clearfix" para corrigir isso (veja o exemplo abaixo).
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+-->
+<h1>Centralizar verticalmente - usando preenchimento</h1>
+<p>
+Existem muitas maneiras de centralizar um elemento verticalmente em CSS. Uma solução simples é usar top e bottom padding:</p>
+<div class="centerpadding ">
+    <p>I am vertically centered.</p>
+</div>
+<h1>Para centralizar vertical e horizontalmente, use paddinge text-align: center:</h1>
+<div class="centervh">
+    <p>Para centralizar vertical e horizontalmente</p>
+  </div>
+  <!--Centralizar Verticalmente - Usando a altura da linha
+Outro truque é usar a line-heightpropriedade com um valor igual à heightpropriedade:
+.center {
+  line-height: 200px;
+  height: 200px;
+  border: 3px solid green;
+  text-align: center;
+}
+
+.center p {
+  line-height: 1.5;
+  display: inline-block;
+  vertical-align: middle;
+}
+Centralizar verticalmente - Usando posição e transformação
+Se paddinge line-height não forem opções, outra solução é usar o posicionamento e a transformpropriedade:
+
+.center {
+  height: 200px;
+  position: relative;
+  border: 3px solid green;
+}
+
+.center p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+Centralizar Verticalmente - Usando Flexbox
+Você também pode usar o flexbox para centralizar as coisas. Apenas observe que o flexbox não é suportado no IE10 e em versões anteriores:
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  border: 3px solid green;
+}
+-->
+<h1>CSS Combinators</h1>
+<pre>
+<p>
+    Combinadores CSS
+Um combinador é algo que explica a relação entre os seletores.
+
+Um seletor CSS pode conter mais de um seletor simples. Entre os seletores simples, podemos incluir um combinador.
+
+Existem quatro combinadores diferentes em CSS:
+
+seletor descendente (espaço)
+seletor filho (>)
+seletor irmão adjacente (+)
+seletor geral de irmãos (~)
+
+</p>
+</pre>
+<!--
+    eletor de Descendentes
+O seletor descendente corresponde a todos os elementos que são descendentes de um elemento especificado.
+
+O exemplo a seguir seleciona todos os elementos <p> dentro dos elementos <div>: 
+
+Exemplo
+div p {
+  background-color: yellow;
+}
+eletor filho (>)
+O seletor filho seleciona todos os elementos que são filhos de um elemento especificado.
+
+O exemplo a seguir seleciona todos os elementos <p> que são filhos de um elemento <div>:
+
+Exemplo
+div > p {
+  background-color: yellow;
+}
+Seletor de irmãos adjacentes (+)
+O seletor irmão adjacente é usado para selecionar um elemento que está diretamente após outro elemento específico.
+
+Elementos irmãos devem ter o mesmo elemento pai, e "adjacente" significa "imediatamente a seguir".
+
+O exemplo a seguir seleciona o primeiro elemento <p> que é colocado imediatamente após os elementos <div>:
+
+Exemplo
+div + p {
+  background-color: yellow;
+}
+Seletor Geral de Irmãos (~)
+O seletor irmão geral seleciona todos os elementos que são os próximos irmãos de um elemento especificado.
+
+O exemplo a seguir seleciona todos os elementos <p> que são os próximos irmãos dos elementos <div>: 
+
+Exemplo
+div ~ p {
+  background-color: yellow;
+}
+-->
+</body>
+
+</html>

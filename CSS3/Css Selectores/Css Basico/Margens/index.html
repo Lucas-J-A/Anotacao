@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Index html 5</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <style>
+        div {
+          border: 1px solid black;
+          margin-top: 100px;
+          margin-bottom: 100px;
+          margin-right: 150px;
+          margin-left: 80px;
+          background-color: lightblue;
+        }
+        div.abrevi {
+  border: 1px solid black;
+  margin: 25px 50px 75px 100px;
+  background-color: lightblue;
+}
+div.valores3 {
+  border: 1px solid black;
+  margin: 25px 50px 75px;
+  background-color: lightblue;
+}
+h2 {
+  margin: 20px 0 0 0;
+}
+        </style>
+
+
+
+
+
+</head>
+
+<body>
+<!--As margens são usadas para criar espaço ao redor dos elementos, fora de quaisquer bordas definidas. 
+Margens CSS
+As propriedades CSS marginsão usadas para criar espaço ao redor dos elementos, fora de quaisquer bordas definidas.
+
+Com CSS, você tem controle total sobre as margens. Existem propriedades para definir a margem para cada lado de um elemento (superior, direito, inferior e esquerdo).
+
+Margem - Lados Individuais
+CSS tem propriedades para especificar a margem para cada lado de um elemento:
+
+margin-top
+margin-right
+margin-bottom
+margin-left
+Todas as propriedades de margem podem ter os seguintes valores:
+
+auto - o navegador calcula a margem
+comprimento - especifica uma margem em px, pt, cm, etc.
+% - especifica uma margem em % da largura do elemento que o contém
+herdar - especifica que a margem deve ser herdada do elemento pai
+Dica: Valores negativos são permitidos.
+-->
+
+<div>This div element has a top margin of 100px, a right margin of 150px, a bottom margin of 100px, and a left margin of 80px.</div>
+
+
+<!--Margem - Propriedade abreviada
+Para encurtar o código, é possível especificar todas as propriedades de margem em uma propriedade.
+
+A marginpropriedade é uma propriedade abreviada para as seguintes propriedades de margem individuais:
+
+margin-top
+margin-right
+margin-bottom
+margin-left
+Então, aqui está como funciona:
+
+Se a marginpropriedade tiver quatro valores:
+
+margem: 25px 50px 75px 100px;
+a margem superior é de 25px
+a margem direita é 50px
+a margem inferior é de 75px
+margem esquerda é 100px-->
+
+<h1>Margem - Propriedade abreviada</h1>
+<div class="abreviado">This div element has a top margin of 25px, a right margin of 50px, a bottom margin of 75px, and a left margin of 100px.</div>
+
+<!--Se a marginpropriedade tiver três valores:
+
+margem: 25px 50px 75px;
+a margem superior é de 25px
+as margens direita e esquerda são 50px
+a margem inferior é de 75px-->
+<div class="valores3"> This div element has a top margin of 25px, a right and left margin of 50px, and a bottom margin of 75px.</div>
+
+<!--Se a marginpropriedade tiver dois valores:
+
+margem: 25px 50px;
+as margens superior e inferior são 25px
+as margens direita e esquerda são 50px
+Se a margin propriedade tiver um valor:
+
+margem: 25px;
+todas as quatro margens são 25px
+
+O valor automático
+Você pode definir a propriedade margin para autocentralizar horizontalmente o elemento em seu contêiner.
+
+O elemento então ocupará a largura especificada e o espaço restante será dividido igualmente entre as margens esquerda e direita.
+-->
+<h2>Recolher margem</h2>
+<!--
+Recolher Margem
+As margens superior e inferior dos elementos às vezes são recolhidas em uma única margem que é igual à maior das duas margens.
+
+Isso não acontece nas margens esquerda e direita! Apenas margens superior e inferior!
+
+Observe o seguinte exemplo:
+
+-->
+</body>
+
+</html>

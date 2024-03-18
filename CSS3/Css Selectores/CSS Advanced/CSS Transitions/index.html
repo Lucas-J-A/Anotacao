@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Index html 5</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <style>
+            div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s;
+}
+        div:hover {
+  width: 300px;
+}
+div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s;
+}
+
+#div1 {transition-timing-function: linear;}
+#div2 {transition-timing-function: ease;}
+#div3 {transition-timing-function: ease-in;}
+#div4 {transition-timing-function: ease-out;}
+#div5 {transition-timing-function: ease-in-out;}
+
+div:hover {
+  width: 300px;
+}
+div.delay {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 3s;
+  transition-delay: 1s;
+}
+
+div.delay:hover {
+  width: 300px;
+}
+div.tranform {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s, height 2s, transform 2s;
+}
+
+div.tranform:hover {
+  width: 300px;
+  height: 300px;
+  transform: rotate(180deg);
+}
+    </style>
+</head>
+
+<body>
+<h1>Transições CSS</h1>
+<p>As transições CSS permitem que você altere os valores das propriedades sem problemas, durante um determinado período.</p>
+<!--
+    Como usar transições CSS?
+Para criar um efeito de transição, você deve especificar duas coisas:
+
+a propriedade CSS à qual você deseja adicionar um efeito
+a duração do efeito
+Nota: Se a parte da duração não for especificada, a transição não terá efeito, pois o valor padrão é 0.
+
+O exemplo a seguir mostra um elemento <div> vermelho de 100px * 100px. O elemento <div> também especificou um efeito de transição para a propriedade largura, com duração de 2 segundos:
+    div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s;
+}
+Alterar vários valores de propriedade
+O exemplo a seguir adiciona um efeito de transição para a propriedade largura e altura, com duração de 2 segundos para a largura e 4 segundos para a altura:
+
+Exemplo
+div {
+  transition: width 2s, height 4s;
+}
+-->
+<div></div>
+<h1>Especifique a curva de velocidade da transição</h1>
+<pre>
+<p>
+    A transition-timing-functionpropriedade especifica a curva de velocidade do efeito de transição.
+
+A propriedade da função de tempo de transição pode ter os seguintes valores:
+
+ease- especifica um efeito de transição com um início lento, depois rápido e depois termina lentamente (este é o padrão)
+linear- especifica um efeito de transição com a mesma velocidade do início ao fim
+ease-in- especifica um efeito de transição com um início lento
+ease-out- especifica um efeito de transição com um final lento
+ease-in-out- especifica um efeito de transição com início e fim lentos
+cubic-bezier(n,n,n,n)- permite definir seus próprios valores em uma função cúbica-bezier
+</p></pre>
+<div id="div1">linear</div><br>
+<div id="div2">ease</div><br>
+<div id="div3">ease-in</div><br>
+<div id="div4">ease-out</div><br>
+<div id="div5">ease-in-out</div><br>
+<!--
+    Atrasar o Efeito da Transição
+A transition-delaypropriedade especifica um atraso (em segundos) para o efeito de transição.
+
+O exemplo a seguir tem um atraso de 1 segundo antes de iniciar:
+
+Exemplo
+div {
+  transition-delay: 1s;
+}
+-->
+<div class="delay"></div>
+<h1>Transição + Transformação</h1>
+<div class="tranform"></div>
+</body>
+
+</html>

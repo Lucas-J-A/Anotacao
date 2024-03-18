@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Index html 5</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <style>
+.button {
+  background-color: #8c8c8c !important; 
+  color: white !important;
+  padding: 5px !important;
+  border: 1px solid black !important; 
+}
+
+#myDiv a {
+  color: red;
+  background-color: yellow;  
+}
+    </style>
+</head>
+
+<body>
+<h1>O que é Especificidade?</h1>
+<p>Se houver duas ou mais regras CSS que apontam para o mesmo elemento, o seletor com o maior valor de especificidade "vencerá" e sua declaração de estilo será aplicada a esse elemento HTML.
+
+    Pense na especificidade como uma pontuação/classificação que determina qual declaração de estilo será aplicada a um elemento</p>
+<!--
+    Hierarquia de Especificidade
+Cada seletor CSS tem seu lugar na hierarquia de especificidade.
+
+Existem quatro categorias que definem o nível de especificidade de um seletor:
+
+Estilos embutidos - Exemplo: <h1 style="color: pink;">
+IDs - Exemplo: #navbar
+Classes, pseudoclasses, seletores de atributos - Exemplo: .test, :hover, [href]
+Elementos e pseudoelementos - Exemplo: h1, :before
+
+Como calcular a especificidade?
+Memorize como calcular a especificidade!
+
+Comece em 0, adicione 100 para cada valor de ID, adicione 10 para cada valor de classe (ou pseudoclasse ou seletor de atributo), adicione 1 para cada seletor de elemento ou pseudoelemento.
+
+Nota: O estilo embutido recebe um valor de especificidade de 1000 e sempre recebe a prioridade mais alta!
+
+Nota 2: Há uma exceção a esta regra: se você usar a !important regra, ela substituirá até mesmo os estilos embutidos!
+
+Os seletores de ID têm uma especificidade mais alta do que os seletores de atributo - Observe as três linhas de código a seguir:
+
+Os seletores contextuais são mais específicos do que um seletor de elemento único - A folha de estilo incorporada está mais próxima do elemento a ser estilizado.
+
+a última regra será aplicada.
+
+Um seletor de classe supera qualquer número de seletores de elemento - um seletor de classe como .intro supera h1, p, div, etc:
+-->
+     
+
+    <h1>CSS The !important Rule</h1>
+    <p>O que é importante?
+        A !importantregra em CSS é usada para adicionar mais importância a uma propriedade/valor do que o normal.
+        
+        Na verdade, se você usar a !importantregra, ela substituirá TODAS as regras de estilo anteriores para essa propriedade específica nesse elemento!</p>
+        <p>This is some text in a paragraph.</p>
+
+<p class="myclass">This is some text in a paragraph.</p>
+
+<p id="myid">This is some text in a paragraph.</p>
+<!--
+    Exemplo explicado
+No exemplo acima. todos os três parágrafos terão uma cor de fundo vermelha, mesmo que o seletor de ID e o seletor de classe tenham uma especificidade mais alta. A !importantregra substitui a background-colorpropriedade em ambos os casos.
+
+Importante Sobre !importante
+A única maneira de substituir uma !important regra é incluir outra !important regra em uma declaração com a mesma (ou superior) especificidade no código-fonte - e aqui começa o problema! Isso torna o código CSS confuso e a depuração será difícil, especialmente se você tiver uma folha de estilo grande!
+
+Aqui criamos um exemplo simples. Não fica muito claro, quando você olha para o código-fonte CSS, qual cor é considerada mais importante:
+
+#myid {
+  background-color: blue !important;
+}
+
+.myclass {
+  background-color: gray !important;
+}
+
+p {
+  background-color: red !important;
+}
+
+
+
+Dica: É bom saber sobre a !important regra, você pode vê-la em algum código-fonte CSS. No entanto, não use a menos que seja absolutamente necessário.
+Talvez um ou dois usos justos de !important
+Uma maneira de usar !importanté se você precisar substituir um estilo que não pode ser substituído de nenhuma outra maneira. Isso pode acontecer se você estiver trabalhando em um sistema de gerenciamento de conteúdo (CMS) e não puder editar o código CSS. Em seguida, você pode definir alguns estilos personalizados para substituir alguns dos estilos do CMS.
+
+Outra maneira de usar !importanté: Suponha que você queira uma aparência especial para todos os botões de uma página. Aqui, os botões são estilizados com uma cor de fundo cinza, texto branco e alguns preenchimentos e bordas:
+Para "forçar" todos os botões a terem a mesma aparência, não importa o que aconteça, podemos adicionar a !important regra às propriedades do botão, assim:
+-->
+<p>Standard button: <a class="button" href="default.asp">CSS Tutorial</a></p>
+
+<div id="myDiv">
+<p>A link text inside myDiv: <a href="/html/">HTML Tutorial</a></p>
+<p>A link button inside myDiv: <a href="/html/" class="button">HTML Tutorial</a></p>
+</div>
+
+</body>
+
+</html>

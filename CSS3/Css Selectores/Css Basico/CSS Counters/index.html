@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Index html 5</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <style>
+        body {
+  counter-reset: section;
+}
+
+h1 {
+  counter-reset: subsection;
+}
+
+h1::before {
+  counter-increment: section;
+  content: "Section " counter(section) ". ";
+}
+
+h2::before {
+  counter-increment: subsection;
+  content: counter(section) "." counter(subsection) " ";
+}
+ol {
+  counter-reset: section;
+  list-style-type: none;
+}
+
+li::before {
+  counter-increment: section;
+  content: counters(section,".") " ";
+}
+    </style>
+</head>
+
+<body>
+<h1>Contadores CSS</h1>
+<!--
+    Contadores CSS são "variáveis" mantidas pelo CSS cujos valores podem ser incrementados por regras CSS (para rastrear quantas vezes eles são usados). Os contadores permitem ajustar a aparência do conteúdo com base em seu posicionamento no documento.
+
+Numeração automática com contadores
+Os contadores CSS são como "variáveis". Os valores das variáveis ​​podem ser incrementados por regras CSS (que rastrearão quantas vezes elas são usadas).
+
+Para trabalhar com contadores CSS, usaremos as seguintes propriedades:
+
+counter-reset- Cria ou redefine um contador
+counter-increment- Incrementa um valor de contador
+content- Insere conteúdo gerado
+counter()ou counters()função - Adiciona o valor de um contador a um elemento
+Para usar um contador CSS, primeiro ele deve ser criado com counter-reset.
+
+O exemplo a seguir cria um contador para a página (no seletor de corpo), então incrementa o valor do contador para cada elemento <h2> e adiciona "Section < value of the counter >:" ao início de cada elemento <h2>:
+-->
+<h1>HTML/CSS Tutorials</h1>
+<h2>HTML</h2>
+<h2>CSS</h2>
+<h2>Bootstrap</h2>
+<h2>W3.CSS</h2>
+
+<h1>Scripting Tutorials</h1>
+<h2>JavaScript</h2>
+<h2>jQuery</h2>
+<h2>React</h2>
+
+<h1>Programming Tutorials</h1>
+<h2>Python</h2>
+<h2>Java</h2>
+<h2>C++</h2>
+<!--
+    Contadores de aninhamento
+O exemplo a seguir cria um contador para a página (seção) e um contador para cada elemento <h1> (subseção). O contador "seção" será contado para cada elemento <h1> com "Seção < valor do contador de seção >.", e o contador "subseção" será contado para cada elemento <h2> com "< valor do contador de seção >.< valor do contador de subseções >
+-->
+<ol>
+    <li>item</li>
+    <li>item   
+    <ol>
+      <li>item</li>
+      <li>item</li>
+      <li>item
+      <ol>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+      </ol>
+      </li>
+      <li>item</li>
+    </ol>
+    </li>
+    <li>item</li>
+    <li>item</li>
+  </ol>
+  
+  <ol>
+    <li>item</li>
+    <li>item</li>
+  </ol>
+  
+</body>
+
+</html>

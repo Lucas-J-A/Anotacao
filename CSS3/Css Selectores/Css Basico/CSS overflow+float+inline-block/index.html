@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Index html 5</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    
+<style>
+#overflowTest {
+    background: #4CAF50;
+    color: white;
+    padding: 15px;
+    width: 50%;
+    height: 100px;
+    overflow: scroll;
+    border: 1px solid #ccc;
+  }
+  div.scrollx {
+  background-color: coral;
+  width: 200px;
+  height: 65px;
+  border: 1px solid black;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+img {
+  float: right;
+}
+.divflot {
+  float: left;
+  padding: 15px; 
+}
+
+.div1 {
+  background: red;
+}
+
+.div2 {
+  background: yellow;
+}
+
+.div3 {
+  background: green;
+}
+
+div {
+  border: 3px solid #4CAF50;
+  padding: 5px;
+}
+
+.img1 {
+  float: right;
+}
+
+.img2 {
+  float: right;
+}
+
+.clearfix {
+  overflow: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.img-container {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+  
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.active {
+  background-color: red;
+}
+span.a {
+  display: inline; /* the default for span */
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  border: 1px solid blue;  
+  background-color: yellow; 
+}
+
+span.b {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  border: 1px solid blue;    
+  background-color: yellow; 
+}
+
+span.c {
+  display: block;
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  border: 1px solid blue;    
+  background-color: yellow; 
+}
+.nav {
+  background-color: yellow; 
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav li {
+  display: inline-block;
+  font-size: 20px;
+  padding: 20px;
+}
+  </style>
+</head>
+
+<body>
+<h1>A propriedade CSS overflow controla o que acontece com o conteúdo grande demais para caber em uma área.</h1>
+<div id="overflowTest">This text is really long and the height of its container is only 100 pixels. Therefore, a scrollbar is added to help the reader to scroll the content. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem.</div>
+<!--
+Estouro de CSS
+A overflow propriedade especifica se o conteúdo deve ser recortado ou adicionado barras de rolagem quando o conteúdo de um elemento for muito grande para caber na área especificada.
+
+A overflow propriedade tem os seguintes valores:
+
+visible- Predefinição. O estouro não é cortado. O conteúdo é renderizado fora da caixa do elemento
+hidden- O estouro é cortado e o restante do conteúdo ficará invisível
+scroll- O estouro é cortado e uma barra de rolagem é adicionada para ver o restante do conteúdo
+auto- Semelhante a scroll, mas adiciona barras de rolagem apenas quando necessário
+Nota: A overflow propriedade só funciona para elementos de bloco com uma altura especificada.
+
+Nota: No OS X Lion (no Mac), as barras de rolagem ficam ocultas por padrão e são exibidas apenas quando usadas (mesmo que "overflow:scroll" esteja definido).-->
+<!--
+    estouro-x e estouro-y
+As propriedades overflow-x and overflow-y especificam se o estouro do conteúdo deve ser alterado apenas horizontalmente ou verticalmente (ou ambos):
+
+overflow-xespecifica o que fazer com as bordas esquerda/direita do conteúdo.
+overflow-yespecifica o que fazer com as bordas superior/inferior do conteúdo.-->
+<h1>As propriedades overflow-x and overflow-y</h1>
+<div class="scrollx">You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</div>
+
+<h1>CSS Layout - float and clear</h1>
+<!--A propriedade CSS float especifica como um elemento deve flutuar.
+
+A propriedade CSS clearespecifica quais elementos podem flutuar ao lado do elemento limpo e de que lado.-->
+<!--
+  A propriedade flutuante
+A float propriedade é usada para posicionar e formatar o conteúdo, por exemplo, deixar uma imagem flutuar à esquerda do texto em um contêiner.
+
+A float propriedade pode ter um dos seguintes valores:
+
+left- O elemento flutua à esquerda de seu contêiner
+right- O elemento flutua à direita de seu contêiner
+none- O elemento não flutua (será exibido exatamente onde ocorre no texto). Isso é padrão
+inherit- O elemento herda o valor float de seu pai
+Em seu uso mais simples, a float propriedade pode ser usada para quebrar o texto em torno das imagens.  
+-->
+<p><img src="img/fundo.jpg" alt="fundo de estudo" style="width:250px;height:120px;margin-left:50px;">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.</p>
+
+
+
+
+<!--Exemplo - Flutuar um ao lado do outro
+Normalmente, os elementos div serão exibidos um em cima do outro. No entanto, se usarmos float: left, podemos deixar os elementos flutuarem um ao lado do outro:-->
+<h1>Flutuar um ao lado do outro</h1>
+
+<h2>Float Next To Each Other</h2>
+
+<p>In this example, the three divs will float next to each other.</p>
+
+<div class="div1 divflot">Div 1</div>
+<div class="div2 divflot">Div 2</div>
+<div class="div3 divflot    ">Div 3</div>
+
+<h1 style="clear: left;"> CSS - clear e clearfix</h1>
+
+
+<!--
+A propriedade clara
+Quando usamos a float propriedade, e queremos o próximo elemento abaixo (não à direita ou à esquerda teremos que usar a clear propriedade.
+
+A clearpropriedade especifica o que deve acontecer com o elemento que está próximo a um elemento flutuante.
+
+A clearpropriedade pode ter um dos seguintes valores:
+
+none- O elemento não é empurrado abaixo dos elementos flutuantes à esquerda ou à direita. Isso é padrão
+left- O elemento é empurrado abaixo dos elementos flutuantes à esquerda
+right- O elemento é empurrado abaixo dos elementos flutuantes à direita
+both- O elemento é empurrado abaixo dos elementos flutuantes esquerdo e direito
+inherit- O elemento herda o valor clear de seu pai
+Ao limpar floats, você deve combinar o clear com o float: Se um elemento flutuar para a esquerda, então você deve limpar para a esquerda. Seu elemento flutuante continuará flutuando, mas o elemento desmarcado aparecerá abaixo dele na página da web.-->
+<h1>O hack do clearfix</h1>
+
+<p>Esta imagem é flutuada para a direita. Também é mais alto que o elemento que o contém, então transborda para fora de seu contêiner:</p>
+
+<div>
+  <img class="img1" src="img/fundo.jpg" alt="Pineapple" width="170" height="170">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...
+</div>
+
+<h2 style="clear:right">With Clearfix</h2>
+<p>Podemos corrigir isso adicionando uma classe clearfix com overflow: auto; para o elemento que contém:s</p>
+
+<div class="clearfix">
+  <img class="img2" src="img/fundo.jpg" alt="Pineapple" width="170" height="170">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...
+</div>
+
+<p>O overflow: autoclearfix funciona bem desde que você consiga manter o controle de suas margens e preenchimento (caso contrário, você poderá ver barras de rolagem). O novo e moderno hack do clearfix , no entanto, é mais seguro de usar, e o código a seguir é usado para a maioria das páginas da web:s</p>
+<!--
+    .clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}-->
+<h1>CSS Layout - Float Examples</h1>
+<h2>Imagens lado a lado</h2>
+<p>Float images side by side:</p>
+
+<div class="clearfix">
+  <div class="img-container">
+  <img src="img/fundo.jpg" alt="Italy" style="width:100%">
+  </div>
+  <div class="img-container">
+  <img src="img/fundo.jpg" alt="Forest" style="width:100%">
+  </div>
+  <div class="img-container">
+  <img src="img/fundo.jpg" alt="Mountains" style="width:100%">
+  </div>
+</div>
+<!--Caixas de Altura Igual
+No exemplo anterior, você aprendeu a flutuar caixas lado a lado com a mesma largura. No entanto, não é fácil criar caixas flutuantes com alturas iguais. Uma solução rápida, no entanto, é definir uma altura fixa, como no exemplo abaixo:
+No entanto , isso não é muito flexível. Tudo bem se você puder garantir que as caixas sempre terão a mesma quantidade de conteúdo. Mas muitas vezes, o conteúdo não é o mesmo. Se você tentar o exemplo acima em um celular, verá que o conteúdo da segunda caixa será exibido fora da caixa. É aqui que o CSS3 Flexbox é útil - pois pode esticar automaticamente as caixas para serem tão longas quanto a caixa mais longa:
+-->
+
+<ul>
+    <li><a href="#home" class="active">Home</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+  
+  <h1>CSS Layout - display: inline-block</h1>
+  <!--
+      A exibição: valor do bloco em linha
+Comparado com display: inline, a principal diferença é que display: inline-blockpermite definir uma largura e uma altura no elemento.
+
+Além disso, com display: inline-block, as margens/preenchimentos superiores e inferiores são respeitados, mas com display: inlineeles não.
+
+Comparado com display: block, a principal diferença é que display: inline-blocknão adiciona uma quebra de linha após o elemento, então o elemento pode ficar ao lado de outros elementos.
+
+O exemplo a seguir mostra o comportamento diferente de display: inline, display: inline-block e display: block:
+  -->
+  <h2>display: inline</h2>
+<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. <span class="a">Aliquam</span> <span class="a">venenatis</span> gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. </div>
+
+<h2>display: inline-block</h2>
+<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. <span class="b">Aliquam</span> <span class="b">venenatis</span> gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. </div>
+
+<h2>display: block</h2>
+<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. <span class="c">Aliquam</span> <span class="c">venenatis</span> gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. </div>
+
+<h1>Usando o bloco inline para criar links de navegação
+    Um uso comum para display: inline-block é exibir itens de lista horizontalmente em vez de verticalmente. O exemplo a seguir cria links de navegação horizontais:</h1>
+    <h1>Horizontal Navigation Links</h1>
+
+    <ul class="nav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#clients">Our Clients</a></li>  
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+</body>
+
+</html>

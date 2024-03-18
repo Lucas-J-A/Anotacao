@@ -1,0 +1,271 @@
+O que são Elementos Semânticos?
+Um elemento semântico descreve claramente seu significado tanto para o navegador quanto para o desenvolvedor.
+
+Exemplos de elementos não semânticos : <div>e <span>- Não informa nada sobre seu conteúdo.
+
+Exemplos de elementos semânticos : <form>, <table>, e <article>- Define claramente seu conteúdo.
+
+Elementos semânticos em HTML
+Muitos sites contêm código HTML como: <div id="nav"> <div class="header"> <div id="footer"> para indicar navegação, cabeçalho e rodapé.
+
+Em HTML existem alguns elementos semânticos que podem ser usados ​​para definir diferentes partes de uma página web:  
+
+<artigo>
+<à parte>
+<detalhes>
+<figcaption>
+<figura>
+<rodapé>
+<cabeçalho>
+<principal>
+<marca>
+<nav>
+<seção>
+<resumo>
+<hora>
+Elementos semânticos HTML
+Elemento <seção> HTML
+O <section>elemento define uma seção em um documento.
+
+De acordo com a documentação HTML do W3C: "Uma seção é um agrupamento temático de conteúdo, normalmente com um título".
+
+Exemplos de onde um <section>elemento pode ser usado:
+
+Capítulos
+Introdução
+Novos itens
+Informações de Contato
+Uma página da web normalmente pode ser dividida em seções para introdução, conteúdo e informações de contato.
+
+Elemento HTML <article>
+O <article>elemento especifica conteúdo independente e autocontido.
+
+Um artigo deve fazer sentido por si só, e deve ser possível distribuí-lo independentemente do resto do site.
+
+Exemplos de onde o <article>elemento pode ser usado:
+
+Postagens do fórum
+Postagens no blog
+Comentários do usuário
+Cartões de produtos
+Artigos de jornal
+
+Aninhando <article> em <section> ou vice-versa?
+O <article> elemento especifica conteúdo independente e autocontido.
+
+O <section>elemento define a seção em um documento.
+
+Podemos usar as definições para decidir como aninhar esses elementos? Não nós não podemos!
+
+Assim, você encontrará páginas HTML com <section>elementos contendo <article>elementos e <article>elementos contendo <section>elementos.
+
+Elemento HTML <header>
+O <header>elemento representa um contêiner para conteúdo introdutório ou um conjunto de links de navegação.
+
+Um <header>elemento normalmente contém:
+
+um ou mais elementos de título (<h1> - <h6>)
+logotipo ou ícone
+informações de autoria
+Nota: Você pode ter vários <header>elementos em um documento HTML. No entanto, <header>não pode ser colocado dentro de um <footer>ou <address>outro <header>elemento.
+
+Elemento HTML <rodapé>
+O <footer>elemento define um rodapé para um documento ou seção.
+
+Um <footer>elemento normalmente contém:
+
+informações de autoria
+Informações sobre direitos autorais
+Informações de Contato
+Mapa do site
+voltar ao topo links
+documentos relacionados
+Você pode ter vários <footer>elementos em um documento.
+
+Elemento HTML <nav>
+O <nav>elemento define um conjunto de links de navegação.
+
+Observe que nem todos os links de um documento devem estar dentro de um <nav>elemento. O <nav>elemento destina-se apenas ao bloco principal de links de navegação.
+
+Os navegadores, como leitores de tela para usuários com deficiência, podem usar esse elemento para determinar se devem omitir a renderização inicial desse conteúdo.
+
+Elemento HTML <à parte>
+O <aside>elemento define algum conteúdo além do conteúdo em que é colocado (como uma barra lateral).
+
+O <aside>conteúdo deve estar indiretamente relacionado ao conteúdo circundante.
+
+Elementos HTML <figure> e <figcaption>
+A <figure>tag especifica conteúdo independente, como ilustrações, diagramas, fotos, listagens de código etc.
+
+A <figcaption>tag define uma legenda para um <figure>elemento. O <figcaption>elemento pode ser colocado como o primeiro ou o último filho de um <figure>elemento.
+
+O <img>elemento define a imagem/ilustração real. 
+
+Guia de estilo HTML
+Um código HTML consistente, limpo e organizado torna mais fácil para outras pessoas lerem e entenderem seu código.
+
+Aqui estão algumas diretrizes e dicas para criar um bom código HTML.
+
+Sempre declarar o tipo de documento
+Sempre declare o tipo de documento como a primeira linha do documento.
+
+O tipo de documento correto para HTML é:
+
+<!DOCTYPE html>
+
+Fechar todos os elementos HTML
+Em HTML, você não precisa fechar todos os elementos (por exemplo, o <p>elemento).
+
+No entanto, recomendamos fechar todos os elementos HTML, assim:
+
+Usar nomes de atributos em minúsculas
+HTML permite misturar letras maiúsculas e minúsculas em nomes de atributos.
+
+No entanto, recomendamos usar nomes de atributos em letras minúsculas, porque:
+
+Misturar nomes maiúsculos e minúsculos parece ruim
+Os desenvolvedores normalmente usam nomes em minúsculas
+Minúsculas parecem mais limpas
+Minúsculas são mais fáceis de escrever
+
+Sempre citar valores de atributo
+HTML permite valores de atributo sem aspas.
+
+No entanto, recomendamos citar valores de atributo, porque:
+
+Os desenvolvedores normalmente citam valores de atributos
+Os valores cotados são mais fáceis de ler
+Você DEVE usar aspas se o valor contiver espaços
+
+Sempre especificar alt, largura e altura para imagens
+Sempre especifique o altatributo para imagens. Este atributo é importante se a imagem por algum motivo não puder ser exibida.
+
+Além disso, sempre defina o widthe heightdas imagens. Isso reduz a cintilação, pois o navegador pode reservar espaço para a imagem antes de carregar.
+
+Espaços e sinais de igual
+HTML permite espaços em torno de sinais de igual. Mas sem espaço é mais fácil de ler e agrupa melhor as entidades.
+
+Evite longas linhas de código
+Ao usar um editor de HTML, NÃO é conveniente rolar para a direita e para a esquerda para ler o código HTML.
+
+Tente evitar linhas de código muito longas.
+
+Linhas em branco e recuo
+Não adicione linhas em branco, espaços ou recuos sem motivo.
+
+Para facilitar a leitura, adicione linhas em branco para separar blocos de código grandes ou lógicos.
+
+Para facilitar a leitura, adicione dois espaços de recuo. Não use a tecla tab.
+
+Nunca pule o elemento <title>
+O <title>elemento é necessário em HTML.
+
+O conteúdo de um título de página é muito importante para a otimização de mecanismos de busca (SEO)! O título da página é usado pelos algoritmos do mecanismo de pesquisa para decidir a ordem ao listar as páginas nos resultados da pesquisa.
+
+O <title>elemento:
+
+define um título na barra de ferramentas do navegador
+fornece um título para a página quando ela é adicionada aos favoritos
+exibe um título para a página nos resultados do mecanismo de pesquisa
+Portanto, tente tornar o título o mais preciso e significativo possível: 
+
+No entanto, recomendamos sempre adicionar as tags <html>e !<body>
+
+A omissão <body>pode produzir erros em navegadores mais antigos.
+
+Omitindo <html>e <body> também pode travar software DOM e XML.
+
+Omitindo <head>?
+A tag HTML <head> também pode ser omitida.
+
+Os navegadores adicionarão todos os elementos antes <body>de , a um elemento padrão <head> .
+
+Fechar elementos HTML vazios?
+Em HTML, é opcional fechar elementos vazios.
+
+Adicione o atributo lang
+Você deve sempre incluir o langatributo dentro da <html>tag, para declarar o idioma da página da Web. Isto destina-se a ajudar os motores de busca e navegadores.
+
+Metadados
+Para garantir a interpretação adequada e a indexação correta do mecanismo de pesquisa, tanto o idioma quanto a codificação de caracteres devem ser definidos o mais cedo possível em um documento HTML:<meta charset="charset">
+
+Configurando a janela de visualização
+A janela de visualização é a área visível do usuário de uma página da web. Varia de acordo com o dispositivo - será menor em um telefone celular do que em uma tela de computador.
+
+Você deve incluir o seguinte <meta>elemento em todas as suas páginas da web:
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+Isso fornece ao navegador instruções sobre como controlar as dimensões e o dimensionamento da página.
+
+A width=device-widthparte define a largura da página para seguir a largura da tela do dispositivo (que varia de acordo com o dispositivo).
+
+A initial-scale=1.0parte define o nível de zoom inicial quando a página é carregada pela primeira vez pelo navegador.
+
+Aqui está um exemplo de uma página da web sem a meta tag viewport e a mesma página da web com a meta tag viewport:
+
+Usando folhas de estilo
+Use uma sintaxe simples para vincular a folhas de estilo (o typeatributo não é necessário):
+
+<link rel="stylesheet" href="styles.css">
+Regras CSS curtas podem ser escritas compactadas, assim:
+
+p.intro {font-family:Verdana;font-size:16em;}
+Regras CSS longas devem ser escritas em várias linhas:
+
+body {
+  background-color: lightgrey;
+  font-family: "Arial Black", Helvetica, sans-serif;
+  font-size: 16em;
+  color: black;
+}
+Coloque o colchete de abertura na mesma linha do seletor
+Use um espaço antes do colchete de abertura
+Use dois espaços de recuo
+Use ponto e vírgula após cada par propriedade-valor, incluindo o último
+Use apenas aspas em torno de valores se o valor contiver espaços
+Coloque o colchete de fechamento em uma nova linha, sem espaços à esquerda
+Carregando JavaScript em HTML
+Use uma sintaxe simples para carregar scripts externos (o typeatributo não é necessário):
+
+<script src="myscript.js">
+Acessando elementos HTML com JavaScript
+O uso de código HTML "desarrumado" pode resultar em erros de JavaScript.
+
+Essas duas instruções JavaScript produzirão resultados diferentes:
+
+Exemplo
+getElementById("Demo").innerHTML = "Hello";
+
+getElementById("demo").innerHTML = "Hello";
+Visite o Guia de Estilo JavaScript .
+
+Usar nomes de arquivo em minúsculas
+Alguns servidores web (Apache, Unix) diferenciam maiúsculas de minúsculas sobre nomes de arquivos: "london.jpg" não pode ser acessado como "London.jpg".
+
+Outros servidores web (Microsoft, IIS) não diferenciam maiúsculas de minúsculas: "london.jpg" pode ser acessado como "London.jpg".
+
+Se você usar uma mistura de maiúsculas e minúsculas, você deve estar ciente disso.
+
+Se você passar de um servidor que não diferencia maiúsculas de minúsculas para um servidor que diferencia maiúsculas de minúsculas, até mesmo pequenos erros quebrarão sua web!
+
+Para evitar esses problemas, sempre use nomes de arquivo em letras minúsculas!
+
+Extensões de arquivo
+Os arquivos HTML devem ter a extensão .html ( é permitido .htm ).
+
+Os arquivos CSS devem ter uma extensão .css .
+
+Os arquivos JavaScript devem ter uma extensão .js .
+
+Diferenças entre .htm e .html?
+Não há diferença entre as extensões de arquivo .htm e .html!
+
+Ambos serão tratados como HTML por qualquer navegador web e servidor web.
+
+Nomes de arquivo padrão
+Quando uma URL não especifica um nome de arquivo no final (como "https://www.w3schools.com/"), o servidor apenas adiciona um nome de arquivo padrão, como "index.html", "index.htm", " default.html" ou "default.htm".
+
+Se o seu servidor estiver configurado apenas com "index.html" como o nome de arquivo padrão, seu arquivo deverá ser denominado "index.html" e não "default.html".
+
+No entanto, os servidores podem ser configurados com mais de um nome de arquivo padrão; geralmente você pode configurar quantos nomes de arquivo padrão desejar.
+

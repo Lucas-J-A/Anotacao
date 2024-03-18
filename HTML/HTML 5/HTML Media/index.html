@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Index html 5</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+</head>
+
+<body>
+
+<!--O que é multimídia?
+Multimídia vem em muitos formatos diferentes. Pode ser quase qualquer coisa que você possa ouvir ou ver, como imagens, música, som, vídeos, discos, filmes, animações e muito mais.
+
+As páginas da Web geralmente contêm elementos multimídia de diferentes tipos e formatos.-->
+
+<!--
+    O elemento HTML <video>é usado para mostrar um vídeo em uma página da web.
+-->
+<video width="320" height="240" controls>
+    <source src="movie.mp4" type="video/mp4">
+    <source src="movie.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+  </video>
+
+  <!--Como funciona
+O controls atributo adiciona controles de vídeo, como reproduzir, pausar e volume.
+
+É uma boa ideia incluir sempre widthe height atributos. Se a altura e a largura não estiverem definidas, a página poderá piscar enquanto vídeo é carregado.
+
+O <source>elemento permite especificar arquivos de vídeo alternativos que o navegador pode escolher. O navegador usará o primeiro formato reconhecido.
+
+O texto entre as tags <video>e </video>só será exibido em navegadores que não suportam o <video>elemento.
+Para iniciar um vídeo automaticamente, use o autoplayatributo:
+<video width="320" height="240" autoplay>
+    
+    Adicione muteddepois autoplaypara permitir que seu vídeo comece a ser reproduzido automaticamente (mas silenciado):
+
+Exemplo
+<video width="320" height="240" autoplay muted>
+-->
+
+<!-- audio
+O elemento HTML <audio>é usado para reproduzir um arquivo de áudio em uma página da web.
+    Para iniciar um arquivo de áudio automaticamente, use o autoplayatributo:
+    Adicione muteddepois autoplaypara permitir que seu arquivo de áudio comece a ser reproduzido automaticamente (mas silenciado):
+
+
+-->
+
+<audio controls autoplay>
+    <source src="horse.ogg" type="audio/ogg">
+    <source src="horse.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+  </audio>
+
+<!--Plug-ins HTML
+Plug-ins são programas de computador que estendem a funcionalidade padrão do navegador.
+
+Plug-ins
+Os plug-ins foram projetados para serem usados ​​para muitas finalidades diferentes:
+
+Para executar applets Java
+Para executar controles Microsoft ActiveX
+Para exibir filmes em Flash
+Para exibir mapas
+Para verificar se há vírus
+Para verificar um ID bancário
+
+O elemento <object>
+O <object>elemento é suportado por todos os navegadores.
+
+O <object>elemento define um objeto incorporado em um documento HTML.
+
+Ele foi projetado para incorporar plug-ins (como applets Java, leitores de PDF e Flash Players) em páginas da Web, mas também pode ser usado para incluir HTML em HTML:
+-->
+
+<object width="100%" height="500px" data="snippet.html"></object>
+<!--imagens se preferir:--> 
+
+<object data="audi.jpeg"></object>
+
+<!--O elemento <embed>
+O <embed>elemento é suportado em todos os principais navegadores.
+
+O <embed>elemento também define um objeto incorporado em um documento HTML.
+
+Os navegadores da Web suportam o elemento <embed> há muito tempo. No entanto, não fazia parte da especificação HTML antes do HTML5.-->
+
+    <embed src="audi.jpeg">
+
+        <!--Vídeos HTML do YouTube
+A maneira mais fácil de reproduzir vídeos em HTML é usar o YouTube.
+
+Lutando com formatos de vídeo?
+Converter vídeos para diferentes formatos pode ser difícil e demorado.
+
+Uma solução mais fácil é permitir que o YouTube reproduza os vídeos em sua página da web.
+
+ID do vídeo do YouTube
+O YouTube exibirá um id (como tgbNymZ7vqY), quando você salvar (ou reproduzir) um vídeo.
+
+Você pode usar esse id e fazer referência ao seu vídeo no código HTML.
+
+Reproduzindo um vídeo do YouTube em HTML
+Para reproduzir seu vídeo em uma página da Web, faça o seguinte:
+
+Envie o vídeo para o YouTube
+Anote o ID do vídeo
+Defina um <iframe>elemento em sua página da web
+Deixe o srcatributo apontar para o URL do vídeo
+Use os atributos widthe heightpara especificar a dimensão do player
+Adicione quaisquer outros parâmetros ao URL (veja abaixo)
+-->
+
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/tgbNymZ7vqY">
+</iframe>
+
+<!--Reprodução automática do YouTube + Silenciar
+Você pode permitir que seu vídeo comece a ser reproduzido automaticamente quando um usuário visitar a página, adicionando autoplay=1ao URL do YouTube. No entanto, iniciar um vídeo automaticamente é irritante para seus visitantes!
+
+Observação: os navegadores Chromium não permitem reprodução automática na maioria dos casos. No entanto, a reprodução automática sem som é sempre permitida.
+
+Adicione mute=1depois autoplay=1para que seu vídeo comece a ser reproduzido automaticamente (mas silenciado).-->
+
+<iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1">
+</iframe>
+
+<!--Loop do YouTube
+Adicione loop=1para deixar seu vídeo em loop para sempre.
+
+Valor 0 (padrão): O vídeo será reproduzido apenas uma vez.
+
+Valor 1: O vídeo será repetido (para sempre).-->
+
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&loop=1">
+</iframe>
+<!--Controles do YouTube
+Adicionar controls=0para não exibir controles no player de vídeo.
+
+Valor 0: os controles do player não são exibidos.
+
+Valor 1 (padrão): Os controles do player são exibidos.-->
+
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
+</iframe>
+</body>
+
+</html>

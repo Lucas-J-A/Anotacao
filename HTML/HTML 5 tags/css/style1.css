@@ -1,0 +1,6 @@
+
+table,th,td{border: 1px solid #000;}
+.nome{background-color: red;}
+.email{background-color: blue;}
+.fone{background-color:green;}
+.cargo{background-color:yellow;}

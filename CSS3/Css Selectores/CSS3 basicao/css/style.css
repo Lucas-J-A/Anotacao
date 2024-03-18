@@ -1,0 +1,466 @@
+/*Comentario em css css*/
+/*Como escreve as Tags css*/
+/*Seletor{propriedade:valor;}*/
+
+
+
+/*Color= seta cor
+font-size= seta tamanho da letra
+font-family= seta qual fonte letra vai ser
+*/
+
+/*Seletor universal * todos itens de documento
+usa para resetar todo layout
+*{margin:0; padding0; color:red;}
+*/
+
+
+
+
+/*
+width =seta largura
+height= seta altura
+border= seta bordas
+background-color = seta cor de fundo
+cursor=seta tipo do curso
+*/
+/*
+[type="text"] faz formatação setar apenas input tipo text
+[type="email"] faz formatação setar apenas input tipo email
+*/
+input[type="text"]{width:200px;background-color:#ccc; height:30px; border:none;}
+input[type="email"]{width:200px;background-color:#cff; height:30px; border:none;}
+input[name="submit"]{width:800px;background-color:#fcc; height:30px; border:none; cursor:pointer;color:#fff;}
+
+/*Seletor Tag para setar somente essa tag
+*/
+h2{color:blue; font-size:35px; font-family:tahoma;}
+/*text-align = seta alinhamento do seletor*/
+/*agrupamento de seletores seletor,seletor,seletor{}*/
+h1,h3,p{color:red; text-align:center;}
+
+/*Seletor class com .nome-da-class
+pode ser usado para varios elementos so colocar nome da classe*/
+.texto-principal{color:white; text-align:center;}
+.fundo-principal{background-color:red; padding:10px;}
+
+/*seletor id #nome-do-id
+pode ser usado somente um id para cada tag html
+*/
+#conteudo{background-color:blue; padding:20px; color:green;}
+/* width:80% siginifica 80% da tela
+#conteudo1{background-color:green; padding:20px; color:#fff; width:80%; height:100px;}
+*/
+
+/*max-width= tamanho maximo da largura
+min-width= tamanho minimo da largura
+max-height= tamanho maximo da altura
+min-height= tamanho minimo da altura
+
+*/
+#conteudo1{
+	background-color:green; 
+	padding:20px; 
+	color:#fff; 
+	width:80%; 
+	max-width:500px; 
+	min-width:50px;
+	}
+	/*padding= espassamento do conteudo
+	pode escolher o 
+	top=topo 
+	right=embaixo 
+	bottom=base
+	left=esquerda
+    pode ser escrito apenas com um padding atribuindo no sentido horario
+    top,right,bottom,left	
+	pading:10px 20px 30px 30px;
+	*/
+#exemplo{
+	background-color:green; 
+	padding-top:10px;
+	padding-right:20px;
+	padding-bottom:30px;
+	padding-left:30px;
+	color:#fff; 
+	width:500px; 
+
+	}
+	/*margin= espaço da area
+	pode escolher o 
+	top=topo 
+	right=embaixo 
+	bottom=base
+	left=esquerda
+    pode ser escrito apenas com um margin atribuindo no sentido horario
+    top,right,bottom,left	
+	margin 20px 20px 20px 20px;
+	*/
+#exemplo2{
+	background-color:yellow; 
+	padding-top:10px;
+	padding-right:20px;
+	padding-bottom:30px;
+	padding-left:30px;
+	color:#fff; 
+	width:500px; 
+	margin-top:20px;
+	margin-left:20px;
+	margin-right:20px;
+	margin-bottom:20px;
+	}
+/*
+color define cor do texto
+text-transform=traforma todo o texto
+uppercase(letra maiuscula)
+lowercase(letra minuscula)
+capitalize(todas primeira letra fica maiuscula)
+text-indent=seta um recuo na primeira palavra
+line-height=tamnho da linha
+direction= direção do texto rtl(direta para esquerda) ltr(esquerda para direita)
+letter-spacing=espaço de uma letra para outra
+word-spacing=espaço das palavras
+*/
+	p{
+		color:black;
+		text-transform:uppercase;
+		text-indent:20px;
+		line-height:20px;
+		direction:ltr;
+		letter-spacing:5px;
+		word-spacing:-3;
+	
+	}
+	/*
+text-align= define alinhamento do texto left(esquerda) right(direita) center(centro)
+text-decoration= define uma decoração para o texto underline(linha em baixo)
+overline(linha embaixo)
+linhe-through(linha no meio do texto)
+none(sem linha para tirar linha do link)
+justify(justificado)
+text-shadow= sombra do texto
+tex-shadow: posição horizontal da sombra, posição vertical da sombra, desfoque da sombra, cor
+*/
+.h1-1{text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);text-align:left; text-decoration:underline;}
+.h2-2{text-align:right; text-decoration:overline;}
+.h3-3{text-align:center; text-decoration:line-through}
+
+/*----------------------------------------------------------------------------*/
+/*
+box-sizing:seta tamanho da caixa
+border-box= seta caixa para padding nao aumenta tamanho do elemento
+box-shadow= seta uma sombra para a caixa 
+posição horizontal da sombra, posição vertical da sombra, desfoque da sombra, cor
+*/
+*{box-sizing:border-box;}
+#conteudo3{
+	
+background-color:red;
+width:300px;
+padding:20px;
+box-shadow: 10px 10px 5px green;
+}
+/*-----------------------------------------------------------------------------------*/
+/*
+overflow=seta quando tamanho ecede o elemento
+hidden=esconde oque fico a mais no elemento
+visible=deixa visivel oque sobro do elemento
+scroll=barra de rolagem
+auto= vai adicionar somente barra onde e necessario
+*/
+#conteudo4{
+	
+background-color:red;
+width:400px;
+height:100px;
+overflow:auto;
+
+}
+/*colocar id depois tag  #conteudo p
+vai fazer somente tags dentro desse id serem setadas
+opacity=seta tranparencia 0.5=50%
+*/
+
+#conteudo p{opacity:0.9;}
+
+/*--------------------------------------------------------------------------------------------*/
+
+/*
+border-radius= seta aredondamento dos cantos
+    pode ser escrito apenas com um border-radius atribuindo no sentido horario
+    top,right,bottom,left	
+	border-radius:10px 20px 30px 30px;
+	ou 
+	para todos os cantos com apenas um atributo
+	border-radius:20px;
+	pode ser trabalha individual cada lado
+	ex: border-top-left-radius:20px; topo lado esquerdo
+	ex: border-top-right-radius:20px; topo lado direito
+	ex: border-bottom-left-radius:20px; base lado esquerdo
+	ex: border-bottom-right-radius:20px; topo lado direito
+*/
+#bloco{
+background-color:green;
+width:300px;
+height:150px;
+border-radius:20px;
+}
+/*
+font-family=define  uma serie de fonts que sera usado pelo navegador
+serif= font generica
+font-family:Arial, Verdana,sans-serif;
+font-family:Times,"Times New Roman",serif;
+*/
+/*
+font-variant:seta variação do texto
+aceita normal ou small-caps
+*/
+
+/*
+font-weight= especifica o peso ou a intensidade da fonte 
+Valores
+normal=Peso normal. O mesmo que 400.
+bold=Peso negrito. O mesmo que 700.
+lighter=Um peso de fonte mais claro que o elemento pai (dentre os pesos disponíveis da fonte).
+bolder=Um peso de fonte mais escuro que o elemento pai (dentre os pesos disponíveis da fonte).
+100, 200, 300, 400, 500, 600, 700, 800, 900
+Pesos numéricos para fontes que oferecem mais que normal e negrito.
+*/
+/*
+font-style=seta estilo do texto
+font-size=seta tamanho do texto
+*/
+
+/*
+*{font-size:100%}
+seta font para todo texto
+font-size:1em;=seta 1 medida do padrão do navegador 1em=16px geralmente
+para calcular px para em vc divide px/em
+ex: 40px/16px = 2.5em
+*/
+*{
+	font-size:100%;
+}
+/*Site para baixa fontes
+https://www.fontsquirrel.com/
+depois de baixar vc vai em generator e tranforma font para web
+woff é arquivo que vc pega ^^
+*/
+@font-face{
+	font-family :open_sans;
+	src: url(opensans-regular-webfont.woff);
+}
+
+#fonts{
+	
+	font-family: 'Oswald', sans-serif;
+	font-variant:small-caps;
+	font-weight:bold;
+	font-style:italic;
+	font-size:1em;
+}
+
+/*-----------------------------------------------------*/
+/*
+cores podem ser usados 
+por nomes predefinidos ex:blue , red;
+por hexdecimal ex:#40b78c;
+por rgb ex:(230,89,225);
+por rgba ex:(230,89,225,0.5); r=red g=green= b=blue a=opacity
+por hsl ex:(20,100%,59%);
+por hsla ex:(20,100%,59%,0.5);
+
+*/
+/*Gradiente*/
+/*background:linear-gradient(to right, red,blue)*/
+/*
+no gradiente tem mistura de uma cor para outra
+passa os parametros(Um parâmetro é um dado que é considerado necessário para analisar ou valorizar uma situação.)
+linear gradiente em linhar
+background:linear-gradient(forma do gradiente)(to right(direção do gradiente),blue(cor),red(cor)...black(cor))
+background:linear-gradient:(80deg,red,blue)
+                           (angulo)
+cor pode ser em RGBA efeito fica mt bunito
+
+*/
+/*
+radial em circulo ponto no meio e a primeira cor
+background-color:radial-gradient(red,blue)*/
+#cores{
+	width:200px;
+	height:200px;
+	background:linear-gradient(to right,red,blue);
+	color:white;
+	}
+	/*---------FLOAT--------*/
+	#base{
+		background-color:green;
+		width:600px;
+		height:600px;
+		
+	}
+	/*float faz elemento flutua para um lado dentro do espaço*/
+	#esquerda{
+		background-color:red;
+		width:300px;
+		height:300px;
+		float:left;
+		
+	}
+
+	#direita{
+		background-color:blue;
+		width:300px;
+		height:300px;
+		float:right;
+			
+	}
+/*--------------------POSITION-----------*/
+/*
+position:relative; faz posição de quem esta drento dessa tag se relativo a ele ao elemento pai
+*/
+
+	#conteudo4{
+		background-color:red;
+		width:600px;
+		height:600px;
+		position:relative;
+		
+	}
+/*
+position=seta posição do elemento
+por padrao ele e static
+position:static;
+position:absolute; permite que elemento seja posicionado qualquer lugar da pagina
+position:absolute;left:0;top:0; seta as cordenadas pode ser usado top e bottom tambem
+*/
+/*
+position:fixed; seta uma posição fixa na pagina nao some mesmo se rolar o scroll(barra de rolagem)
+*/
+	#texto4{
+		width:500px;
+		background-color:green;
+		position:absolute;left:0;top:40px;
+		
+	}
+
+/*--------------------------Border--------------------------------------*/
+/*border-style=seta o estilo da borda
+dotted - Define uma borda pontilhada
+dashed - Define uma borda tracejada
+solid - Define uma borda sólido
+double - Define uma margem dupla
+groove- Define uma borda sulcada 3D. O efeito depende do valor border-color
+ridge- Define uma borda ridged 3D. O efeito depende do valor border-color
+inset- Define uma borda inset 3D. O efeito depende do valor border-color
+outset- Define uma borda início 3D. O efeito depende do valor border-color
+none - Define sem fronteira
+hidden - Define uma borda escondida
+*/
+/*pode se escolher tambem o tamanho da borada com 
+border-width:5px;
+setar cor da borda
+border-color:red;
+*/
+/*outline
+outline seta estilo, cor e largura de um esboço.
+esboço é uma linha que é desenhada em torno de elementos (fora das fronteiras) 
+para fazer o elemento "destacam-se".
+*/
+ #exemplo3{
+	 
+	 border-style:5px solid yellow;
+	 outline:groove;
+	 outline-color:red;
+ }
+/*transisiton
+transições CSS3 permite alterar os valores de 
+propriedade sem problemas (de um valor para outro), 
+durante um determinado período
+*/
+
+/*transition-property
+define qual medida vai suavizar a trasição
+*/
+/*transition-duration
+define tempo da transição em segundos
+*/
+/*transition-timing-function
+define ritimo da transição
+ease - especifica um efeito de transição com um arranque lento, em seguida, rapidamente, em seguida, termina-se lentamente (isto é o padrão)
+linear - especifica um efeito de transição com a mesma velocidade do início ao fim
+ease-in - especifica um efeito de transição com um arranque lento
+ease-out - especifica um efeito de transição com uma extremidade lento
+ease-in-out - especifica um efeito de transição com um lento início e fim
+cubic-bezier(n,n,n,n) - permite definir seus próprios valores em uma função cúbica-bezier
+*/
+/*
+transition-delay
+define tempo de espera para começa a transição
+*/
+ #exemplo4{
+	width:200px;
+	height:200px;
+	background-color:red;
+	transition: width 2s linear 1s;
+ }
+/*hover
+especificar um novo valor para a 
+quando um usuário passar o mouse sobre o elemento
+ */
+#exemplo4:hover{
+	width:350px;
+	height:350px;
+	background-color:green;
+	
+}
+
+/*background
+definir os efeitos de fundo para os elementos.
+*/
+/*
+background-color propriedade especifica a cor de fundo de um elemento.
+
+background-image: url("paper.gif");
+
+A background-image propriedade especifica uma imagem para usar como fundo de um elemento.
+Por padrão, a background-image propriedade repete uma imagem horizontalmente e verticalmente.
+Se a imagem acima é repetido apenas horizontalmente ( background-repeat: repeat-x;), o fundo vai parecer melhor:
+
+background-repeat: no-repeat;
+Mostrando a imagem de fundo apenas uma vez
+
+background-position: right top;
+A posição da imagem é especificado pela background-positionpropriedade:
+
+background-attachment: fixed;
+Para especificar que a imagem de fundo deve ser fixado (não vai rolar com o resto da página)
+
+Para encurtar o código, também é possível especificar 
+todas as propriedades de fundo em uma única propriedade. 
+Isso é chamado de propriedade estenográfica.
+
+Ao usar a propriedade estenográfica a ordem dos valores de propriedade é:
+
+background: #ffffff url("img_tree.png") no-repeat right top;
+
+background-color
+background-image
+background-repeat
+background-attachment
+background-position
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+

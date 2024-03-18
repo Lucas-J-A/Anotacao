@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="PT-BR">
+<head>
+<title>CSS3</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/style.css">
+<!--
+<style>
+/*Comentario em css css*/
+/*Como escreve as Tags css*/
+/*Seletor{propriedade:valor;}*/
+h1{color:green; font-size:40px;}
+</style>-->
+<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+</head>
+<body>
+<h2>Olá Mundo</h2>
+
+<br>
+<h2>Seletor</h2>
+<p>Paragrafo com Seletor *{margin:0; padding0; color:red;}</p>
+
+<form>
+
+<h4>input[type="text"]{width:200px;background-color:#ccc; height:30px; border:none;}:<h4><br>
+<input type="text" name="nome"><br>
+<h4>input[type="email"]{width:200px;background-color:#cff; height:30px; border:none;}:<h4><br><input type="email" name="email"><br>
+<h4>input[name="submit"]{width:800px;background-color:#fcc; height:30px; border:none; cursor:pointer;color:#fff;}</h4>
+
+<input type="submit" name="submit" value="enviar"><br>
+
+
+</form><br>
+
+<h1>Agrupamento de seletores seletor,seletor,seletor{propriedade:valor;}</h1>
+<h3> h1,h3,p{color:red; text-align:center;}</h3>
+<p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. 
+Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker</p>
+
+
+<h1>Seletor Class (p class="texto-principal fundo-principal")</h1>
+
+<p class="texto-principal fundo-principal">.texto-principal{color:white; text-align:center;} .fundo-principal{background-color:red; padding:10px;} </p>
+
+<div id="conteudo">
+<h1>Seletor ID #nome{propriedade:valor;}
+<p>#conteudo{background-color:blue; padding:20px; color:green;}</p>
+</div><br>
+
+<div id="conteudo1">
+Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, 
+e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja 
+de tipos e os embaralhou para fazer um livro de modelos de tipos. 
+Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a 
+editoração eletrônica, 
+</div>
+<br>
+<div id="exemplo">
+<h1>pading:10px 20px 30px 30px;</h1>
+Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, 
+e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja 
+de tipos e os embaralhou para fazer um livro de modelos de tipos. 
+Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a 
+editoração eletrônica, 
+</div><br>
+
+<div id="exemplo2">
+<h1>Margin margin:20px 20px 20px 20px;</h1>
+Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, 
+e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja 
+de tipos e os embaralhou para fazer um livro de modelos de tipos. 
+Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a 
+editoração eletrônica, 
+</div><br>
+<h1>Text</h1>
+<p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, 
+e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja 
+de tipos e os embaralhou para fazer um livro de modelos de tipos. </P>
+
+<h1 class="h1-1">Esquerda {text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);text-align:left; text-decoration:underline;}</h1>
+<h2 class="h2-2">Direita {text-align:right;text-decoration:overline;}<h2>
+<h3 class="h3-3">Centro {text-align:center;text-decoration:line-through}</h3>
+
+<h1>Box sizing e Box shadow</h1>
+<div id="conteudo3">
+*{box-sizing:border-box;}
+#conteudo3{
+	
+background-color:red;
+width:300px;
+padding:20px;
+box-shadow: 10px 10px 5px green;
+} 
+</div><br>
+
+<h1>Overflows e Opacity</h1>
+<div id="conteudo4">
+<p>#conteudo4{
+	
+background-color:red;
+width:300px;
+height:50px;
+overflow:visible;
+
+}</p>
+</div><br>
+
+<h1>Border Radius</h1>
+<div id="bloco">
+<p>#conteudo4{
+	
+background-color:red;
+width:300px;
+height:50px;
+overflow:visible;
+
+}</p>
+</div><br>
+<h1>Fonts</h1>
+<p id="fonts">Esse é meu Texto </p><br>
+
+<h1>Fonts-externa</h1>
+<p id="fonts">Esse é meu Texto </p><br>
+
+<div id="cores">
+Cores
+</div>
+
+
+<h1>Float</h1>
+<div id="base">
+<div id="esquerda">
+#esquerda{
+		background-color:red;
+		width:300px;
+		height:300px;
+		float:left;
+		
+	}
+</div>
+<div id="direita">
+	#direita{
+		background-color:blue;
+		width:300px;
+		height:300px;
+		float:right;
+			
+	}
+
+</div>
+</div><br>
+
+<div id="conteudo4">
+<div id="texto4">
+<h1>Posisiton</h1>
+Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, 
+e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja 
+de tipos e os embaralhou para fazer um livro de modelos de tipos. 
+Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a 
+editoração eletrônica, 
+</div>
+</div><br>
+<h1>Border e Outline</h1>
+<p id="exemplo3">
+Texto texto texto
+</p><br>
+<div id="exemplo4">
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body> 
+
+</html>

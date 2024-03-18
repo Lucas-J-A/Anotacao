@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" user-scalabe=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0>
+    <!--
+  content="width=device-width" = Diz que site vai ter a largura da tela do dispositivo
+  
+  user-scalabe=no= usuario nao pode mexer na escala
+  initial-scale=1.0, = escala inicial
+  maximum-scale=1.0, = escala maxima
+  minimum-scale=1.0, = escala minima
+  -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type=text/css href="style.css">
+
+
+
+</head>
+
+<body>
+    <header class="container-fluid">
+        <h1>Cabeçalho</h1>
+
+    </header>
+    <!--
+    class="container" serve para designar um espaço conteudo
+    container-fluid ele vai ocupa todo espaço da tela
+    col-md ele falta quantas colunas de espaço sera utilizada vai de 1 a 12 maximo sendo 12 bootstrap trabalha dessa forma para separa conteudo e reoganizar
+    ex: 
+    class="col-md-9"
+    class="col-md-3"
+    
+    class=row separa em uma linha
+    col-xs-12  xs seria tamanho para celulares
+    col-sm-8  sm seria tamanho para tablet
+    col-md-9  md seria tamanho para telas
+    col-ml-9" ml seria tamos para tvs
+    col-md-offset-3 offset pula tantas colunas
+    
+    class= "lead" deixa o texto todo destacado
+    
+    <mark> faz marcação no texto
+    <del> coloca um risco no meio da palavra
+    <ins> sublinha o texto
+    ---------------tabela----------------------------
+    class="table" dividi com uma linha na parte inferior
+    class "table-striped" cada linha vai alterna as cores
+    class="table-hover" vai escurecer a linha quando eu passar mouse em cima
+    class="table-condensed" deixa tabela sem padding fica masi grudado 
+    class="active" deixa celula em "negrito"
+   class= success= deixa com cor verde
+    class= info= deixa com cor azul
+    class= warning= deixa amarelado
+    class= danger= deixa vermelhado
+    class="table-responsive" deixa uma barra de rolagem para a tabela quando nao der para vizualizar tudo
+    ----------------------tabela----------------------------
+    -->
+    <div class="container">
+        <section class="main row">
+            <article class="
+               col-xs-12 
+               col-sm-8 
+               col-md-9 
+               col-ml-9">
+                <h3>Titulo Header</h3>
+                <p>
+                    Rows must be placed within a .container (fixed-width) or .container-fluid (full-width) for proper alignment and padding. Use rows to create horizontal groups of columns. Content should be placed within columns, and only columns may be immediate children of rows. Predefined grid classes like .row and .col-xs-4 are
+                </p>
+
+            </article>
+            <aside class="
+               col-xs-12 
+               col-sm-4 
+               col-md-3 
+               col-ml-3">
+                <h3>Titulo Aside</h3>
+                <p>
+                    Rows must be placed within a .container (fixed-width) or .container-fluid (full-width) for proper alignment and padding. Use rows to create horizontal groups of columns. Content should be placed within columns, and only columns may be immediate children of rows. Predefined grid classes like .row and .col-xs-4 are
+                </p>
+            </aside>
+
+        </section>
+        <div class="row">
+            <div class=" col-xs-12 col-sm-6  col-md-3 
+col-ml-3 cor">
+                <h3>Titulo Coluna 1</h3>
+                <p>
+                    <mark>
+                        Rows must be placed within a .container (fixed-width) or .container-fluid (full-width) for proper alignment and padding. Use rows to create horizontal groups of columns.</mark> Content should be placed within columns, and only columns may be immediate children of rows. Predefined grid classes like .row and .col-xs-4 are</p>
+            </div>
+            <div class=" col-xs-12 col-sm-6  col-md-3 
+col-ml-3 cor2">
+                <h3>Titulo Coluna 2</h3>
+                <p> Rows must be placed within a .container (fixed-width) or .container-fluid (full-width) for proper alignment and padding. Use rows to create horizontal groups of columns. Content should be placed within columns, and only columns may be immediate children of rows. Predefined grid classes like .row and .col-xs-4 are</p>
+            </div>
+            <div class=" col-xs-12 col-sm-6  col-md-3 
+col-ml-3 cor2">
+                <h3>Titulo Coluna 3</h3>
+                <p> Rows must be placed within a .container (fixed-width) or .container-fluid (full-width) for proper alignment and padding. Use rows to create horizontal groups of columns. Content should be placed within columns, and only columns may be immediate children of rows. Predefined grid classes like .row and .col-xs-4 are</p>
+            </div>
+            <div class=" col-xs-12 col-sm-6  col-md-3 
+col-ml-3 cor">
+                <h3>Titulo Coluna 4</h3>
+                <p> Rows must be placed within a .container (fixed-width) or .container-fluid (full-width) for proper alignment and padding. Use rows to create horizontal groups of columns. Content should be placed within columns, and only columns may be immediate children of rows. Predefined grid classes like .row and .col-xs-4 are</p>
+            </div>
+
+        </div>
+
+
+        <div class="container">
+           <div class="table-responsive">
+            <table class="table  table-hover ">
+                <tr class="danger">
+                    <td>Código 0</td>
+                    <td>Produto 0</td>
+                    <td>Valor 0</td>
+                    <td>Código 0</td>
+                    <td>Produto 0</td>
+                    <td>Valor 0</td>
+                    <td>Código 0</td>
+                    <td>Produto 0</td>
+                    <td>Valor 0</td>
+                </tr>
+
+                <tr>
+                    <td>Código 1</td>
+                    <td>Produto 1</td>
+                    <td>Valor 1</td>
+                    <td>Código 0</td>
+                    <td>Produto 0</td>
+                    <td>Valor 0</td>
+                    <td>Código 0</td>
+                    <td>Produto 0</td>
+                    <td>Valor 0</td>
+                </tr>
+
+                <tr>
+                    <td>Código 1</td>
+                    <td>Produto 1</td>
+                    <td>Valor 1</td>
+                    <td>Código 0</td>
+                    <td>Produto 0</td>
+                    <td>Valor 0</td>
+                    <td>Código 0</td>
+                    <td>Produto 0</td>
+                    <td>Valor 0</td>
+                </tr>
+
+                <tr>
+                    <td>Código 1</td>
+                    <td>Produto 1</td>
+                    <td>Valor 1</td>
+                    <td>Código 0</td>
+                    <td>Produto 0</td>
+                    <td>Valor 0</td>
+                    <td>Código 0</td>
+                    <td>Produto 0</td>
+                    <td>Valor 0</td>
+                </tr>
+
+            </table>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+    <footer>
+        <div class="container">
+            <h3> Lucas José</h3>
+        </div>
+
+    </footer>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

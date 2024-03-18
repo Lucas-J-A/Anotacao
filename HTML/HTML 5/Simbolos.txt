@@ -1,0 +1,20 @@
+Símbolos que não estão presentes em seu teclado também podem ser adicionados usando entidades.
+
+Entidades Símbolo HTML
+As entidades HTML foram descritas no capítulo anterior.
+
+Muitos símbolos matemáticos, técnicos e monetários não estão presentes em um teclado normal.
+
+Para adicionar esses símbolos a uma página HTML, você pode usar o nome da entidade ou o número da entidade (uma referência decimal ou hexadecimal) para o símbolo.
+
+Exemplo
+Exiba o sinal do euro, €, com um nome de entidade, um decimal e um valor hexadecimal:
+
+<p>I will display &euro;</p>
+<p>I will display &#8364;</p>
+<p>I will display &#x20AC;</p>
+Será exibido como:
+Mostrarei €
+Mostrarei €
+Mostrarei €
+

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Index html 5</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <style>
+        div {
+  background-color: lightgrey;
+  width: 300px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;
+}   
+p {outline-color:red;}
+
+p.dotted {outline-style: dotted;}
+p.dashed {outline-style: dashed;}
+p.solid {outline-style: solid;}
+p.double {outline-style: double;}
+p.groove {outline-style: groove;}
+p.ridge {outline-style: ridge;}
+p.inset {outline-style: inset;}
+p.outset {outline-style: outset;}
+
+p.ex1 {
+  border: 1px solid black;
+  outline-style: solid;
+  outline-color: red;
+  outline-width: thin;
+}
+
+p.ex2 {
+  border: 1px solid black;
+  outline-style: solid;
+  outline-color: red;
+  outline-width: medium;
+}
+
+p.ex3 {
+  border: 1px solid black;
+  outline-style: solid;
+  outline-color: red;
+  outline-width: thick;
+}
+
+p.ex4 {
+  border: 1px solid black;
+  outline-style: solid;
+  outline-color: red;
+  outline-width: 4px;
+}
+p.out {
+  margin: 30px;
+  background:yellow;
+  border: 1px solid black;
+  outline: 1px solid red;
+  outline-offset: 15px;
+}
+
+    </style>
+</head>
+
+<body>
+<!--
+Modelo de caixa CSS
+
+Explicação das diferentes partes:
+
+Conteúdo - O conteúdo da caixa, onde o texto e as imagens aparecem
+Preenchimento - Limpa uma área ao redor do conteúdo. O forro é transparente
+Borda - Uma borda que contorna o preenchimento e o conteúdo
+Margem - Limpa uma área fora da fronteira. A margem é transparente
+-->
+<h1>Modelo de caixa CSS</h1>
+<img src="img/boxmodel.png" alt="imagem de box model css">
+
+<div>This text is the content of the box. We have added a 50px padding, 20px margin and a 15px green border. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+
+<!--
+Importante: Ao definir as propriedades de largura e altura de um elemento com CSS, basta definir a largura e a altura da área de conteúdo . Para calcular o tamanho total de um elemento, você também deve adicionar preenchimento, bordas e margens.
+
+Exemplo
+Este elemento <div> terá uma largura total de 350px: 
+
+div {
+  width: 320px;
+  padding: 10px;
+  border: 5px solid gray;
+  margin: 0;
+}
+Segue o cálculo:
+320px (largura)
++ 20px (preenchimento esquerdo + direito)
++ 10px (borda esquerda + direita)
++ 0px (margem esquerda + direita)
+= 350px
+A largura total de um elemento deve ser calculada assim:
+
+Largura total do elemento = largura + preenchimento esquerdo + preenchimento direito + borda esquerda + borda direita + margem esquerda + margem direita
+
+A altura total de um elemento deve ser calculada assim:
+
+Altura total do elemento = altura + preenchimento superior + preenchimento inferior + borda superior + borda inferior + margem superior + margem inferior
+
+
+
+-->
+<h1>CSS Outline</h1>
+<!--Um contorno é uma linha desenhada fora da borda do elemento.
+ outline-stylepropriedade especifica o estilo do contorno e pode ter um dos seguintes valores:
+
+dotted- Define um contorno pontilhado
+dashed- Define um contorno tracejado
+solid- Define um contorno sólido
+double- Define um contorno duplo
+groove- Define um contorno ranhurado 3D
+ridge- Define um contorno 3D estriado
+inset- Define um contorno de inserção 3D
+outset- Define um esboço inicial 3D
+none- Não define contorno
+hidden- Define um contorno oculto
+-->
+<h2>The outline-style Property</h2>
+
+<p class="dotted">A dotted outline</p>
+<p class="dashed">A dashed outline</p>
+<p class="solid">A solid outline</p>
+<p class="double">A double outline</p>
+<p class="groove">A groove outline. The effect depends on the outline-color value.</p>
+<p class="ridge">A ridge outline. The effect depends on the outline-color value.</p>
+<p class="inset">An inset outline. The effect depends on the outline-color value.</p>
+<p class="outset">An outset outline. The effect depends on the outline-color value.</p>
+
+<!--Largura do contorno CSS
+A outline-widthpropriedade especifica a largura do contorno e pode ter um dos seguintes valores:
+
+fino (normalmente 1px)
+médio (normalmente 3px)
+grosso (normalmente 5px)
+Um tamanho específico (em px, pt, cm, em, etc)-->
+
+<h2>The outline-width Property</h2>
+<!--A outline-color propriedade é usada para definir a cor do contorno.-->
+<p class="ex1">A thin outline.</p>
+<p class="ex2">A medium outline.</p>
+<p class="ex3">A thick outline.</p>
+<p class="ex4">A 4px thick outline.</p>
+
+<!--Abreviação de esboço de CSS
+A outlinepropriedade é uma propriedade abreviada para definir as seguintes propriedades de estrutura de tópicos individuais:
+
+outline-width
+outline-style(requeridos)
+outline-color
+A outlinepropriedade é especificada como um, dois ou três valores da lista acima. A ordem dos valores não importa.
+-->
+<h1>Deslocamento de contorno CSS</h1>
+<!--A outline-offsetpropriedade adiciona espaço entre um contorno e a borda/borda de um elemento. O espaço entre um elemento e seu contorno é transparente.-->
+<p class="out">This paragraph has an outline of 15px outside the border edge.</p>
+
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+/*Link mudando status*/
+/*
+a:link {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+*/
+/*Link como se fosse um botão*/
+/*
+a:link, a:visited {
+    background-color: #f44336;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  a:hover, a:active {
+    background-color: red;
+  }
+  */
+/*
+  th, td {
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+  */
+  /*Tabela HTML - Listras Zebra
+  Se você usar (odd)em vez de (even), o estilo ocorrerá na linha 1,3,5 etc. em vez de 2,4,6 etc.
+  */
+  tr:nth-child(even) {
+    background-color: #D6EEEE;
+  }
+/*para fazer listras de zebra verticais, estilize todas as outras colunas , em vez de todas as outras linhas .*/
+/*
+  td:nth-child(even), th:nth-child(even) {
+    background-color: #D6EEEE;
+  }
+  */
+/*Divisores horizontais
+tr {
+  border-bottom: 1px solid #ddd;
+}
+
+*/
+/*
+Mesa flutuante
+Use o :hover seletor tr para destacar as linhas da tabela ao passar o mouse:
+tr:hover {background-color: #D6EEEE;}
+*/
+
+#menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+#menu > li {
+  float: left;
+}
+
+#menu > li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+#menu > li a:hover {
+  background-color: #111111;
+}
+
+#myHeader {
+  background-color: lightblue;
+  color: black;
+  padding: 40px;
+  text-align: center;
+}

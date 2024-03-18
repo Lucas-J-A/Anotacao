@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Index html 5</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <style>
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #333;
+        }
+        
+        li {
+          float: left;
+        }
+        
+        li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+        
+        li a:hover:not(.active) {
+          background-color: #111;
+        }
+        
+        .active {
+          background-color: #04AA6D;
+        }
+        </style>
+</head>
+
+<body>
+<h1>Barra de navegação horizontal</h1>
+<p>Há duas maneiras de criar uma barra de navegação horizontal. Usando itens de lista em linha ou flutuantes .
+
+    Itens de lista em linha
+    Uma maneira de construir uma barra de navegação horizontal é especificar os elementos li como embutidos, além do código "padrão" da página anterior:</p>
+    <!--Exemplo explicado:
+
+li {
+  display: inline;
+}
+Exemplo explicado:
+
+display: inline;- Por padrão, os elementos <li> são elementos de bloco. Aqui, removemos as quebras de linha antes e depois de cada item da lista, para exibi-las em uma linha
+Itens de lista flutuante
+Outra maneira de criar uma barra de navegação horizontal é flutuar os elementos <li> e especificar um layout para os links de navegação:
+
+Exemplo
+li {
+  float: left;
+}
+
+a {
+  display: block;
+  padding: 8px;
+  background-color: #dddddd;
+}
+Exemplo explicado:
+
+float: left;- Use float para fazer com que os elementos do bloco flutuem um ao lado do outro
+display: block;- Permite especificar o preenchimento (e altura, largura, margens, etc., se desejar)
+padding: 8px;- Especifique algum preenchimento entre cada elemento <a>, para torná-los bonitos
+background-color: #dddddd;- Adicione uma cor de fundo cinza a cada elemento <a>
+Dica: adicione a cor de fundo a <ul> em vez de cada elemento <a> se quiser uma cor de fundo de largura total:
+
+Exemplo
+ul {
+  background-color: #dddddd;
+}
+Exemplos de barra de navegação horizontal
+Crie uma barra de navegação horizontal básica com uma cor de fundo escura e altere a cor de fundo dos links quando o usuário passar o mouse sobre eles: 
+Link de navegação ativo/atual
+Adicione uma classe "ativa" ao link atual para que o usuário saiba em qual página ele está:
+.active {
+  background-color: #04AA6D;
+}
+Links de alinhamento à direita
+Alinhe os links à direita flutuando os itens da lista para a direita ( float:right;):
+-->
+<ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li style="float:right"><a class="active" href="#about">About</a></li>
+  </ul>
+  <!--
+      Divisores de borda
+Adicione a border-rightpropriedade a <li> para criar divisores de link:
+    /* Add a gray right border to all list items, except the last item (last-child) */
+li {
+  border-right: 1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+Barra de navegação fixa
+Faça com que a barra de navegação fique na parte superior ou inferior da página, mesmo quando o usuário rolar a página:
+ul {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+ul {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+  -->
+</body>
+
+</html>

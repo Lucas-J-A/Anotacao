@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Index html 5</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+<style>
+
+.p1 {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.p2 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.p3 {
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+</style>
+
+</head>
+
+<body>
+<!--Fontes CSS
+
+-->
+<h1>Fontes CSS</h1>
+<p>Escolher a fonte certa para o seu site é importante!
+
+    A seleção da fonte é importante
+    Escolher a fonte certa tem um enorme impacto em como os leitores experimentam um site.
+    
+    A fonte certa pode criar uma identidade forte para sua marca.
+    
+    Usar uma fonte que seja fácil de ler é importante. A fonte agrega valor ao seu texto. Também é importante escolher a cor e o tamanho do texto corretos para a fonte.
+    
+    Famílias de fontes genéricas
+    Em CSS existem cinco famílias de fontes genéricas:
+    
+    As fontes com serifa têm um pequeno traço nas bordas de cada letra. Eles criam uma sensação de formalidade e elegância.
+    As fontes sem serifa têm linhas limpas (sem pequenos traços anexados). Eles criam um visual moderno e minimalista.
+    Fontes monoespaçadas - aqui todas as letras têm a mesma largura fixa. Eles criam uma aparência mecânica. 
+    As fontes cursivas imitam a caligrafia humana.
+    Fontes de fantasia são fontes decorativas/lúdicas.
+    Todos os nomes de fontes diferentes pertencem a uma das famílias de fontes genéricas. </p>
+
+    <!-- A propriedade da família de fontes CSS
+Em CSS, usamos a font-familypropriedade para especificar a fonte de um texto.
+
+Nota : Se o nome da fonte for mais de uma palavra, deve estar entre aspas, como: "Times New Roman".
+
+Dica: A font-familypropriedade deve conter vários nomes de fontes como um sistema "fallback", para garantir a máxima compatibilidade entre navegadores/sistemas operacionais. Comece com a fonte desejada e termine com uma família genérica (para permitir que o navegador escolha uma fonte semelhante na família genérica, se não houver outras fontes disponíveis). Os nomes das fontes devem ser separados por vírgula. Leia mais sobre fontes de fallback no próximo capítulo .-->
+<h1>CSS font-family</h1>
+<p class="p1">This is a paragraph, shown in the Times New Roman font.</p>
+<p class="p2">This is a paragraph, shown in the Arial font.</p>
+<p class="p3">This is a paragraph, shown in the Lucida Console font.</p>
+
+<h1>CSS Web Safe Fonts</h1>
+<!--
+O que são fontes seguras da Web?
+As fontes seguras da Web são fontes instaladas universalmente em todos os navegadores e dispositivos.
+
+Fontes substitutas
+No entanto, não existem fontes 100% totalmente seguras para a web. Há sempre uma chance de que uma fonte não seja encontrada ou não esteja instalada corretamente.
+
+Portanto, é muito importante sempre usar fontes de fallback.
+
+Isso significa que você deve adicionar uma lista de "fontes de backup" semelhantes na font-family propriedade. Se a primeira fonte não funcionar, o navegador tentará a próxima, e a próxima e assim por diante. Sempre termine a lista com um nome de família de fonte genérico.    
+p {
+font-family: Tahoma, Verdana, sans-serif;
+}
+-->
+<p style="font-family: Tahoma, Verdana, sans-serif;"> Sou um exmeplo kk</p>
+<!--Melhores fontes seguras da Web para HTML e CSS
+A lista a seguir são as melhores fontes seguras da Web para HTML e CSS:
+
+Arial (sem serifa)
+Verdana (sem serifa)
+Helvética (sem serifa)
+Tahoma (sem serifa)
+Trabuco MS (sem serifa)
+Times New Roman (serifa)
+Geórgia (serif)
+Garamond (serifa)
+Courier New (monoespaço)
+Brush Script MT (cursiva)
+Arial (sem serifa)
+Arial é a fonte mais usada para mídia online e impressa. Arial também é a fonte padrão no Google Docs.
+
+Arial é uma das fontes da Web mais seguras e está disponível em todos os principais sistemas operacionais.
+
+Verdana (sem serifa)
+Verdana é uma fonte muito popular. Verdana é facilmente legível mesmo para tamanhos de fonte pequenos.
+
+Helvética (sem serifa)
+A fonte Helvetica é amada pelos designers. É adequado para muitos tipos de negócios.
+
+Tahoma (sem serifa)
+A fonte Tahoma tem menos espaço entre os caracteres.
+
+Trabuco MS (sem serifa)
+Trebuchet MS foi projetado pela Microsoft em 1996. Use essa fonte com cuidado. Não suportado por todos os sistemas operacionais móveis.
+
+Times New Roman (serifa)
+Times New Roman é uma das fontes mais conhecidas do mundo. Parece profissional e é usado em muitos jornais e sites de "notícias". É também a fonte principal para dispositivos e aplicativos Windows.
+
+Geórgia (serif)
+Georgia é uma fonte com serifa elegante. É muito legível em diferentes tamanhos de fonte, por isso é um bom candidato para design responsivo a dispositivos móveis.
+
+
+
+
+
+
+
+
+-->
+<h1>CSS Font Fallbacks</h1>
+<p>Fallbacks de fonte comumente usados
+    Abaixo estão alguns fallbacks de fontes comumente usados, organizados pelas 5 famílias de fontes genéricas:
+    
+    Serifa
+    Sem serifa
+    Monoespaço
+    Cursiva
+    Fantasia</p>
+    <!--font-family: "Times New Roman", Times, serif;-->
+
+    <h1>font-style</h1>
+    <!-- 
+        Estilo de fonte
+A font-stylepropriedade é usada principalmente para especificar texto em itálico.
+
+Esta propriedade tem três valores:
+
+normal - O texto é mostrado normalmente
+itálico - O texto é mostrado em itálico
+oblíquo - O texto está "inclinado" (o oblíquo é muito semelhante ao itálico, mas menos suportado)
+Exemplo
+p.normal {
+  font-style: normal;
+}
+
+p.italic {
+  font-style: italic;
+}
+
+p.oblique {
+  font-style: oblique;
+}
+
+Espessura da fonte
+A font-weightpropriedade especifica o peso de uma fonte:
+
+Exemplo
+p.normal {
+  font-weight: normal;
+}
+
+p.thick {
+  font-weight: bold;
+}
+Variante de fonte
+A font-variantpropriedade especifica se um texto deve ou não ser exibido em uma fonte em versalete.
+
+Em uma fonte de letras minúsculas, todas as letras minúsculas são convertidas em letras maiúsculas. No entanto, as letras maiúsculas convertidas aparecem em um tamanho de fonte menor do que as letras maiúsculas originais no texto.
+
+Exemplo
+p.normal {
+  font-variant: normal;
+}
+
+p.small {
+  font-variant: small-caps;
+}
+    -->
+    <h1>CSS Font Size tamanho da fonte</h1>
+    <p>
+        Tamanho da fonte
+A font-size propriedade define o tamanho do texto.
+
+Ser capaz de gerenciar o tamanho do texto é importante no design da web. No entanto, você não deve usar ajustes de tamanho de fonte para fazer os parágrafos parecerem títulos ou os títulos parecerem parágrafos.
+
+Sempre use as tags HTML apropriadas, como h1 e h2 para títulos e "p"para parágrafos.
+
+O valor do tamanho da fonte pode ser um tamanho absoluto ou relativo.
+
+Tamanho absoluto:
+
+Define o texto para um tamanho especificado
+Não permite que um usuário altere o tamanho do texto em todos os navegadores (ruim por motivos de acessibilidade)
+O tamanho absoluto é útil quando o tamanho físico da saída é conhecido
+Tamanho relativo:
+
+Define o tamanho em relação aos elementos circundantes
+Permite que um usuário altere o tamanho do texto nos navegadores
+Nota: Se você não especificar um tamanho de fonte, o tamanho padrão para texto normal, como parágrafos, é 16px (16px=1em).
+    </p>
+
+    <!--
+        h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+p {
+  font-size: 14px;
+}
+
+Definir tamanho da fonte com Em
+Para permitir que os usuários redimensionem o texto (no menu do navegador), muitos desenvolvedores usam em vez de pixels.
+
+1em é igual ao tamanho da fonte atual. O tamanho de texto padrão nos navegadores é 16px. Portanto, o tamanho padrão de 1em é 16px.
+
+O tamanho pode ser calculado de pixels para em usando esta fórmula: pixels /16= em
+
+Exemplo
+h1 {
+  font-size: 2.5em; /* 40px/16=2.5em */
+}
+
+h2 {
+  font-size: 1.875em; /* 30px/16=1.875em */
+}
+
+p {
+  font-size: 0.875em; /* 14px/16=0.875em */
+}
+
+Use uma combinação de porcentagem e Em
+A solução que funciona em todos os navegadores é definir um tamanho de fonte padrão em porcentagem para o elemento <body>:
+
+Exemplo
+body {
+  font-size: 100%;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 1.875em;
+}
+
+p {
+  font-size: 0.875em;
+}
+
+tamanho da fonte responsiva
+O tamanho do texto pode ser definido com uma vwunidade, o que significa a "largura da janela de visualização".
+
+Dessa forma, o tamanho do texto seguirá o tamanho da janela do navegador:
+Exemplo
+<h1 style="font-size:10vw">Hello World</h1>
+    -->
+
+   
+    <h1>CSS Google Fonts</h1>
+     <!--CSS Google Fonts
+    Fontes do Google
+Se você não quiser usar nenhuma das fontes padrão em HTML, poderá usar o Google Fonts.
+
+As fontes do Google são gratuitas e têm mais de 1.000 fontes para escolher.
+
+Como usar as fontes do Google
+Basta adicionar um link de folha de estilo especial na seção <head> e, em seguida, consultar a fonte no CSS.
+
+Exemplo
+Aqui, queremos usar uma fonte chamada "Sofia" do Google Fonts:
+
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+<style>
+body {
+  font-family: "Sofia", sans-serif;
+}
+</style>
+</head>
+    -->
+
+<h1>Ativando efeitos de fonte</h1>
+    <!--Ativando efeitos de fonte
+O Google também ativou diferentes efeitos de fonte que você pode usar.
+
+Primeiro adicione à API do Google e, em seguida, adicione um nome de classe especial ao elemento que usará o efeito especial. O nome da classe sempre começa e termina com o .effect=effectnamefont-effect-effectname
+
+Exemplo
+Adicione o efeito de fogo à fonte "Sofia":
+
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
+<style>
+body {
+  font-family: "Sofia", sans-serif;
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+
+<h1 class="font-effect-fire">Sofia on Fire</h1>
+
+</body>-->
+<h1>Para solicitar vários efeitos de fonte, basta separar os nomes dos efeitos com uma barra vertical ( |), assim:</h1>
+<!--Para solicitar vários efeitos de fonte, basta separar os nomes dos efeitos com uma barra vertical ( |), assim:
+
+Exemplo
+Adicione vários efeitos à fonte "Sofia":
+
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+<style>
+body {
+  font-family: "Sofia", sans-serif;
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+
+<h1 class="font-effect-neon">Neon Effect</h1>
+<h1 class="font-effect-outline">Outline Effect</h1>
+<h1 class="font-effect-emboss">Emboss Effect</h1>
+<h1 class="font-effect-shadow-multiple">Multiple Shadow Effect</h1>
+
+</body>-->
+
+<h1>CSS Great Font Pairings Excelentes Pareamentos de Fontes CSS</h1>
+<!--
+    timos pares de fontes são essenciais para um ótimo design.
+
+Regras de pareamento de fontes
+Aqui estão algumas regras básicas para criar ótimos pares de fontes:
+
+1. Complemento
+É sempre seguro encontrar pares de fontes que se complementam.
+
+Uma ótima combinação de fontes deve harmonizar, sem ser muito parecida ou muito diferente.
+
+2. Use superfamílias de fontes
+Uma superfamília de fontes é um conjunto de fontes projetadas para funcionar bem juntas. Portanto, usar fontes diferentes dentro da mesma superfamília é seguro.
+
+Por exemplo, a superfamília Lucida contém as seguintes fontes: Lucida Sans, Lucida Serif, Lucida Typewriter Sans, Lucida Typewriter Serif e Lucida Math.
+
+3. O contraste é rei
+Duas fontes que são muito semelhantes geralmente entram em conflito. No entanto, os contrastes, feitos da maneira certa, trazem o melhor de cada fonte.
+
+Exemplo: Combinar serifa com sans serif é uma combinação bem conhecida.
+
+Uma superfamília forte inclui variações com serifa e sem serifa da mesma fonte (por exemplo, Lucida e Lucida Sans).
+
+4. Escolha apenas um chefe
+Uma fonte deve ser o chefe. Isso estabelece uma hierarquia para as fontes em sua página. Isto pode ser conseguido variando o tamanho, peso e cor.
+
+Exemplo
+Sem dúvida, "Georgia" é o chefe aqui:
+
+body {
+  background-color: black;
+  font-family: Verdana, sans-serif;
+  font-size: 16px;
+  color: gray;
+}
+
+h1 {
+  font-family: Georgia, serif;
+  font-size: 60px;
+  color: white;
+}
+
+Geórgia e Verdana
+Georgia e Verdana é uma combinação clássica. Ele também segue os padrões de fontes seguras da Web:
+
+Emparelhamentos de fontes populares do Google
+Se você não quiser usar fontes padrão em HTML, poderá usar o Google Fonts.
+
+As fontes do Google são gratuitas e têm mais de 1.000 fontes para escolher.
+
+Abaixo estão alguns pares populares de fontes da Web do Google.
+
+Merriweather e Open Sans
+Abril Fatface e Poppins
+Cinzel e Fauna Um
+-->
+<h1>Propriedade da fonte CSS abreviado</h1>
+<!--A propriedade da fonte CSS
+Para encurtar o código, também é possível especificar todas as propriedades de fonte individuais em uma propriedade.
+
+A fontpropriedade é uma propriedade abreviada para:
+
+font-style
+font-variant
+font-weight
+font-size/line-height
+font-family
+Nota: Os valores font-sizee font-family são obrigatórios. Se um dos outros valores estiver ausente, seu valor padrão será usado.
+
+Exemplo
+Use fontpara definir várias propriedades de fonte em uma declaração:
+
+p.a {
+  font: 20px Arial, sans-serif;
+}
+
+p.b {
+  font: italic small-caps bold 12px/30px Georgia, serif;
+}
+-->
+</body>
+
+</html>

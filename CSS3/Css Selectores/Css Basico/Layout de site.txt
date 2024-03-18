@@ -1,0 +1,16 @@
+Layout do site
+Um site geralmente é dividido em cabeçalhos, menus, conteúdo e rodapé:
+Contente
+O layout nesta seção geralmente depende dos usuários-alvo. O layout mais comum é um (ou combiná-los) dos seguintes:
+
+1 coluna (geralmente usado para navegadores móveis)
+2 colunas (geralmente usado para tablets e laptops)
+Layout de 3 colunas (usado apenas para desktops)
+
+Dica: Para criar um layout de 2 colunas, altere a largura para 50%. Para criar um layout de 4 colunas, use 25%, etc.
+
+Dica: Você quer saber como funciona a regra @media? Leia mais sobre isso em nosso capítulo CSS Media Queries .
+
+Dica: Uma forma mais moderna de criar layouts de colunas é usar CSS Flexbox. No entanto, ele não é compatível com o Internet Explorer 10 e versões anteriores. Se você precisar de suporte ao IE6-10, use floats (como mostrado acima).
+
+Para saber mais sobre o Módulo de Layout de Caixa Flexível, leia nosso capítulo CSS Flexbox .

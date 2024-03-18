@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Index html 5</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <style>
+        div {
+          background-color: green;
+        }
+        
+        div.first {
+          opacity: 0.1;
+        }
+        /*usando rgb*/
+        div.second {
+  background: rgba(0, 128, 0, 0.3);
+}
+        
+        div.third {
+          opacity: 0.6;
+        }
+        p.fundo {
+  background-image: url("img/fundo.jpg") ;
+  width: 100%;
+  height: 200px;
+}
+
+p.fundoRepet {
+  background-image: url("img/fundo.jpg") ;
+    /*Se a imagem acima for repetida apenas horizontalmente ( background-repeat: repeat-x;),
+    Para repetir uma imagem verticalmente, definabackground-repeat: repeat-y;
+    */
+  background-repeat: no-repeat;
+  /*A background-position propriedade é usada para especificar a posição da imagem de fundo.*/
+  background-position: right top;
+}
+p.attachment{
+    background-image: url("img/fundo.jpg");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-attachment: scroll;
+
+}
+
+/*
+Ao usar a propriedade abreviada, a ordem dos valores da propriedade é:
+
+background-color
+background-image
+background-repeat
+background-attachment
+background-position
+Não importa se um dos valores da propriedade está faltando, desde que os outros estejam nesta ordem. Observe que não usamos a propriedade background-attachment nos exemplos acima, pois ela não possui um valor.
+*/
+p.abreviada{
+    background: #ffffff url("img/fundo.jpg") no-repeat right top;
+}
+        </style>
+</head>
+
+<body>
+<!--
+    As propriedades de plano de fundo CSS são usadas para adicionar efeitos de plano de fundo para elementos.
+        A background-color propriedade especifica a cor de fundo de um elemento.
+        Com CSS, uma cor é mais frequentemente especificada por:
+
+um nome de cor válido - como "vermelho"
+um valor HEX - como "#ff0000"
+um valor RGB - como "rgb(255,0,0)"
+
+
+
+
+-->
+
+<h1>Transparent Boxes</h1>
+
+<p>When using the opacity property to add transparency to the background of an element, all of its child elements become transparent as well. This can make the text inside a fully transparent element hard to read:</p>
+
+<div class="first">
+  <h1>opacity 0.1</h1>
+</div>
+
+<div class="second">
+  <h1>opacity 0.3</h1>
+</div>
+
+<div class="third">
+  <h1>opacity 0.6</h1>
+</div>
+
+<div>
+  <h1>opacity 1 (default)</h1>
+</div>
+
+<!--imagem de fundo CSS
+A background-image propriedade especifica uma imagem a ser usada como plano de fundo de um elemento.
+
+Por padrão, a imagem é repetida para cobrir todo o elemento.-->
+
+<p class="fundo">This paragraph has an image as the background!</p>
+
+<!--CSS background-repeat
+Por padrão, a background-image propriedade repete uma imagem na horizontal e na vertical.
+
+Algumas imagens devem ser repetidas apenas na horizontal ou na vertical, ou ficarão estranhas,-->
+<p class="fundoRepet">USHUSAHUSAHASUHASUHSAUHSAUSHU</p>
+
+<!--CSS em segundo plano
+A background-attachment ropriedade especifica se a imagem de fundo deve rolar ou ser fixa (não rolará com o resto da página):-->
+<p class="attachment">This paragraph has an image as the background!</p>
+<p class="abreviada"> Abreviada a background</p>
+</body>
+
+</html>

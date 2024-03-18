@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Index html 5</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+</head>
+
+<body>
+<!--
+Eventos enviados pelo servidor (SSE) permitem que uma página da Web obtenha atualizações de um servidor.
+
+Eventos enviados pelo servidor - Mensagens de sentido único
+Um evento enviado pelo servidor ocorre quando uma página da Web obtém atualizações automaticamente de um servidor.
+Isso também era possível antes, mas a página da Web teria que perguntar se alguma atualização estava disponível. Com eventos enviados pelo servidor, as atualizações vêm automaticamente.
+
+Exemplos: atualizações do Facebook/Twitter, atualizações de preços de ações, feeds de notícias, resultados esportivos etc.
+
+-->
+<h1>Getting server updates</h1>
+<div id="result"></div>
+
+<script>
+    /*
+    No exemplo tryit acima, havia algumas linhas extras de código para verificar o suporte do navegador para eventos enviados pelo servidor:
+    */
+if(typeof(EventSource) !== "undefined") {
+  var source = new EventSource("demo_sse.php");
+  source.onmessage = function(event) {
+    document.getElementById("result").innerHTML += event.data + "<br>";
+  };
+} else {
+  document.getElementById("result").innerHTML = "Sorry, your browser does not support server-sent events...";
+}
+</script>
+<!--
+Crie um novo objeto EventSource e especifique a URL da página que envia as atualizações (neste exemplo "demo_sse.php")
+Cada vez que uma atualização é recebida, o evento onmessage ocorre
+Quando ocorre um evento onmessage, coloque os dados recebidos no elemento com id="result"
+
+-->
+</body>
+
+</html>

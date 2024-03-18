@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Index html 5</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+</head>
+
+<body>
+<h1>CSS Attribute Selectors</h1>
+<p>Estilizar elementos HTML com atributos específicos
+    É possível estilizar elementos HTML que possuem atributos ou valores de atributos específicos.
+    
+    Seletor de CSS [atributo]
+    O [attribute]seletor é usado para selecionar elementos com um atributo especificado.
+    
+    O exemplo a seguir seleciona todos os elementos a com um atributo target:</p>
+    <!--
+        Exemplo
+a[target] {
+  background-color: yellow;
+}
+
+Seletor de CSS [attribute="value"]
+O [attribute="value"]seletor é usado para selecionar elementos com um atributo e valor especificados.
+
+O exemplo a seguir seleciona todos os elementos <a> com um atributo target="_blank":
+
+Exemplo
+a[target="_blank"] {
+  background-color: yellow;
+}
+
+Seletor de CSS [attribute~="value"]
+O [attribute~="value"]seletor é usado para selecionar elementos com um valor de atributo contendo uma palavra especificada.
+
+O exemplo a seguir seleciona todos os elementos com um atributo title que contém uma lista de palavras separadas por espaço, uma das quais é "flor":
+O exemplo acima corresponderá a elementos com title="flower", title="summer flower" e title="flower new", mas não title="my-flower" ou title="flowers".
+
+Seletor de CSS [attribute|="value"]
+O [attribute|="value"]seletor é usado para selecionar elementos com o atributo especificado, cujo valor pode ser exatamente o valor especificado, ou o valor especificado seguido de um hífen (-).
+
+Nota: O valor deve ser uma palavra inteira, sozinha, como class="top", ou seguida por um hífen( - ), como class="top-text".
+
+Exemplo
+[class|="top"] {
+  background: yellow;
+}
+
+Seletor de CSS [attribute^="value"]
+O [attribute^="value"]seletor é usado para selecionar elementos com o atributo especificado, cujo valor começa com o valor especificado.
+
+O exemplo a seguir seleciona todos os elementos com um valor de atributo de classe que começa com "top":
+
+Nota: O valor não precisa ser uma palavra inteira!
+
+Exemplo
+[class^="top"] {
+  background: yellow;
+}
+
+Seletor de CSS [attribute$="value"]
+O [attribute$="value"]seletor é usado para selecionar elementos cujo valor de atributo termina com um valor especificado.
+
+O exemplo a seguir seleciona todos os elementos com um valor de atributo de classe que termina com "test":
+
+Nota: O valor não precisa ser uma palavra inteira!  
+
+Exemplo
+[class$="test"] {
+  background: yellow;
+}
+
+Seletor de CSS [attribute*="value"]
+O [attribute*="value"]seletor é usado para selecionar elementos cujo valor de atributo contém um valor especificado.
+
+O exemplo a seguir seleciona todos os elementos com um valor de atributo de classe que contém "te":
+
+Nota: O valor não precisa ser uma palavra inteira!  
+
+Exemplo
+[class*="te"] {
+  background: yellow;
+}   
+
+forms 
+input[type=text] {
+  width: 150px;
+  display: block;
+  margin-bottom: 10px;
+  background-color: yellow;
+}
+
+input[type=button] {
+  width: 120px;
+  margin-left: 35px;
+  display: block;
+}
+    -->
+</body>
+
+</html>

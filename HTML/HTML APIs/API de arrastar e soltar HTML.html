@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Index html 5</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+
+    <style>
+      #div1 {
+        width: 350px;
+        height: 70px;
+        padding: 10px;
+        border: 1px solid #aaaaaa;
+      }
+      </style>
+      <script>
+      function allowDrop(ev) {
+        ev.preventDefault();
+      }
+      /*
+O que arrastar - ondragstart e setData()
+Em seguida, especifique o que deve acontecer quando o elemento for arrastado.
+No exemplo acima, o ondragstart atributo chama uma função, drag(event), que especifica quais dados serão arrastados.
+O dataTransfer.setData()método define o tipo de dados e o valor dos dados arrastados:
+Nesse caso, o tipo de dado é "texto" e o valor é o id do elemento arrastável ("drag1").
+*/
+      function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+      }
+      /*
+Onde cair - ondragover
+O ondragoverevento especifica onde os dados arrastados podem ser soltos.
+Por padrão, dados/elementos não podem ser descartados em outros elementos. Para permitir uma queda, devemos evitar a manipulação padrão do elemento.
+Isso é feito chamando o event.preventDefault()método para o evento ondragover:
+      */
+      function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+      }
+      /*
+Faça o Drop - ondrop
+Quando os dados arrastados são soltos, ocorre um evento de soltar.
+No exemplo acima, o atributo ondrop chama uma função, drop(event):*/
+
+/*
+Código explicado:
+
+Chame preventDefault() para evitar que o navegador manipule os dados por padrão (o padrão é aberto como link ao soltar)
+Obtenha os dados arrastados com o método dataTransfer.getData(). Este método retornará todos os dados que foram definidos para o mesmo tipo no método setData()
+Os dados arrastados são o id do elemento arrastado ("drag1")
+Anexar o elemento arrastado no elemento soltar
+*/
+      </script>
+</head>
+
+<body>
+
+  <p>Drag the W3Schools image into the rectangle:</p>
+
+  <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+  <br>
+  <!--
+    Tornar um elemento arrastável
+Primeiro de tudo: Para tornar um elemento arrastável, defina o draggableatributo como true:
+
+<img draggable="true">
+-->
+  <img id="drag1" src="img_logo.gif" draggable="true" ondragstart="drag(event)" width="336" height="69">
+
+</body>
+
+</html>

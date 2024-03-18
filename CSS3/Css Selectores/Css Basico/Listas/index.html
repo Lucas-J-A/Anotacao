@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Index html 5</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <style>
+        ul.a {
+          list-style-type: circle;
+        }
+        
+        ul.b {
+          list-style-type: square;
+        }
+        
+        ol.c {
+          list-style-type: upper-roman;
+        }
+        
+        ol.d {
+          list-style-type: lower-alpha;
+        }
+        ul {
+  list-style-image: url('sqpurple.gif');
+}
+ul.a {
+  list-style-position: outside;
+}
+
+ul.b {
+  list-style-position: inside;
+}
+
+div.color > ol {
+  background: #ff9999;
+  padding: 20px;
+}
+
+div.color > ul {
+  background: #3399ff;
+  padding: 20px;
+}
+
+div.color > ol li {
+  background: #ffe5e5;
+  color: darkred;
+  padding: 5px;
+  margin-left: 35px;
+}
+
+div.color > ul li {
+  background: #cce5ff;
+  color: darkblue;
+  margin: 5px;
+}
+        </style>
+</head>
+
+<body>
+<!--Listas CSS-->
+<h1>Listas CSS</h1>
+<!--Listas HTML e Propriedades da Lista CSS
+Em HTML, existem dois tipos principais de listas:
+
+listas não ordenadas (<ul>) - os itens da lista são marcados com marcadores
+listas ordenadas (<ol>) - os itens da lista são marcados com números ou letras
+As propriedades da lista CSS permitem:
+
+Definir marcadores de itens de lista diferentes para listas ordenadas
+Definir marcadores de itens de lista diferentes para listas não ordenadas
+Definir uma imagem como marcador de item da lista
+Adicionar cores de fundo a listas e itens de lista
+Marcadores de itens de lista diferentes
+A list-style-typepropriedade especifica o tipo de marcador de item de lista.
+
+O exemplo a seguir mostra alguns dos marcadores de itens de lista disponíveis:
+
+Exemplo
+ul.a {
+  list-style-type: circle;
+}
+
+ul.b {
+  list-style-type: square;
+}
+
+ol.c {
+  list-style-type: upper-roman;
+}
+
+ol.d {
+  list-style-type: lower-alpha;
+}
+-->
+<h2>The list-style-type Property</h2>
+
+<p>Example of unordered lists:</p>
+<ul class="a">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ul>
+
+<ul class="b">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ul>
+
+<p>Example of ordered lists:</p>
+<ol class="c">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+<ol class="d">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+<!--Uma imagem como marcador de item de lista
+A list-style-imagepropriedade especifica uma imagem como o marcador de item da lista:
+ul {
+  list-style-image: url('sqpurple.gif');
+}
+-->
+<h2>The list-style-image Property</h2>
+<ul>
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Coca Cola</li>
+  </ul>
+  <!--Posicione os marcadores de itens da lista
+A list-style-positionpropriedade especifica a posição dos marcadores de item de lista (pontos de bala).
+
+"list-style-position: outside;" significa que os marcadores estarão fora do item da lista. O início de cada linha de um item de lista será alinhado verticalmente.-->
+
+<!--list-style-position: inside;" significa que os marcadores estarão dentro do item da lista. Como faz parte do item da lista, fará parte do texto e empurrará o texto no início-->
+<h1>The list-style-position Property</h1>
+
+<h2>list-style-position: outside (default):</h2>
+<ul class="a">
+  <li>Coffee - A brewed drink prepared from roasted coffee beans, which are the seeds of berries from the Coffea plant</li>
+  <li>Tea - An aromatic beverage commonly prepared by pouring hot or boiling water over cured leaves of the Camellia sinensis, an evergreen shrub (bush) native to Asia</li>
+  <li>Coca Cola - A carbonated soft drink produced by The Coca-Cola Company. The drink's name refers to two of its original ingredients, which were kola nuts (a source of caffeine) and coca leaves</li>
+</ul>
+
+<h2>list-style-position: inside:</h2>
+<ul class="b">
+  <li>Coffee - A brewed drink prepared from roasted coffee beans, which are the seeds of berries from the Coffea plant</li>
+  <li>Tea - An aromatic beverage commonly prepared by pouring hot or boiling water over cured leaves of the Camellia sinensis, an evergreen shrub (bush) native to Asia</li>
+  <li>Coca Cola - A carbonated soft drink produced by The Coca-Cola Company. The drink's name refers to two of its original ingredients, which were kola nuts (a source of caffeine) and coca leaves</li>
+</ul>
+<!--Remover configurações padrão
+A list-style-type:nonepropriedade também pode ser usada para remover os marcadores/balas. Observe que a lista também possui margem e preenchimento padrão. Para remover isso, adicione margin:0e padding:0a <ul> ou <ol>:
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}   
+-->
+<!--Lista - propriedade abreviada
+A list-stylepropriedade é uma propriedade abreviada. Ele é usado para definir todas as propriedades da lista em uma declaração:
+Ao usar a propriedade abreviada, a ordem dos valores da propriedade é:
+
+list-style-type(se uma imagem de estilo de lista for especificada, o valor desta propriedade será exibido se a imagem por algum motivo não puder ser exibida)
+list-style-position(especifica se os marcadores de item de lista devem aparecer dentro ou fora do fluxo de conteúdo)
+list-style-image(especifica uma imagem como marcador de item da lista)
+Se um dos valores de propriedade acima estiver ausente, o valor padrão para a propriedade ausente será inserido, se houver.
+-->
+<!--Lista de estilo com cores
+Também podemos estilizar listas com cores, para torná-las um pouco mais interessantes.
+
+Qualquer coisa adicionada à tag <ol> ou <ul> afeta a lista inteira, enquanto as propriedades adicionadas à tag <li> afetarão os itens individuais da lista:-->
+
+    <h1>Styling Lists With Colors</h1>
+<div class="color">
+    <ol>
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Coca Cola</li>
+    </ol>
+    
+    <ul>
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Coca Cola</li>
+    </ul>
+</div>
+</body>
+
+</html>

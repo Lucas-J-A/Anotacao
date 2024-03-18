@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Index html 5</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <style>
+        p.dotted {border-style: dotted;}
+        p.dashed {border-style: dashed;}
+        p.solid {border-style: solid;}
+        p.double {border-style: double;}
+        p.groove {border-style: groove;}
+        p.ridge {border-style: ridge;}
+        p.inset {border-style: inset;}
+        p.outset {border-style: outset;}
+        p.none {border-style: none;}
+        p.hidden {border-style: hidden;}
+        p.mix {border-style: dotted dashed solid double;}
+        p.one {
+  border-style: solid;
+  border-width: 5px;
+}
+
+p.two {
+  border-style: solid;
+  border-width: medium;
+}
+
+p.three {
+  border-style: dotted;
+  border-width: 2px;
+}
+
+p.four {
+  border-style: dotted;
+  border-width: thick;
+}
+
+p.five {
+  border-style: double;
+  border-width: 15px;
+}
+
+p.six {
+  border-style: double;
+  border-width: thick;
+}
+p.one2 {
+  border-style: solid;
+  border-width: 5px 20px; /* 5px top and bottom, 20px on the sides */
+}
+
+p.two2 {
+  border-style: solid;
+  border-width: 20px 5px; /* 20px top and bottom, 5px on the sides */
+}
+
+p.three2 {
+  border-style: solid;
+  border-width: 25px 10px 4px 35px; /* 25px top, 10px right, 4px bottom and 35px left */
+}
+p.one3 {
+  border-style: solid;
+  border-color: red;
+}
+
+p.two3 {
+  border-style: solid;
+  border-color: green;
+} 
+
+p.three3 {
+  border-style: dotted;
+  border-color: blue;
+} 
+p.one4 {
+  border-style: solid;
+  border-color: red green blue yellow; /* red top, green right, blue bottom and yellow left */
+}
+p.one5{
+  border-top-style: dotted;
+  border-right-style: solid;
+  border-bottom-style: dotted;
+  border-left-style: solid;
+}
+p.one6{
+  border: 5px solid red;
+}
+p.normal {
+  border: 2px solid red;
+  padding: 5px;
+}
+
+p.round1 {
+  border: 2px solid red;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+p.round2 {
+  border: 2px solid red;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+p.round3 {
+  border: 2px solid red;
+  border-radius: 12px;
+  padding: 5px;
+}
+        </style>
+
+</head>
+
+<body>
+<!--Bordas CSS
+As propriedades da borda CSS permitem que você especifique o estilo, a largura e a cor da borda de um elemento.
+
+Estilo de borda CSS
+A border-stylepropriedade especifica que tipo de borda exibir.
+
+Os seguintes valores são permitidos:
+
+dotted- Define uma borda pontilhada
+dashed- Define uma borda tracejada
+solid- Define uma borda sólida
+double- Define uma borda dupla
+groove- Define uma borda ranhurada 3D. O efeito depende do valor da cor da borda
+ridge- Define uma borda 3D estriada. O efeito depende do valor da cor da borda
+inset- Define uma borda de inserção 3D. O efeito depende do valor da cor da borda
+outset- Define uma borda inicial 3D. O efeito depende do valor da cor da borda
+none- Não define borda
+hidden- Define uma borda oculta
+A border-stylepropriedade pode ter de um a quatro valores (para a borda superior, borda direita, borda inferior e borda esquerda).
+
+-->
+
+<h2>The border-style Property</h2>
+<p>This property specifies what kind of border to display:</p>
+
+<p class="dotted">A dotted border.</p>
+<p class="dashed">A dashed border.</p>
+<p class="solid">A solid border.</p>
+<p class="double">A double border.</p>
+<p class="groove">A groove border.</p>
+<p class="ridge">A ridge border.</p>
+<p class="inset">An inset border.</p>
+<p class="outset">An outset border.</p>
+<p class="none">No border.</p>
+<p class="hidden">A hidden border.</p>
+<p class="mix">A mixed border.</p>
+
+<!--Largura da borda CSS
+A border-widthpropriedade especifica a largura das quatro bordas.
+
+A largura pode ser definida como um tamanho específico (em px, pt, cm, em, etc) ou usando um dos três valores predefinidos: fino, médio ou grosso:-->
+<h2>The border-width Property</h2>
+<p class="one">Some text.</p>
+<p class="two">Some text.</p>
+<p class="three">Some text.</p>
+<p class="four">Some text.</p>
+<p class="five">Some text.</p>
+<p class="six">Some text.</p>
+
+<!--Larguras Laterais Específicas
+A border-width propriedade pode ter de um a quatro valores (para a borda superior, borda direita, borda inferior e borda esquerda):-->
+<h1>Larguras Laterais Específicas</h1>
+<p class="one2">Some text.</p>
+<p class="two2">Some text.</p>
+<p class="three2">Some text.</p>
+
+<!--Cor da borda CSS
+A border-colorpropriedade é usada para definir a cor das quatro bordas.
+
+A cor pode ser definida por:
+
+name - especifique um nome de cor, como "vermelho"
+HEX - especifique um valor HEX, como "#ff0000"
+RGB - especifique um valor RGB, como "rgb(255,0,0)"
+HSL - especifique um valor HSL, como "hsl(0, 100%, 50%)"
+transparente-->
+<h1>Cor da borda CSS</h1>
+<p class="one3">A solid red border</p>
+<p class="two3">A solid green border</p>
+<p class="three3">A dotted blue border</p>
+
+<!--Cores Laterais Específicas
+A border-colorpropriedade pode ter de um a quatro valores (para a borda superior, borda direita, borda inferior e borda esquerda). -->
+
+<h1>Cores Laterais Específicas</h1>
+<p class="one4">A solid multicolor border</p>
+
+<!--Borda CSS - Lados Individuais
+Nos exemplos das páginas anteriores, você viu que é possível especificar uma borda diferente para cada lado.
+
+Em CSS, também existem propriedades para especificar cada uma das bordas (superior, direita, inferior e esquerda):
+ex: border-style: dotted solid double dashed;
+-->
+
+<h1>Borda CSS - Lados Individuais</h1>
+<p class="one5">A solid multicolor border</p>
+
+<!--Borda CSS - Propriedade abreviada
+Como você viu na página anterior, há muitas propriedades a serem consideradas ao lidar com bordas.
+
+Para encurtar o código, também é possível especificar todas as propriedades individuais da borda em uma propriedade.
+
+A borderpropriedade é uma propriedade abreviada para as seguintes propriedades de borda individuais:
+
+border-width
+border-style(requeridos)
+border-color
+ex: border-left: 6px solid red;
+-->
+<h1>Borda CSS - abreviada</h1>
+<p class="one6">A solid multicolor border</p>
+
+<!--Bordas arredondadas CSS
+A border-radiuspropriedade é usada para adicionar bordas arredondadas a um elemento:-->
+<h1>Bordas arredondadas CSS</h1>
+<p class="normal">Normal border</p>
+<p class="round1">Round border</p>
+<p class="round2">Rounder border</p>
+<p class="round3">Roundest border</p>
+
+</body>
+
+</html>

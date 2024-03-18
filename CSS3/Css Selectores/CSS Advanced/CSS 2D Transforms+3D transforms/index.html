@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Index html 5</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <style>
+        div.translate {
+  width: 300px;
+  height: 100px;
+  background-color: yellow;
+  border: 1px solid black;
+  transform: translate(50px,100px);
+  display: block;
+}
+div.normal {
+  width: 300px;
+  height: 100px;
+  background-color: yellow;
+  border: 1px solid black;
+  display: block;
+}
+
+div#myDiv {
+  transform: rotate(20deg);
+  display: block;
+}
+div.scale {
+  margin: 150px;
+  width: 200px;
+  height: 100px;
+  background-color: yellow;
+  border: 1px solid black;
+  transform: scale(2,3);
+}
+div.area {
+  width: 300px;
+  height: 100px;
+  background-color: yellow;
+  border: 1px solid black;
+}
+
+#myDiv {
+  transform: rotateX(150deg);
+}
+    </style>
+</head>
+
+<body>
+<h1>Transformações CSS 2D</h1>
+<p>Neste capítulo, você aprenderá sobre a seguinte propriedade CSS:
+
+    transform</p>
+    <!--
+        Métodos de transformações CSS 2D
+Com a propriedade CSS transformvocê pode usar os seguintes métodos de transformação 2D:
+
+translate()
+rotate()
+scaleX()
+scaleY()
+scale()
+skewX()
+skewY()
+skew()
+matrix()
+    -->
+    <div class="translate">
+        This div element is moved 50 pixels to the right, and 100 pixels down from its current position.
+        </div>
+        <p>O rotate()método gira um elemento no sentido horário ou anti-horário de acordo com um determinado grau.
+
+            O exemplo a seguir gira o elemento div no sentido horário com 20 graus:</p>
+        <div class="normal">
+            This a normal div element.
+            </div>
+            
+            <div id="myDiv">
+            This div element is rotated clockwise 20 degrees.
+            </div>]
+            <p>O scale()método aumenta ou diminui o tamanho de um elemento (de acordo com os parâmetros dados para largura e altura).
+
+                O exemplo a seguir aumenta o elemento <div> para duas vezes sua largura original e três vezes sua altura original: </p>
+                    <div class="scale">
+                        This div element is two times of its original width, and three times of its original height.
+                        </div>
+                        <!--
+                            O exemplo a seguir diminui o elemento <div> para metade de sua largura e altura originais: 
+
+Exemplo
+div {
+  transform: scale(0.5, 0.5);
+}
+                        -->
+                        <!--
+                            O método scaleY()
+O scaleY()método aumenta ou diminui a altura de um elemento.
+
+O exemplo a seguir aumenta o elemento <div> para três vezes sua altura original: 
+
+Exemplo
+div {
+  transform: scaleY(3);
+}
+O método skewX()
+O skewX()método inclina um elemento ao longo do eixo X pelo ângulo fornecido.
+
+O exemplo a seguir inclina o elemento <div> 20 graus ao longo do eixo X:
+
+Exemplo
+div {
+  transform: skewX(20deg);
+}
+O método skew()
+O skew()método inclina um elemento ao longo dos eixos X e Y pelos ângulos fornecidos.
+
+O exemplo a seguir inclina o elemento <div> 20 graus ao longo do eixo X e 10 graus ao longo do eixo Y:
+
+Exemplo
+div {
+  transform: skew(20deg, 10deg);
+}
+O matrix()método combina todos os métodos de transformação 2D em um.
+
+O método matrix() aceita seis parâmetros, contendo funções matemáticas, que permitem girar, dimensionar, mover (traduzir) e inclinar elementos.
+
+Os parâmetros são os seguintes: matrix(scaleX(),skewY(),skewX(),scaleY(),translateX(),translateY())
+
+Exemplo
+div {
+  transform: matrix(1, -0.3, 0, 1, 0, 0);
+}
+                        -->
+                        <h1>CSS 3D Transforms</h1>
+                        <p>Neste capítulo, você aprenderá sobre a seguinte propriedade CSS:
+
+                            transform</p>
+                            <p>Métodos de transformações CSS 3D
+                                Com a propriedade CSS transformvocê pode usar os seguintes métodos de transformação 3D:
+                                
+                                rotateX()
+                                rotateY()
+                                rotateZ()</p>
+                                <p>O método girarX()
+                                    Girar X
+                                    O rotateX()método gira um elemento em torno de seu eixo X em um determinado grau:</p>
+                                    <div class="normal" id="myDiv">
+                                        This div element is rotated 150 degrees.
+                                        </div>
+                                        <!--
+                                            O rotateY()método gira um elemento em torno de seu eixo Y em um determinado grau:
+
+Exemplo
+#myDiv {
+  transform: rotateY(150deg);
+}
+O método girarZ()
+O rotateZ()método gira um elemento em torno de seu eixo Z em um determinado grau:
+
+Exemplo
+#myDiv {
+  transform: rotateZ(90deg);
+}
+                                        -->
+                                        
+            
+</body>
+
+</html>

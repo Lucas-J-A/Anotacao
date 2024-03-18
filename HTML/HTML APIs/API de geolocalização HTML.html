@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Index html 5</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+</head>
+
+<body>
+
+<!--
+A API de geolocalização HTML é usada para localizar a posição de um usuário.
+Localize a posição do usuário
+A API de geolocalização HTML é usada para obter a posição geográfica de um usuário.
+Como isso pode comprometer a privacidade, a posição não está disponível, a menos que o usuário a aprove.
+-->
+<!--
+Observação: a partir do Chrome 50, a API de geolocalização funcionará apenas em contextos seguros, como HTTPS. Se seu site estiver hospedado em uma origem não segura (como HTTP), as solicitações para obter a localização dos usuários não funcionarão mais.
+-->
+<!--O getCurrentPosition()método é usado para retornar a posição do usuário.
+
+O exemplo abaixo retorna a latitude e longitude da posição do usuário:-->
+
+<p>Click the button to get your coordinates.</p>
+
+<!--Cria botão aonde vai ser disparado a função-->
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<script>
+ //pega o elemento do id demo e coloca na variavel x
+var x = document.getElementById("demo");
+
+//função getlocation
+function getLocation() {
+    //verifica se navigator suporta getlocation
+    /*A propriedade de apenas leitura Navigator.geolocation retorna um objeto Geolocation que disponibiliza acesso de conteúdo Web à localização do dispositivo. Isso permite que um Web site ou aplicativo ofereçam resultados customizados baseado na localização do usuário.*/
+
+  if (navigator.geolocation) {
+      //O método Geolocation.getCurrentPosition()é utilizado para capturar a posição atual do dispositivo.
+      //função showPosition pega possição pego pelo getCurrentPosition para exibir
+      /*O segundo parâmetro do getCurrentPosition()método é usado para tratar erros. Ele especifica uma função a ser executada se não conseguir obter a localização do usuário:*/
+      navigator.geolocation.getCurrentPosition(showPosition, showError);
+  
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+//fução para mostra latitude e longitude
+//position.coords.latitude  = pega posição de acordo com latitude
+//position.coords.longitude = pega posição de acordo com longitude
+function showPosition(position) {
+    
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+/*Exemplo explicado:
+
+Verifique se a geolocalização é compatível
+Se suportado, execute o método getCurrentPosition(). Caso contrário, exiba uma mensagem para o usuário
+Se o método getCurrentPosition() for bem sucedido, ele retornará um objeto de coordenadas para a função especificada no parâmetro (showPosition)
+A função showPosition() gera a Latitude e a Longitude*/
+
+
+function showError(error) {
+  switch(error.code) {
+    case error.PERMISSION_DENIED:
+      x.innerHTML = "O usuário negou a solicitação de geolocalização."
+      break;
+    case error.POSITION_UNAVAILABLE:
+      x.innerHTML = "As informações de localização não estão disponíveis."
+      break;
+    case error.TIMEOUT:
+      x.innerHTML = "A solicitação para obter a localização do usuário expirou."
+      break;
+    case error.UNKNOWN_ERROR:
+      x.innerHTML = "Ocorreu um erro desconhecido."
+      break;
+  }
+}
+/*Informações específicas do local
+Esta página demonstrou como mostrar a posição de um usuário em um mapa.
+
+A geolocalização também é muito útil para informações específicas do local, como:
+
+Informações locais atualizadas
+Mostrando pontos de interesse perto do usuário
+Navegação passo a passo (GPS)
+
+O método getCurrentPosition() - Dados de retorno
+O getCurrentPosition()método retorna um objeto em caso de sucesso. As propriedades de latitude, longitude e precisão são sempre retornadas. As outras propriedades são retornadas se disponíveis:
+
+coords.latitude = A latitude como um número decimal (sempre retornado)
+coords.longitude =A longitude como um número decimal (sempre retornado)
+coords.accuracy =A precisão da posição (sempre retornada)
+coords.altitude =A altitude em metros acima do nível médio do mar (retornado se disponível)
+coords.altitudeAccuracy = precisão da altitude da posição (devolvida se disponível)
+coords.heading =A direção em graus no sentido horário a partir do Norte (retornado se disponível)
+coords.speed = A velocidade em metros por segundo (retornada se disponível)
+timestamp = A data/hora da resposta (retornada se disponível) */
+
+/*Objeto de geolocalização - Outros métodos interessantes
+O objeto Geolocation também possui outros métodos interessantes:
+
+watchPosition()- Retorna a posição atual do usuário e continua a retornar a posição atualizada conforme o usuário se move (como o GPS em um carro).
+clearWatch()- Interrompe o watchPosition()método.
+O exemplo abaixo mostra o watchPosition()método. Você precisa de um dispositivo GPS preciso para testar isso (como smartphone):*/
+</script>
+
+<p>Click the button to get your coordinates watchPosition() usando Retorna a posição atual do usuário e continua a retornar a posição atualizada conforme o usuário se move (como o GPS em um carro)..</p>
+
+<button onclick="getLocation2()">Try It</button>
+
+<p id="demo2"></p>
+
+<script>
+var x = document.getElementById("demo2");
+
+function getLocation2() {
+  if (navigator.geolocation) {
+    navigator.geolocation.watchPosition(showPosition2);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+    
+function showPosition2(position) {
+    x.innerHTML="Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" user-scalabe=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type=text/css href="style2.css">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <title>Formulários</title>
+</head>
+<!--
+class="form-group" organiza os formularios
+
+class="form-control" organiza o input de forma preencher o espaço melhor da tela
+
+class="help-block" deixa texto menos destaque
+class="sr-only" so mostrar quando tiver tela pequena
+class="input-group" faz com que div seja um grupo de forms
+
+class="control-label"= ele vai setar o label para fazer parte da coluna
+-->
+
+<body>
+    <div class="container">
+        <form class="form-horizontal" id="form1" name="form1" method="post">
+            <div class="form-group">
+                <label class="control-label col-md-2">Nome:</label>
+                <div class="col-md-10">
+                    <input class="form-control" placeholder="Escreve seu nome" type="text">
+
+                </div>
+            </div>
+            <div class="form-group">
+
+                <label class="control-label col-md-2">Email:</label>
+                <div class="col-md-10">
+                    <input placeholder="Escreve seu Email" type="text" class="form-control">
+
+                </div>
+
+            </div>
+            <div class="form-group">
+                <div class="col-md-2 col-md-offset-2">
+                    <label class="control-label">
+                        <input type="checkbox">Gravar Nome </label>
+
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-2 col-md-offset-2">
+                    <button class="btn btn-primary">Enviar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Index html 5</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <style>
+ ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+    </style>
+</head>
+
+<body>
+<h1>CSS Navigation Bar</h1>
+<p>Barras de navegação
+    Ter uma navegação fácil de usar é importante para qualquer site.
+    
+    Com CSS você pode transformar menus HTML chatos em barras de navegação bonitas.
+    
+    Barra de Navegação = Lista de Links
+    Uma barra de navegação precisa de HTML padrão como base.
+    
+    construiremos a barra de navegação a partir de uma lista HTML padrão.
+    
+    Uma barra de navegação é basicamente uma lista de links, então usar os elementos ul e li faz todo o sentido:</p>
+    <ul>
+        <li><a href="default.asp">Home</a></li>
+        <li><a href="news.asp">News</a></li>
+        <li><a href="contact.asp">Contact</a></li>
+        <li><a href="about.asp">About</a></li>
+      </ul> 
+      <!--
+          Exemplo explicado:
+
+list-style-type: none;- Remove as balas. Uma barra de navegação não precisa de marcadores de lista
+Definir margin: 0;e 
+padding: 0; remover as configurações padrão do navegador
+O código no exemplo acima é o código padrão usado nas barras de navegação vertical e horizontal, sobre o qual você aprenderá mais nos próximos capítulos.
+      -->
+      <h1>Vertical Navigation Bar</h1>
+      <!--
+          xemplo
+li a {
+  display: block;
+  width: 60px;
+}
+Exemplo explicado:
+
+display: block;- A exibição dos links como elementos de bloco torna toda a área do link clicável (não apenas o texto) e nos permite especificar a largura (e preenchimento, margem, altura etc., se desejar)
+width: 60px;- Os elementos do bloco ocupam a largura total disponível por padrão. Queremos especificar uma largura de 60 pixels
+Você também pode definir a largura de <ul> e remover a largura de <a>, pois eles ocuparão toda a largura disponível quando exibidos como elementos de bloco. Isso produzirá o mesmo resultado do nosso exemplo anterior:
+      -->
+      <!--
+          Exemplos de barra de navegação vertical
+Crie uma barra de navegação vertical básica com uma cor de fundo cinza e altere a cor de fundo dos links quando o usuário passar o mouse sobre eles:
+      -->
+      <!--
+          Link de navegação ativo/atual
+Adicione uma classe "ativa" ao link atual para que o usuário saiba em qual página ele está:
+      -->
+      <ul>
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+      <!--
+          Centralizar links e adicionar bordas
+Adicione text-align:centera <li> ou <a> para centralizar os links.
+
+Adicione a borderpropriedade para <ul> adicionar uma borda ao redor da barra de navegação. Se você também quiser bordas dentro da barra de navegação, adicione um border-bottoma todos os elementos <li>, exceto o último:
+
+Casa
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  border: 1px solid #555;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li {
+  text-align: center;
+  border-bottom: 1px solid #555;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+li a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+      -->
+</body>
+
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Index html 5</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <style> 
+        input[type=text] {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          box-sizing: border-box;
+        }
+        input.borde[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid red;
+  border-radius: 4px;
+}
+input.bordebot[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid red;
+}
+
+input.focusazul[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #555;
+  outline: none;
+}
+
+input.focusazul[type=text]:focus {
+  background-color: lightblue;
+}
+
+input.focusborde[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+input.focusborde[type=text]:focus {
+  border: 3px solid #555;
+}
+input.img[type=text] {
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('img/fundo.jpg');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+}
+input.animate[type=text] {
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('img/fundo.jpg');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  transition: width 0.4s ease-in-out;
+}
+
+input.animate[type=text]:focus {
+  width: 100%;
+}
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+select {
+  width: 100%;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+}
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+    <h1>Formulários CSS</h1>
+<!--
+Estilizando campos de entrada
+Use a widthpropriedade para determinar a largura do campo de entrada:
+Exemplo
+input {
+  width: 100%;
+}
+O exemplo acima se aplica a todos os elementos <input>. Se você deseja apenas estilizar um tipo de entrada específico, pode usar seletores de atributo:
+
+input[type=text]- selecionará apenas campos de texto
+input[type=password]- selecionará apenas campos de senha
+input[type=number]- selecionará apenas campos numéricos
+etc.
+
+Entradas acolchoadas
+Use a paddingpropriedade para adicionar espaço dentro do campo de texto.
+
+Dica: Quando você tem muitas entradas uma após a outra, você também pode querer adicionar algumas margin, para adicionar mais espaço fora delas:
+
+
+-->
+<h2>Padded input fields</h2>
+
+<form>
+  <label for="fname">First Name</label>
+  <input type="text" id="fname" name="fname">
+  <label for="lname">Last Name</label>
+  <input type="text" id="lname" name="lname">
+</form>
+<!--
+    Observe que definimos a box-sizingpropriedade como border-box. Isso garante que o preenchimento e, eventualmente, as bordas sejam incluídos na largura e altura totais dos elementos.
+-->
+<h1>Entradas com bordas</h1>
+   <p> Use a border propriedade para alterar o tamanho e a cor da borda e use a border-radius propriedade para adicionar cantos arredondados:</p>
+   
+<h2>Input fields with borders</h2>
+
+<form>
+  <label for="fname">First Name</label>
+  <input class="borde" type="text" id="fname" name="fname">
+  <label for="lname">Last Name</label>
+  <input class="borde"  type="text" id="lname" name="lname">
+</form>
+<h1>Se você quiser apenas uma borda inferior, use a border-bottompropriedade:</h1>
+<h2>Input fields with bottom border</h2>
+
+<form>
+  <label for="fname">First Name</label>
+  <input class="bordebot" type="text" id="fname" name="fname">
+  <label for="lname">Last Name</label>
+  <input class="bordebot" type="text" id="lname" name="lname">
+</form>
+<!--
+    Entradas coloridas
+Use a background-color propriedade para adicionar uma cor de fundo à entrada e a colorpropriedade para alterar a cor do texto:
+
+Exemplo
+input[type=text] {
+  background-color: #3CBC8D;
+  color: white;
+}
+-->
+<h1>Entradas focadas</h1>
+<!--
+    Entradas focadas
+Por padrão, alguns navegadores adicionam um contorno azul ao redor da entrada quando ela recebe o foco (clicado). Você pode remover esse comportamento adicionando outline: none;à entrada.
+
+Use o :focusseletor para fazer algo com o campo de entrada quando ele ficar em foco:
+-->
+<h2>Focus Azul</h2>
+<form>
+    <label for="fname">First Name</label>
+    <input class="focusazul"type="text" id="fname" name="fname" value="John">
+    <label for="lname">Last Name</label>
+    <input class="focusazul" type="text" id="lname" name="lname" value="Doe">
+  </form>
+  <h2>Focus com borda</h2>
+  <form>
+    <label for="fname">First Name</label>
+    <input class="focusborde" type="text" id="fname" name="fname" value="John">
+    <label for="lname">Last Name</label>
+    <input class="focusborde" type="text" id="lname" name="lname" value="Doe">
+  </form>
+  
+  <!--
+      Entrada com ícone/imagem
+Se você quiser um ícone dentro da entrada, use a background-imagepropriedade e posicione-o com a background-positionpropriedade. Observe também que adicionamos um grande preenchimento à esquerda para reservar o espaço do ícone:
+  -->
+  <h1>  Entrada com ícone/imagem    </h1>
+  <form>
+    <input class="img" type="text" name="search" placeholder="Search..">
+  </form>
+  <!--
+      Entrada de pesquisa animada
+Neste exemplo, usamos a transition propriedade CSS para animar a largura da entrada de pesquisa quando ela fica em foco. Você aprenderá mais sobre a transitionpropriedade mais tarde, em nosso capítulo Transições CSS .
+  -->
+  <h1>  Entrada de pesquisa animada</h1>
+  <form>
+    <input class="animate" type="text" name="search" placeholder="Search..">
+  </form>
+  <!--
+      Estilizando Áreas de Texto
+Dica: Use a resizepropriedade para evitar que as áreas de texto sejam redimensionadas (desabilite o "grabber" no canto inferior direito):
+  -->
+  <h1>Estilizando Áreas de Texto</h1>
+  <form>
+    <textarea>Some text...</textarea>
+  </form>
+  <h1>Estilizando Selesct</h1>
+  <form>
+    <select id="country" name="country">
+    <option value="au">Australia</option>
+    <option value="ca">Canada</option>
+    <option value="usa">USA</option>
+    </select>
+  </form>
+  <h1>Botões de entrada de estilo</h1>
+  <input type="button" value="Button">
+<input type="reset" value="Reset">
+<input type="submit" value="Submit">
+
+</body>
+
+</html>

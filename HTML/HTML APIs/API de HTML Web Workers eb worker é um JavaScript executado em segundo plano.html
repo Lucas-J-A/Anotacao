@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--
+
+
+    -->
+ 
+    <title>Index html 5</title>
+
+  
+</head>
+
+<body>
+
+<p>Count numbers: <output id="result"></output></p>
+<button onclick="startWorker()">Start Worker</button> 
+<button onclick="stopWorker()">Stop Worker</button>
+
+<p><strong>Note:</strong> Internet Explorer 9 and earlier versions do not support Web Workers.</p>
+
+<script>
+var w;
+
+function startWorker() {
+       /*Verifique o suporte ao trabalhador da Web
+Antes de criar um web worker, verifique se o navegador do usuário o suporta:*/
+  if(typeof(Worker) !== "undefined") {
+    if(typeof(w) == "undefined") {
+        /*
+        Criar um objeto Web Worker
+Agora que temos o arquivo do web worker, precisamos chamá-lo de uma página HTML.
+
+As linhas a seguir verificam se o trabalhador já existe, caso contrário - ele cria um novo objeto de trabalhador da web e executa o código em "demo_workers.js":
+        */
+    
+        w = new Worker ("demo_workers.js");
+     
+    }
+    /*Então podemos enviar e receber mensagens do web worker.
+
+Adicione um ouvinte de evento "onmessage" ao web worker.*/
+    w.onmessage = function(event) {
+      document.getElementById("result").innerHTML = event.data;
+    };
+  } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Workers...";
+  }
+}
+/*
+Encerrar um Web Worker
+Quando um objeto de trabalho da Web é criado, ele continuará a ouvir mensagens (mesmo após a conclusão do script externo) até que seja encerrado.
+
+Para encerrar um web worker e liberar recursos de navegador/computador, use o terminate()método:
+*/
+function stopWorker() { 
+  w.terminate();
+  w = undefined;
+}
+/*
+
+Reutilize o Web Worker
+Se você definir a variável do trabalhador como indefinida, depois que ela for encerrada, poderá reutilizar o código:
+*/
+</script>
+
+</body>
+
+</html>
